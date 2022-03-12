@@ -1,0 +1,52 @@
+[gd_scene format=2]
+
+[node name="Position" type="Node2D"]
+
+[node name="X" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "X:"
+align = 1
+
+[node name="Y" type="Label" parent="."]
+margin_top = 35.0
+margin_right = 40.0
+margin_bottom = 49.0
+rect_scale = Vector2( 2, 2 )
+text = "Y:"
+align = 1
+
+[node name="Z" type="Label" parent="."]
+margin_top = 70.0
+margin_right = 40.0
+margin_bottom = 84.0
+rect_scale = Vector2( 2, 2 )
+text = "Z:"
+align = 1
+
+[node name="X Position" type="LineEdit" parent="."]
+margin_left = 60.0
+margin_right = 118.0
+margin_bottom = 24.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
+
+[node name="Y Position" type="LineEdit" parent="."]
+margin_left = 60.0
+margin_top = 35.0
+margin_right = 118.0
+margin_bottom = 59.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
+
+[node name="Z Position" type="LineEdit" parent="."]
+margin_left = 60.0
+margin_top = 70.0
+margin_right = 118.0
+margin_bottom = 94.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
