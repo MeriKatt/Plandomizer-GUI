@@ -1,312 +1,25 @@
 extends OptionButton
-var worlds = [
-	"Frigate Orpheon",
-	"Tallon Canyon",
-	"Chozo Ruins",
-	"Magmoor Caverns",
-	"Phendrana Drifts",
-	"Phazon Mines",
-	"Impact Crater"
-]
+func DePrint(obj):
+	 Globals.DePrint(obj)
+
+var worlds = Globals.worlds
+
+var elevators_world = Globals.elevators_world
+var elevators_room = Globals.elevators_room
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 var current_world = null
-var frigate_rooms = [
-	"Air Lock",
-	"Biohazard Containment",
-	"Biotech Research Area 1",
-	"Biotech Research Area 2",
-	"Cargo Freight Lift to Deck Gamma",
-	"Connection Elevator to Deck Alpha",
-	"Connection Elevator to Deck Beta",
-	"Connection Elevator to Deck Beta (2)",
-	"Deck Alpha Access Hall",
-	"Deck Alpha Mech Shaft",
-	"Deck Alpha Umbilical Hall",
-	"Deck Beta Conduit Hall",
-	"Deck Beta Security Hall",
-	"Deck Beta Transit Hall",
-	"Deck Gamma Monitor Hall",
-	"Emergency Evacuation Area",
-	"Exterior Docking Hangar",
-	"Main Ventilation Shaft Section A",
-	"Main Ventilation Shaft Section B",
-	"Main Ventilation Shaft Section C",
-	"Main Ventilation Shaft Section D",
-	"Main Ventilation Shaft Section E",
-	"Main Ventilation Shaft Section F",
-	"Map Facility",
-	"Reactor Core",
-	"Reactor Core Entrance",
-	"Subventilation Shaft Section A",
-	"Subventilation Shaft Section B",
-]
-var tallon_rooms = [
-	"Alcove",
-	"Arbor Chamber",
-	"Artifact Temple",
-	"Biohazard Containment",
-	"Biotech Research Area 1",
-	"Canyon Cavern",
-	"Cargo Freight Lift to Deck Gamma",
-	"Connection Elevator to Deck Beta",
-	"Deck Beta Conduit Hall",
-	"Deck Beta Security Hall",
-	"Deck Beta Transit Hall",
-	"Frigate Access Tunnel",
-	"Frigate Crash Site",
-	"Great Tree Chamber",
-	"Great Tree Hall",
-	"Gully",
-	"Hydro Access Tunnel",
-	"Landing Site",
-	"Life Grove",
-	"Life Grove Tunnel",
-	"Main Ventilation Shaft Section A",
-	"Main Ventilation Shaft Section B",
-	"Main Ventilation Shaft Section C",
-	"Overgrown Cavern",
-	"Reactor Access",
-	"Reactor Core",
-	"Root Cave",
-	"Root Tunnel",
-	"Savestation",
-	"Tallon Canyon",
-	"Temple Hall",
-	"Temple Lobby",
-	"Temple Security Station",
-	"Transport to Chozo Ruins East",
-	"Transport to Chozo Ruins South",
-	"Transport to Chozo Ruins West",
-	"Transport to Magmoor Caverns East",
-	"Transport to Phazon Mines East",
-	"Transport Tunnel A",
-	"Transport Tunnel B",
-	"Transport Tunnel C",
-	"Transport Tunnel D",
-	"Transport Tunnel E",
-	"Waterfall Cavern",
-]
-var chozo_rooms = [
-	"Antechamber",
-	"Arboretum",
-	"Arboretum Access",
-	"Burn Dome",
-	"Burn Dome Access",
-	"Crossway",
-	"Crossway Access South",
-	"Crossway Access West",
-	"Dynamo",
-	"Dynamo Access",
-	"East Atrium",
-	"East Furnace Access",
-	"Elder Chamber",
-	"Elder Hall Access",
-	"Energy Core",
-	"Energy Core Access",
-	"Eyon Tunnel",
-	"Furnace",
-	"Gathering Hall",
-	"Gathering Hall Access",
-	"Hall of the Elders",
-	"Hive Totem",
-	"Magma Pool",
-	"Main Plaza",
-	"Map Station",
-	"Meditation Fountain",
-	"North Atrium",
-	"Nursery Access",
-	"Piston Tunnel",
-	"Plaza Access",
-	"Reflecting Pool",
-	"Reflecting Pool Access",
-	"Ruined Fountain",
-	"Ruined Fountain Access",
-	"Ruined Gallery",
-	"Ruined Nursery",
-	"Ruined Shrine",
-	"Ruined Shrine Access",
-	"Ruins Entrance",
-	"Save Station 1",
-	"Save Station 2",
-	"Save Station 3",
-	"Sun Tower",
-	"Sun Tower Access",
-	"Sunchamber",
-	"Sunchamber Access",
-	"Sunchamber Lobby",
-	"Totem Access",
-	"Tower Chamber",
-	"Tower of Light",
-	"Tower of Light Access",
-	"Training Chamber",
-	"Training Chamber Access",
-	"Transport Access North",
-	"Transport Access South",
-	"Transport to Magmoor Caverns North",
-	"Transport to Tallon Overworld East",
-	"Transport to Tallon Overworld North",
-	"Transport to Tallon Overworld South",
-	"Vault",
-	"Vault Access",
-	"Watery Hall",
-	"Watery Hall Access",
-	"West Furnace Access",
-]
-var magmoor_rooms = [
-	"Burning Trail",
-	"Fiery Shores",
-	"Geothermal Core",
-	"Lake Tunnel",
-	"Lava Lake",
-	"Magmoor Workstation",
-	"Monitor Station",
-	"Monitor Tunnel",
-	"North Core Tunnel",
-	"Pit Tunnel",
-	"Plasma Processing",
-	"Save Station Magmoor A",
-	"Save Station Magmoor B",
-	"Shore Tunnel",
-	"South Core Tunnel",
-	"Storage Cavern",
-	"Transport to Chozo Ruins North",
-	"Transport to Phazon Mines West",
-	"Transport to Phendrana Drifts North",
-	"Transport to Phendrana Drifts South",
-	"Transport to Tallon Overworld West",
-	"Transport Tunnel A",
-	"Transport Tunnel B",
-	"Transport Tunnel C",
-	"Triclops Pit",
-	"Twin Fires",
-	"Twin Fires Tunnel",
-	"Warrior Shrine",
-	"Workstation Tunnel",
-]
-var phendrana_rooms = [
-	"Aether Lab Entryway",
-	"Canyon Entryway",
-	"Chamber Access",
-	"Chapel of the Elders",
-	"Chapel Tunnel",
-	"Chozo Ice Temple",
-	"Control Tower",
-	"Courtyard Entryway",
-	"East Tower",
-	"Frost Cave",
-	"Frost Cave Access",
-	"Frozen Pike",
-	"Gravity Chamber",
-	"Hunter Cave",
-	"Hunter Cave Access",
-	"Hydra Lab Entryway",
-	"Ice Ruins Access",
-	"Ice Ruins East",
-	"Ice Ruins West",
-	"Lake Tunnel",
-	"Lower Edge Tunnel",
-	"Map Station",
-	"North Quarantine Tunnel",
-	"Observatory",
-	"Observatory Access",
-	"Phendrana Canyon",
-	"Phendrana Shorelines",
-	"Phendrana's Edge",
-	"Pike Access",
-	"Plaza Walkway",
-	"Quarantine Access",
-	"Quarantine Cave",
-	"Quarantine Monitor",
-	"Research Core",
-	"Research Core Access",
-	"Research Entrance",
-	"Research Lab Aether",
-	"Research Lab Hydra",
-	"Ruined Courtyard",
-	"Ruins Entryway",
-	"Save Station A",
-	"Save Station B",
-	"Save Station C",
-	"Save Station D",
-	"Security Cave",
-	"Shoreline Entrance",
-	"South Quarantine Tunnel",
-	"Specimen Storage",
-	"Storage Cave",
-	"Temple Entryway",
-	"Transport Access",
-	"Transport to Magmoor Caverns South",
-	"Transport to Magmoor Caverns West",
-	"Upper Edge Tunnel",
-	"West Tower",
-	"West Tower Entrance",
-]
-var phazon_rooms = [
-	"Central Dynamo",
-	"Dynamo Access",
-	"Elevator A",
-	"Elevator Access A",
-	"Elevator Access B",
-	"Elevator B",
-	"Elite Control",
-	"Elite Control Access",
-	"Elite Quarters",
-	"Elite Quarters Access",
-	"Elite Research",
-	"Fungal Hall A",
-	"Fungal Hall Access",
-	"Fungal Hall B",
-	"Main Quarry",
-	"Maintenance Tunnel",
-	"Map Station Mines",
-	"Metroid Quarantine A",
-	"Metroid Quarantine B",
-	"Mine Security Station",
-	"Missile Station Mines",
-	"Omega Research",
-	"Ore Processing",
-	"Phazon Mining Tunnel",
-	"Phazon Processing Center",
-	"Processing Center Access",
-	"Quarantine Access A",
-	"Quarantine Access B",
-	"Quarry Access",
-	"Research Access",
-	"Save Station Mines A",
-	"Save Station Mines B",
-	"Save Station Mines C",
-	"Security Access A",
-	"Security Access B",
-	"Storage Depot A",
-	"Storage Depot B",
-	"Transport Access",
-	"Transport to Magmoor Caverns South",
-	"Transport to Tallon Overworld South",
-	"Ventilation Shaft",
-	"Waste Disposal",
-]
-var impact_rooms = [
-	"Crater Entry Point",
-	"Crater Missile Station",
-	"Crater Tunnel A",
-	"Crater Tunnel B",
-	"Metroid Prime Lair",
-	"Phazon Core",
-	"Phazon Infusion Chamber",
-	"Subchamber Five",
-	"Subchamber Four",
-	"Subchamber One",
-	"Subchamber Three",
-	"Subchamber Two",
-]
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var i = 1
+	var array = Globals.get_array("Frigate Orpheon")
+	for x in array:
+		add_item(x,i)
+		i+=1
 
 var current_room = null
 
@@ -314,33 +27,44 @@ var current_room = null
 func _process(_delta):
 		pass
 
-func get_array(area):
-		match area:
-			"Frigate Orpheon": 
-				return frigate_rooms
-			"Tallon Canyon":
-				return tallon_rooms
-			"Chozo Ruins":
-				return chozo_rooms
-			"Magmooor Caverns":
-				return magmoor_rooms
-			"Phendrana Drifts":
-				return phendrana_rooms
-			"Phazon Mines":
-				return phazon_rooms
-			"Impact Crater":
-				return impact_rooms
 
 func _on_Area_item_selected(index):
+	if worlds[index] == "":
+		return
 	current_world = worlds[index]
 	clear()
 	var i = 1
-	var array = get_array(current_world)
+	var array = Globals.get_array(current_world)
 	for x in array:
 		add_item(x,i)
 		i+=1
 
 
 func _on_Room_item_selected(index):
-	current_room = get_array(current_world)[index]
-	print(current_room)
+	current_room = Globals.get_array(current_world)[index]
+	DePrint(current_room)
+
+
+func _on_Elevators_item_selected(_index):
+	var elev = Globals.elevators[_index]
+	if elev == "":
+		return
+	var world = elevators_world[elev]
+	var room = elevators_room[elev]
+	current_room = room
+	var ind = 0
+	for x in worlds:
+		if x == world:
+			clear()
+			current_world = world
+			DePrint(current_world)
+			var array = Globals.get_array(current_world)
+			DePrint(array)
+			var l = 0
+			for c in array:
+				add_item(c,l)
+				if c == room:
+					ind = l	
+				l+=1
+			select(ind)
+

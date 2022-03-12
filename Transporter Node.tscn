@@ -54,7 +54,10 @@ margin_top = 24.0
 margin_right = 397.0
 margin_bottom = 44.0
 rect_scale = Vector2( 1.5, 1.5 )
+clip_text = true
 script = ExtResource( 2 )
 
 [connection signal="item_selected" from="Panel/Area" to="Panel/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/Room" to="Panel/Room" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/Elevators" to="Panel/Area" method="_on_Elevators_item_selected"]
+[connection signal="item_selected" from="Panel/Elevators" to="Panel/Room" method="_on_Elevators_item_selected"]

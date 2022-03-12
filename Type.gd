@@ -4,14 +4,13 @@ extends OptionButton
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var elevators = Globals.elevators
-		
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var i = 1
-	for x in elevators:
-		add_item(x, i)
-		i = i+1
+	add_item("Water", 1)
+	add_item("Lava", 2)
+	add_item("Poison", 3) # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
