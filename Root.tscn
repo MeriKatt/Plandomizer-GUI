@@ -1,0 +1,45 @@
+[gd_scene format=2]
+
+[node name="Gui Root" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+margin_right = 1023.0
+margin_bottom = 603.0
+
+[node name="Import" type="Container" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Create" type="Container" parent="Panel/TabContainer"]
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1019.0
+margin_bottom = 599.0
+
+[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Create"]
+margin_left = 500.0
+margin_right = 504.0
+margin_bottom = 567.0
+
+[node name="Nodes" type="ItemList" parent="Panel/TabContainer/Create"]
+margin_top = 80.0
+margin_right = 495.0
+margin_bottom = 567.0
+
+[node name="Area" type="OptionButton" parent="Panel/TabContainer/Create"]
+margin_right = 495.0
+margin_bottom = 30.0
+
+[node name="Room" type="OptionButton" parent="Panel/TabContainer/Create"]
+margin_top = 35.0
+margin_right = 495.0
+margin_bottom = 70.0
