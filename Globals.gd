@@ -1,5 +1,11 @@
 extends Node
 
+var current_world = null
+var current_room = null
+
+var json_layout = {}
+var working_layout = json_layout
+
 var DEBUG = true
 # Declare member variables here. Examples:
 # var a = 2
@@ -391,32 +397,266 @@ var endgame_rooms = [
 ]
 
 func get_array(area):
-		match area:
-			"Frigate Orpheon": 
-				return frigate_rooms
-			"Tallon Overworld":
-				return tallon_rooms
-			"Chozo Ruins":
-				return chozo_rooms
-			"Magmoor Caverns":
-				return magmoor_rooms
-			"Phendrana Drifts":
-				return phendrana_rooms
-			"Phazon Mines":
-				return phazon_rooms
-			"Impact Crater":
-				return impact_rooms
-			"End of Game":
-				return endgame_rooms
+	match area:
+		"Frigate Orpheon":
+			return frigate_rooms
+		"Tallon Overworld":
+			return tallon_rooms
+		"Chozo Ruins":
+			return chozo_rooms
+		"Magmoor Caverns":
+			return magmoor_rooms
+		"Phendrana Drifts":
+			return phendrana_rooms
+		"Phazon Mines":
+			return phazon_rooms
+		"Impact Crater":
+			return impact_rooms
+		"End of Game":
+			return endgame_rooms
 
 func DePrint(obj):
 	if DEBUG:
 		print(obj)
 
+
+
+var default_file = File.new()
+var data_text
+var data_parse
+var data
+func test_file(file):
+	if file.open("res://vanilla.json", File.READ) != OK:
+		return
+	data_text = default_file.get_as_text()
+	data_parse = JSON.parse(data_text)
+	if data_parse.error != OK:
+		return
+	data = data_parse.result
+	working_layout = data
+
+var world_element = {
+	"transports": {},
+	"rooms": {}
+}
+
+var room_element = {
+	name: {
+		"pickups": [
+			
+		],
+		"superheated": false,
+		"drainLiquids": false,
+		"liquids": [],
+		"modalHudMemo":null,
+		"position": null,
+		"destination":null,
+		"doors": []
+	}
+}
+
+var pickup_element = {
+	"type": "Nothing",
+	"model": "Nothing",
+	"scanText": "Nothing",
+	"hudmemoText": "Nothing Acquired",
+	"currIncrease": 1,
+	"maxIncrease": 1,
+	"respawn": false
+}
+
+func Create_Room(pickups, superheated, drainliquids, liquids, hudmemo, position, destination, doors):
+	var json = {
+		"pickups": pickups,
+		"superheated": superheated,
+		"drainLiquids": drainliquids,
+		"liquids": liquids,
+		"modalHudmemo": hudmemo,
+		"position": position,
+		"destination": destination,
+		"doors": doors
+	}
+	return json
+	
+func Create_Pickup(type : String, model : String, text : String, memotext : String, cur : int, maxInc : int, respawn : bool):
+	var json = {
+		"type": type,
+		"model": model,
+		"scanText": text,
+		"hudmemoText": memotext,
+		"currIncrease": cur,
+		"maxIncrease": maxInc,
+		"respawn": respawn
+	}
+	return json
+
+func Create_Door():
+	return {}
+func Create_Liquid():
+	return {}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	var json ={
+		"preferences": {
+			"qolGameBreaking": true,
+			"qolCosmetic": true,
+			"qolPickupScans": true,
+			"qolCutscenes": "competitive",
+			"mapDefaultState": "default",
+			"artifactHintBehavior": "all",
+			"automaticCrashScreen": true,
+			"trilogyDiscPath": null,
+			"quickplay": false
+		},
+		"gameConfig": {
+			"startingRoom": "Tallon Overworld:Landing Site",
+			"startingMemo": null,
+			"warpToStart": false,
+			"nonvariaHeatDamage": true,
+			"staggeredSuitDamage": false,
+			"heatDamagePerSec": 10,
+			"autoEnabledElevators": false,
+			"startingItems": {
+				"combatVisor": true,
+				"powerBeam": true,
+				"scanVisor": true,
+				"ice": false,
+				"wave": false,
+				"plasma": false,
+				"missiles": 0,
+				"bombs": false,
+				"powerBombs": 0,
+				"flamethrower": false,
+				"thermalVisor": false,
+				"charge": false,
+				"superMissile": false,
+				"grapple": false,
+				"xray": false,
+				"iceSpreader": false,
+				"spaceJump": false,
+				"morphBall": false,
+				"boostBall": false,
+				"spiderBall": false,
+				"gravitySuit": false,
+				"variaSuit": false,
+				"phazonSuit": false,
+				"energyTanks": 0,
+				"wavebuster": false
+			},
+			"etankCapacity": 100,
+			"itemMaxCapacity": {
+				"Energy Tank": 100,
+				"Missile": 250,
+				"Power Bomb": 8
+			},
+			"backwardsFrigate": true,
+			"backwardsLabs": true,
+			"backwardsUpperMines": true,
+			"backwardsLowerMines": true,
+			"phazonEliteWithoutDynamo": true,
+			"gameBanner": {
+				"gameName": "Metroid Prime: Plandomizer",
+				"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
+				"description": "github.com/toasterparty/metroid-prime-plandomizer"
+			},
+			"mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
+			"creditsString": null,
+			"artifactHints": {
+				"Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
+				"Artifact of Nature": "&push;&main-color=#c300ff;Artifact of Nature&pop; has no need to be located.",
+				"Artifact of Sun": "&push;&main-color=#c300ff;Artifact of Sun&pop; has no need to be located.",
+				"Artifact of World": "&push;&main-color=#c300ff;Artifact of World&pop; has no need to be located.",
+				"Artifact of Spirit": "&push;&main-color=#c300ff;Artifact of Spirit&pop; has no need to be located.",
+				"Artifact of Newborn": "&push;&main-color=#c300ff;Artifact of Newborn&pop; has no need to be located.",
+				"Artifact of Truth": "&push;&main-color=#c300ff;Artifact of Truth&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld - Artifact Temple&pop;.",
+				"Artifact of Strength": "&push;&main-color=#c300ff;Artifact of Strength&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Ice Ruins East&pop;.",
+				"Artifact of Elder": "&push;&main-color=#c300ff;Artifact of Elder&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Phendrana Canyon&pop;.",
+				"Artifact of Wild": "&push;&main-color=#c300ff;Artifact of Wild&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Warrior Shrine&pop;.",
+				"Artifact of Lifegiver": "&push;&main-color=#c300ff;Artifact of Lifegiver&pop; is located in &push;&main-color=#89a1ff;Phazon Mines - Metroid Quarantine A&pop;.",
+				"Artifact of Warrior": "&push;&main-color=#c300ff;Artifact of Warrior&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Transport Tunnel A&pop;."
+			}
+		},
+		"tweaks": {},
+		"levelData": {
+			"Impact Crater": {
+				"transporters": {
+					"Crater Entry Point": "Artifact Temple"
+				},
+				"rooms":{}
+			},
+			"Phendrana Drifts": {
+				"transporters": {
+					"Phendrana Drifts North (Phendrana Shorelines)": "Phazon Mines West (Phazon Processing Center)",
+					"Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
+				},
+				"rooms":{}
+			},
+			"Frigate Orpheon": {
+				"transporters": {},
+				"rooms":{}
+			},
+			"Magmoor Caverns": {
+				"transporters": {
+					"Magmoor Caverns North (Lava Lake)": "Chozo Ruins East (Reflecting Pool, Save Station)",
+					"Magmoor Caverns West (Monitor Station)": "Tallon Overworld South (Great Tree Hall, Upper)",
+					"Magmoor Caverns East (Twin Fires)": "Chozo Ruins North (Sun Tower)",
+					"Magmoor Caverns South (Magmoor Workstation, Debris)": "Tallon Overworld East (Frigate Crash Site)",
+					"Magmoor Caverns South (Magmoor Workstation, Save Station)": "Phendrana Drifts South (Quarantine Cave)"
+				},
+				"rooms":{}
+			},
+			"Phazon Mines": {
+				"transporters": {
+					"Phazon Mines East (Main Quarry)": "Tallon Overworld South (Great Tree Hall, Lower)",
+					"Phazon Mines West (Phazon Processing Center)": "Phendrana Drifts North (Phendrana Shorelines)"
+				},
+				"rooms":{}
+			},
+			"Tallon Overworld": {
+				"transporters": {
+					"Tallon Overworld North (Tallon Canyon)": "Chozo Ruins South (Reflecting Pool, Far End)",
+					"Artifact Temple": "Credits",
+					"Tallon Overworld East (Frigate Crash Site)": "Magmoor Caverns South (Magmoor Workstation, Debris)",
+					"Tallon Overworld West (Root Cave)": "Chozo Ruins West (Main Plaza)",
+					"Tallon Overworld South (Great Tree Hall, Upper)": "Magmoor Caverns West (Monitor Station)",
+					"Tallon Overworld South (Great Tree Hall, Lower)": "Phazon Mines East (Main Quarry)"
+				},
+				"rooms":{}
+			},
+			"Chozo Ruins": {
+				"transporters": {
+					"Chozo Ruins West (Main Plaza)": "Tallon Overworld West (Root Cave)",
+					"Chozo Ruins North (Sun Tower)": "Magmoor Caverns East (Twin Fires)",
+					"Chozo Ruins East (Reflecting Pool, Save Station)": "Magmoor Caverns North (Lava Lake)",
+					"Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld North (Tallon Canyon)"
+				},
+				"rooms":{}
+			}
+		},
+		"inputIso": "F:\\Dropbox\\Media\\Games\\ROMs\\Nintendo\\Gamecube\\Metroid Prime\\Metroid Prime [GM8E01].iso",
+		"outputIso": "D:\\Libraries\\Downloads\\Prime Randomizer - Turret Turret Nature.iso"
+	}
+	for x in impact_rooms:
+		json["levelData"]["Impact Crater"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in phendrana_rooms:
+		json["levelData"]["Phendrana Drifts"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in frigate_rooms:
+		json["levelData"]["Frigate Orpheon"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in magmoor_rooms:
+		json["levelData"]["Magmoor Caverns"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in phazon_rooms:
+		json["levelData"]["Phazon Mines"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in tallon_rooms:
+		json["levelData"]["Tallon Overworld"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	for x in chozo_rooms:
+		json["levelData"]["Chozo Ruins"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+	
+	var serial=JSON.print(json, "\t")
+	var file = File.new()
+	file.open("user://json_test.json", File.WRITE)
+	file.store_string(serial)
+	file.close()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

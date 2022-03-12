@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
 [ext_resource path="res://Nodes List.gd" type="Script" id=3]
+[ext_resource path="res://Import Button.gd" type="Script" id=4]
+[ext_resource path="res://FileDialog.gd" type="Script" id=5]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -15,7 +17,6 @@ margin_right = 1023.0
 margin_bottom = 603.0
 
 [node name="Import" type="Container" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -23,7 +24,30 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
+[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer/Import"]
+margin_left = 150.0
+margin_right = 850.0
+margin_bottom = 500.0
+popup_exclusive = true
+window_title = "Open a File"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.json" )
+current_dir = "/Users/devta/Documents/Godot/Plandomizer"
+current_path = "/Users/devta/Documents/Godot/Plandomizer/"
+script = ExtResource( 5 )
+
+[node name="Import Button" type="Button" parent="Panel/TabContainer/Import"]
+margin_left = 420.0
+margin_top = 220.0
+margin_right = 506.0
+margin_bottom = 240.0
+rect_scale = Vector2( 2, 2 )
+text = "Import JSon"
+script = ExtResource( 4 )
+
 [node name="Create" type="Container" parent="Panel/TabContainer"]
+visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1019.0
@@ -66,6 +90,9 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
+[connection signal="file_selected" from="Panel/TabContainer/Import/FileDialog" to="Panel/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer/Import/Import Button" to="Panel/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
+[connection signal="item_selected" from="Panel/TabContainer/Create/Nodes" to="Panel/TabContainer/Create/Nodes" method="_on_Nodes_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Create/Area" to="Panel/TabContainer/Create/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Create/Room" to="Panel/TabContainer/Create/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Create/Room" to="Panel/TabContainer/Create/Room" method="_on_Room_item_selected"]

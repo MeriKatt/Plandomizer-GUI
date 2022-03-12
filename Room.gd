@@ -31,18 +31,18 @@ func _process(_delta):
 func _on_Area_item_selected(index):
 	if worlds[index] == "":
 		return
-	current_world = worlds[index]
+	Globals.current_world = worlds[index]
 	clear()
 	var i = 1
-	var array = Globals.get_array(current_world)
+	var array = Globals.get_array(Globals.current_world)
 	for x in array:
 		add_item(x,i)
 		i+=1
 
 
 func _on_Room_item_selected(index):
-	current_room = Globals.get_array(current_world)[index]
-	DePrint(current_room)
+	Globals.current_room = Globals.get_array(Globals.current_world)[index]
+	DePrint(Globals.current_room)
 
 
 func _on_Elevators_item_selected(_index):
@@ -51,14 +51,14 @@ func _on_Elevators_item_selected(_index):
 		return
 	var world = elevators_world[elev]
 	var room = elevators_room[elev]
-	current_room = room
+	Globals.current_room = room
 	var ind = 0
 	for x in worlds:
 		if x == world:
 			clear()
-			current_world = world
-			DePrint(current_world)
-			var array = Globals.get_array(current_world)
+			Globals.current_world = world
+			DePrint(Globals.current_world)
+			var array = Globals.get_array(Globals.current_world)
 			DePrint(array)
 			var l = 0
 			for c in array:

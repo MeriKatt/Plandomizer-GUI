@@ -29,15 +29,15 @@ func _ready():
 func _on_Area_item_selected(index):
 	if worlds[index] == "":
 		return
-	current_world = worlds[index]
+	Globals.current_world = worlds[index]
 	clear()
 	var i = 1
-	var array = Globals.get_array(current_world)
+	var array = Globals.get_array(Globals.current_world)
 	for x in array:
 		add_item(x,i)
 		i+=1
 
 
 func _on_Room_item_selected(index):
-	current_room = Globals.get_array(current_world)[index]
-	DePrint(current_room)
+	Globals.current_room = Globals.get_array(Globals.current_world)[index]
+	DePrint(Globals.current_room)

@@ -1,0 +1,1947 @@
+{
+    "preferences": {
+      "qolGameBreaking": true,
+      "qolCosmetic": true,
+      "qolPickupScans": true,
+      "qolCutscenes": "competitive",
+      "mapDefaultState": "default",
+      "artifactHintBehavior": "all",
+      "automaticCrashScreen": true,
+      "trilogyDiscPath": null,
+      "quickplay": false
+    },
+    "gameConfig": {
+      "startingRoom": "Tallon Overworld:Landing Site",
+      "startingMemo": null,
+      "warpToStart": false,
+      "nonvariaHeatDamage": true,
+      "staggeredSuitDamage": false,
+      "heatDamagePerSec": 10,
+      "autoEnabledElevators": false,
+      "startingItems": {
+        "combatVisor": true,
+        "powerBeam": true,
+        "scanVisor": true,
+        "ice": false,
+        "wave": false,
+        "plasma": false,
+        "missiles": 0,
+        "bombs": false,
+        "powerBombs": 0,
+        "flamethrower": false,
+        "thermalVisor": false,
+        "charge": false,
+        "superMissile": false,
+        "grapple": false,
+        "xray": false,
+        "iceSpreader": false,
+        "spaceJump": false,
+        "morphBall": false,
+        "boostBall": false,
+        "spiderBall": false,
+        "gravitySuit": false,
+        "variaSuit": false,
+        "phazonSuit": false,
+        "energyTanks": 0,
+        "wavebuster": false
+      },
+      "etankCapacity": 100,
+      "itemMaxCapacity": {
+        "Energy Tank": 100,
+        "Missile": 250,
+        "Power Bomb": 8
+      },
+      "backwardsFrigate": true,
+      "backwardsLabs": true,
+      "backwardsUpperMines": true,
+      "backwardsLowerMines": true,
+      "phazonEliteWithoutDynamo": true,
+      "gameBanner": {
+        "gameName": "Metroid Prime: Plandomizer",
+        "gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
+        "description": "github.com/toasterparty/metroid-prime-plandomizer"
+      },
+      "mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
+      "creditsString": null,
+      "artifactHints": {
+        "Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
+        "Artifact of Nature": "&push;&main-color=#c300ff;Artifact of Nature&pop; has no need to be located.",
+        "Artifact of Sun": "&push;&main-color=#c300ff;Artifact of Sun&pop; has no need to be located.",
+        "Artifact of World": "&push;&main-color=#c300ff;Artifact of World&pop; has no need to be located.",
+        "Artifact of Spirit": "&push;&main-color=#c300ff;Artifact of Spirit&pop; has no need to be located.",
+        "Artifact of Newborn": "&push;&main-color=#c300ff;Artifact of Newborn&pop; has no need to be located.",
+        "Artifact of Truth": "&push;&main-color=#c300ff;Artifact of Truth&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld - Artifact Temple&pop;.",
+        "Artifact of Strength": "&push;&main-color=#c300ff;Artifact of Strength&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Ice Ruins East&pop;.",
+        "Artifact of Elder": "&push;&main-color=#c300ff;Artifact of Elder&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Phendrana Canyon&pop;.",
+        "Artifact of Wild": "&push;&main-color=#c300ff;Artifact of Wild&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Warrior Shrine&pop;.",
+        "Artifact of Lifegiver": "&push;&main-color=#c300ff;Artifact of Lifegiver&pop; is located in &push;&main-color=#89a1ff;Phazon Mines - Metroid Quarantine A&pop;.",
+        "Artifact of Warrior": "&push;&main-color=#c300ff;Artifact of Warrior&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Transport Tunnel A&pop;."
+      }
+    },
+    "tweaks": {},
+    "levelData": {
+      "Impact Crater": {
+        "transports": {
+          "Crater Entry Point": "Artifact Temple"
+        },
+        "rooms": {}
+      },
+      "Phendrana Drifts": {
+        "transports": {
+          "Phendrana Drifts North (Phendrana Shorelines)": "Phazon Mines West (Phazon Processing Center)",
+          "Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
+        },
+        "rooms": {
+          "Phendrana Shorelines": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Chozo Ice Temple": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ice Ruins West": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ice Ruins East": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Chapel of the Elders": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ruined Courtyard": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Phendrana Canyon": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Quarantine Cave": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Research Lab Hydra": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Quarantine Monitor": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Observatory": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Transport Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Control Tower": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Research Core": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Frost Cave": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Research Lab Aether": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Gravity Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Storage Cave": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Security Cave": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          }
+        }
+      },
+      "Frigate Orpheon": {
+        "transports": {},
+        "rooms": {}
+      },
+      "Magmoor Caverns": {
+        "transports": {
+          "Magmoor Caverns North (Lava Lake)": "Chozo Ruins East (Reflecting Pool, Save Station)",
+          "Magmoor Caverns West (Monitor Station)": "Tallon Overworld South (Great Tree Hall, Upper)",
+          "Magmoor Caverns East (Twin Fires)": "Chozo Ruins North (Sun Tower)",
+          "Magmoor Caverns South (Magmoor Workstation, Debris)": "Tallon Overworld East (Frigate Crash Site)",
+          "Magmoor Caverns South (Magmoor Workstation, Save Station)": "Phendrana Drifts South (Quarantine Cave)"
+        },
+        "rooms": {
+          "Lava Lake": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Triclops Pit": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Storage Cavern": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Transport Tunnel A": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Warrior Shrine": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Shore Tunnel": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Fiery Shores": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Plasma Processing": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Magmoor Workstation": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          }
+        }
+      },
+      "Phazon Mines": {
+        "transports": {
+          "Phazon Mines East (Main Quarry)": "Tallon Overworld South (Great Tree Hall, Lower)",
+          "Phazon Mines West (Phazon Processing Center)": "Phendrana Drifts North (Phendrana Shorelines)"
+        },
+        "rooms": {
+          "Main Quarry": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Security Access A": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Storage Depot B": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Storage Depot A": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Elite Research": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Elite Control Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ventilation Shaft": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Phazon Processing Center": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Processing Center Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Elite Quarters": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Central Dynamo": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Metroid Quarantine B": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Metroid Quarantine A": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Fungal Hall B": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Phazon Mining Tunnel": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Fungal Hall Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          }
+        }
+      },
+      "Tallon Overworld": {
+        "transports": {
+          "Tallon Overworld North (Tallon Canyon)": "Chozo Ruins South (Reflecting Pool, Far End)",
+          "Artifact Temple": "Credits",
+          "Tallon Overworld East (Frigate Crash Site)": "Magmoor Caverns South (Magmoor Workstation, Debris)",
+          "Tallon Overworld West (Root Cave)": "Chozo Ruins West (Main Plaza)",
+          "Tallon Overworld South (Great Tree Hall, Upper)": "Magmoor Caverns West (Monitor Station)",
+          "Tallon Overworld South (Great Tree Hall, Lower)": "Phazon Mines East (Main Quarry)"
+        },
+        "rooms": {
+          "Landing Site": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Alcove": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Frigate Crash Site": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Overgrown Cavern": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Root Cave": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Artifact Temple": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Transport Tunnel B": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Arbor Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Cargo Freight Lift to Deck Gamma": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Biohazard Containment": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Hydro Access Tunnel": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Great Tree Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Life Grove Tunnel": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Life Grove": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          }
+        }
+      },
+      "Chozo Ruins": {
+        "transports": {
+          "Chozo Ruins West (Main Plaza)": "Tallon Overworld West (Root Cave)",
+          "Chozo Ruins North (Sun Tower)": "Magmoor Caverns East (Twin Fires)",
+          "Chozo Ruins East (Reflecting Pool, Save Station)": "Magmoor Caverns North (Lava Lake)",
+          "Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld North (Tallon Canyon)"
+        },
+        "rooms": {
+          "Main Plaza": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ruined Fountain": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ruined Shrine": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Vault": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Training Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ruined Nursery": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Training Chamber Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Magma Pool": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Tower of Light": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Tower Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Ruined Gallery": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Transport Access North": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Gathering Hall": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Hive Totem": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Sunchamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Watery Hall Access": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Watery Hall": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Dynamo": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Burn Dome": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Furnace": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              },
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Hall of the Elders": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Crossway": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Elder Chamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          },
+          "Antechamber": {
+            "pickups": [
+              {
+                "type": "Nothing",
+                "model": "Nothing",
+                "scanText": "Nothing",
+                "hudmemoText": "Nothing Acquired",
+                "currIncrease": 1,
+                "maxIncrease": 1,
+                "respawn": false
+              }
+            ],
+            "superheated": false,
+            "drainLiquids": false,
+            "liquids": [],
+            "modalHudmemo": null,
+            "position": null,
+            "destination": null,
+            "doors": []
+          }
+        }
+      }
+    },
+    "inputIso": "F:\\Dropbox\\Media\\Games\\ROMs\\Nintendo\\Gamecube\\Metroid Prime\\Metroid Prime [GM8E01].iso",
+    "outputIso": "D:\\Libraries\\Downloads\\Prime Randomizer - Turret Turret Nature.iso"
+}
