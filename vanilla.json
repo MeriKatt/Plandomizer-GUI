@@ -368,7 +368,11 @@
             "modalHudmemo": null,
             "position": null,
             "destination": null,
-            "doors": []
+            "doors": {
+              "0": {
+                "type": "Red"
+              }
+            }
           },
           "Research Core": {
             "pickups": [

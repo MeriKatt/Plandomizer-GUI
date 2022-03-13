@@ -464,7 +464,7 @@ var pickup_element = {
 	"maxIncrease": 1,
 	"respawn": false
 }
-
+var node_details
 func Create_Room(pickups, superheated, drainliquids, liquids, hudmemo, position, destination, doors):
 	var json = {
 		"pickups": pickups,
@@ -490,8 +490,13 @@ func Create_Pickup(type : String, model : String, text : String, memotext : Stri
 	}
 	return json
 
-func Create_Door():
-	return {}
+func Create_Door(type, blastshield, destination):
+	return {
+		"type": type,
+		"blastShieldType": blastshield or null,
+		"destination": destination or null
+	}
+
 func Create_Liquid():
 	return {}
 

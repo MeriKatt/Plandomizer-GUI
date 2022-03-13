@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Liquid/Type.gd" type="Script" id=1]
+[ext_resource path="res://Position.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Liquid/Liquid node.gd" type="Script" id=3]
+
+[node name="Liquid node" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Position" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Position" parent="Position" instance=ExtResource( 2 )]
+position = Vector2( -13, 58 )
+
+[node name="Liquid Type" type="Control" parent="."]
+margin_left = 12.0
+margin_top = 160.0
+margin_right = 387.0
+margin_bottom = 257.0
+
+[node name="Type label" type="Label" parent="Liquid Type"]
+margin_left = 3.0
+margin_top = 25.0
+margin_right = 43.0
+margin_bottom = 39.0
+rect_scale = Vector2( 2, 2 )
+text = "Type:"
+
+[node name="Type" type="OptionButton" parent="Liquid Type"]
+margin_left = 75.0
+margin_top = 22.0
+margin_right = 205.0
+margin_bottom = 42.0
+rect_scale = Vector2( 2, 1.5 )
+script = ExtResource( 1 )
