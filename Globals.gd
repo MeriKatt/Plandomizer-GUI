@@ -502,166 +502,166 @@ func Create_Liquid():
 	return {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var json ={
-		"preferences": {
-			"qolGameBreaking": true,
-			"qolCosmetic": true,
-			"qolPickupScans": true,
-			"qolCutscenes": "competitive",
-			"mapDefaultState": "default",
-			"artifactHintBehavior": "all",
-			"automaticCrashScreen": true,
-			"trilogyDiscPath": null,
-			"quickplay": false
-		},
-		"gameConfig": {
-			"startingRoom": "Tallon Overworld:Landing Site",
-			"startingMemo": null,
-			"warpToStart": false,
-			"nonvariaHeatDamage": true,
-			"staggeredSuitDamage": false,
-			"heatDamagePerSec": 10,
-			"autoEnabledElevators": false,
-			"startingItems": {
-				"combatVisor": true,
-				"powerBeam": true,
-				"scanVisor": true,
-				"ice": false,
-				"wave": false,
-				"plasma": false,
-				"missiles": 0,
-				"bombs": false,
-				"powerBombs": 0,
-				"flamethrower": false,
-				"thermalVisor": false,
-				"charge": false,
-				"superMissile": false,
-				"grapple": false,
-				"xray": false,
-				"iceSpreader": false,
-				"spaceJump": false,
-				"morphBall": false,
-				"boostBall": false,
-				"spiderBall": false,
-				"gravitySuit": false,
-				"variaSuit": false,
-				"phazonSuit": false,
-				"energyTanks": 0,
-				"wavebuster": false
-			},
-			"etankCapacity": 100,
-			"itemMaxCapacity": {
-				"Energy Tank": 100,
-				"Missile": 250,
-				"Power Bomb": 8
-			},
-			"backwardsFrigate": true,
-			"backwardsLabs": true,
-			"backwardsUpperMines": true,
-			"backwardsLowerMines": true,
-			"phazonEliteWithoutDynamo": true,
-			"gameBanner": {
-				"gameName": "Metroid Prime: Plandomizer",
-				"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
-				"description": "github.com/toasterparty/metroid-prime-plandomizer"
-			},
-			"mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
-			"creditsString": null,
-			"artifactHints": {
-				"Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
-				"Artifact of Nature": "&push;&main-color=#c300ff;Artifact of Nature&pop; has no need to be located.",
-				"Artifact of Sun": "&push;&main-color=#c300ff;Artifact of Sun&pop; has no need to be located.",
-				"Artifact of World": "&push;&main-color=#c300ff;Artifact of World&pop; has no need to be located.",
-				"Artifact of Spirit": "&push;&main-color=#c300ff;Artifact of Spirit&pop; has no need to be located.",
-				"Artifact of Newborn": "&push;&main-color=#c300ff;Artifact of Newborn&pop; has no need to be located.",
-				"Artifact of Truth": "&push;&main-color=#c300ff;Artifact of Truth&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld - Artifact Temple&pop;.",
-				"Artifact of Strength": "&push;&main-color=#c300ff;Artifact of Strength&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Ice Ruins East&pop;.",
-				"Artifact of Elder": "&push;&main-color=#c300ff;Artifact of Elder&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Phendrana Canyon&pop;.",
-				"Artifact of Wild": "&push;&main-color=#c300ff;Artifact of Wild&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Warrior Shrine&pop;.",
-				"Artifact of Lifegiver": "&push;&main-color=#c300ff;Artifact of Lifegiver&pop; is located in &push;&main-color=#89a1ff;Phazon Mines - Metroid Quarantine A&pop;.",
-				"Artifact of Warrior": "&push;&main-color=#c300ff;Artifact of Warrior&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Transport Tunnel A&pop;."
-			}
-		},
-		"tweaks": {},
-		"levelData": {
-			"Impact Crater": {
-				"transporters": {
-					"Crater Entry Point": "Artifact Temple"
-				},
-				"rooms":{}
-			},
-			"Phendrana Drifts": {
-				"transporters": {
-					"Phendrana Drifts North (Phendrana Shorelines)": "Phazon Mines West (Phazon Processing Center)",
-					"Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
-				},
-				"rooms":{}
-			},
-			"Frigate Orpheon": {
-				"transporters": {},
-				"rooms":{}
-			},
-			"Magmoor Caverns": {
-				"transporters": {
-					"Magmoor Caverns North (Lava Lake)": "Chozo Ruins East (Reflecting Pool, Save Station)",
-					"Magmoor Caverns West (Monitor Station)": "Tallon Overworld South (Great Tree Hall, Upper)",
-					"Magmoor Caverns East (Twin Fires)": "Chozo Ruins North (Sun Tower)",
-					"Magmoor Caverns South (Magmoor Workstation, Debris)": "Tallon Overworld East (Frigate Crash Site)",
-					"Magmoor Caverns South (Magmoor Workstation, Save Station)": "Phendrana Drifts South (Quarantine Cave)"
-				},
-				"rooms":{}
-			},
-			"Phazon Mines": {
-				"transporters": {
-					"Phazon Mines East (Main Quarry)": "Tallon Overworld South (Great Tree Hall, Lower)",
-					"Phazon Mines West (Phazon Processing Center)": "Phendrana Drifts North (Phendrana Shorelines)"
-				},
-				"rooms":{}
-			},
-			"Tallon Overworld": {
-				"transporters": {
-					"Tallon Overworld North (Tallon Canyon)": "Chozo Ruins South (Reflecting Pool, Far End)",
-					"Artifact Temple": "Credits",
-					"Tallon Overworld East (Frigate Crash Site)": "Magmoor Caverns South (Magmoor Workstation, Debris)",
-					"Tallon Overworld West (Root Cave)": "Chozo Ruins West (Main Plaza)",
-					"Tallon Overworld South (Great Tree Hall, Upper)": "Magmoor Caverns West (Monitor Station)",
-					"Tallon Overworld South (Great Tree Hall, Lower)": "Phazon Mines East (Main Quarry)"
-				},
-				"rooms":{}
-			},
-			"Chozo Ruins": {
-				"transporters": {
-					"Chozo Ruins West (Main Plaza)": "Tallon Overworld West (Root Cave)",
-					"Chozo Ruins North (Sun Tower)": "Magmoor Caverns East (Twin Fires)",
-					"Chozo Ruins East (Reflecting Pool, Save Station)": "Magmoor Caverns North (Lava Lake)",
-					"Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld North (Tallon Canyon)"
-				},
-				"rooms":{}
-			}
-		},
-		"inputIso": "F:\\Dropbox\\Media\\Games\\ROMs\\Nintendo\\Gamecube\\Metroid Prime\\Metroid Prime [GM8E01].iso",
-		"outputIso": "D:\\Libraries\\Downloads\\Prime Randomizer - Turret Turret Nature.iso"
-	}
-	for x in impact_rooms:
-		json["levelData"]["Impact Crater"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in phendrana_rooms:
-		json["levelData"]["Phendrana Drifts"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in frigate_rooms:
-		json["levelData"]["Frigate Orpheon"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in magmoor_rooms:
-		json["levelData"]["Magmoor Caverns"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in phazon_rooms:
-		json["levelData"]["Phazon Mines"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in tallon_rooms:
-		json["levelData"]["Tallon Overworld"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	for x in chozo_rooms:
-		json["levelData"]["Chozo Ruins"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-	
-	var serial=JSON.print(json, "\t")
-	var file = File.new()
-	file.open("user://json_test.json", File.WRITE)
-	file.store_string(serial)
-	file.close()
+#	var json ={
+#		"preferences": {
+#			"qolGameBreaking": true,
+#			"qolCosmetic": true,
+#			"qolPickupScans": true,
+#			"qolCutscenes": "competitive",
+#			"mapDefaultState": "default",
+#			"artifactHintBehavior": "all",
+#			"automaticCrashScreen": true,
+#			"trilogyDiscPath": null,
+#			"quickplay": false
+#		},
+#		"gameConfig": {
+#			"startingRoom": "Tallon Overworld:Landing Site",
+#			"startingMemo": null,
+#			"warpToStart": false,
+#			"nonvariaHeatDamage": true,
+#			"staggeredSuitDamage": false,
+#			"heatDamagePerSec": 10,
+#			"autoEnabledElevators": false,
+#			"startingItems": {
+#				"combatVisor": true,
+#				"powerBeam": true,
+#				"scanVisor": true,
+#				"ice": false,
+#				"wave": false,
+#				"plasma": false,
+#				"missiles": 0,
+#				"bombs": false,
+#				"powerBombs": 0,
+#				"flamethrower": false,
+#				"thermalVisor": false,
+#				"charge": false,
+#				"superMissile": false,
+#				"grapple": false,
+#				"xray": false,
+#				"iceSpreader": false,
+#				"spaceJump": false,
+#				"morphBall": false,
+#				"boostBall": false,
+#				"spiderBall": false,
+#				"gravitySuit": false,
+#				"variaSuit": false,
+#				"phazonSuit": false,
+#				"energyTanks": 0,
+#				"wavebuster": false
+#			},
+#			"etankCapacity": 100,
+#			"itemMaxCapacity": {
+#				"Energy Tank": 100,
+#				"Missile": 250,
+#				"Power Bomb": 8
+#			},
+#			"backwardsFrigate": true,
+#			"backwardsLabs": true,
+#			"backwardsUpperMines": true,
+#			"backwardsLowerMines": true,
+#			"phazonEliteWithoutDynamo": true,
+#			"gameBanner": {
+#				"gameName": "Metroid Prime: Plandomizer",
+#				"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
+#				"description": "github.com/toasterparty/metroid-prime-plandomizer"
+#			},
+#			"mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
+#			"creditsString": null,
+#			"artifactHints": {
+#				"Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
+#				"Artifact of Nature": "&push;&main-color=#c300ff;Artifact of Nature&pop; has no need to be located.",
+#				"Artifact of Sun": "&push;&main-color=#c300ff;Artifact of Sun&pop; has no need to be located.",
+#				"Artifact of World": "&push;&main-color=#c300ff;Artifact of World&pop; has no need to be located.",
+#				"Artifact of Spirit": "&push;&main-color=#c300ff;Artifact of Spirit&pop; has no need to be located.",
+#				"Artifact of Newborn": "&push;&main-color=#c300ff;Artifact of Newborn&pop; has no need to be located.",
+#				"Artifact of Truth": "&push;&main-color=#c300ff;Artifact of Truth&pop; is located in &push;&main-color=#89a1ff;Tallon Overworld - Artifact Temple&pop;.",
+#				"Artifact of Strength": "&push;&main-color=#c300ff;Artifact of Strength&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Ice Ruins East&pop;.",
+#				"Artifact of Elder": "&push;&main-color=#c300ff;Artifact of Elder&pop; is located in &push;&main-color=#89a1ff;Phendrana Drifts - Phendrana Canyon&pop;.",
+#				"Artifact of Wild": "&push;&main-color=#c300ff;Artifact of Wild&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Warrior Shrine&pop;.",
+#				"Artifact of Lifegiver": "&push;&main-color=#c300ff;Artifact of Lifegiver&pop; is located in &push;&main-color=#89a1ff;Phazon Mines - Metroid Quarantine A&pop;.",
+#				"Artifact of Warrior": "&push;&main-color=#c300ff;Artifact of Warrior&pop; is located in &push;&main-color=#89a1ff;Magmoor Caverns - Transport Tunnel A&pop;."
+#			}
+#		},
+#		"tweaks": {},
+#		"levelData": {
+#			"Impact Crater": {
+#				"transporters": {
+#					"Crater Entry Point": "Artifact Temple"
+#				},
+#				"rooms":{}
+#			},
+#			"Phendrana Drifts": {
+#				"transporters": {
+#					"Phendrana Drifts North (Phendrana Shorelines)": "Phazon Mines West (Phazon Processing Center)",
+#					"Phendrana Drifts South (Quarantine Cave)": "Magmoor Caverns South (Magmoor Workstation, Save Station)"
+#				},
+#				"rooms":{}
+#			},
+#			"Frigate Orpheon": {
+#				"transporters": {},
+#				"rooms":{}
+#			},
+#			"Magmoor Caverns": {
+#				"transporters": {
+#					"Magmoor Caverns North (Lava Lake)": "Chozo Ruins East (Reflecting Pool, Save Station)",
+#					"Magmoor Caverns West (Monitor Station)": "Tallon Overworld South (Great Tree Hall, Upper)",
+#					"Magmoor Caverns East (Twin Fires)": "Chozo Ruins North (Sun Tower)",
+#					"Magmoor Caverns South (Magmoor Workstation, Debris)": "Tallon Overworld East (Frigate Crash Site)",
+#					"Magmoor Caverns South (Magmoor Workstation, Save Station)": "Phendrana Drifts South (Quarantine Cave)"
+#				},
+#				"rooms":{}
+#			},
+#			"Phazon Mines": {
+#				"transporters": {
+#					"Phazon Mines East (Main Quarry)": "Tallon Overworld South (Great Tree Hall, Lower)",
+#					"Phazon Mines West (Phazon Processing Center)": "Phendrana Drifts North (Phendrana Shorelines)"
+#				},
+#				"rooms":{}
+#			},
+#			"Tallon Overworld": {
+#				"transporters": {
+#					"Tallon Overworld North (Tallon Canyon)": "Chozo Ruins South (Reflecting Pool, Far End)",
+#					"Artifact Temple": "Credits",
+#					"Tallon Overworld East (Frigate Crash Site)": "Magmoor Caverns South (Magmoor Workstation, Debris)",
+#					"Tallon Overworld West (Root Cave)": "Chozo Ruins West (Main Plaza)",
+#					"Tallon Overworld South (Great Tree Hall, Upper)": "Magmoor Caverns West (Monitor Station)",
+#					"Tallon Overworld South (Great Tree Hall, Lower)": "Phazon Mines East (Main Quarry)"
+#				},
+#				"rooms":{}
+#			},
+#			"Chozo Ruins": {
+#				"transporters": {
+#					"Chozo Ruins West (Main Plaza)": "Tallon Overworld West (Root Cave)",
+#					"Chozo Ruins North (Sun Tower)": "Magmoor Caverns East (Twin Fires)",
+#					"Chozo Ruins East (Reflecting Pool, Save Station)": "Magmoor Caverns North (Lava Lake)",
+#					"Chozo Ruins South (Reflecting Pool, Far End)": "Tallon Overworld North (Tallon Canyon)"
+#				},
+#				"rooms":{}
+#			}
+#		},
+#		"inputIso": "F:\\Dropbox\\Media\\Games\\ROMs\\Nintendo\\Gamecube\\Metroid Prime\\Metroid Prime [GM8E01].iso",
+#		"outputIso": "D:\\Libraries\\Downloads\\Prime Randomizer - Turret Turret Nature.iso"
+#	}
+#	for x in impact_rooms:
+#		json["levelData"]["Impact Crater"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in phendrana_rooms:
+#		json["levelData"]["Phendrana Drifts"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in frigate_rooms:
+#		json["levelData"]["Frigate Orpheon"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in magmoor_rooms:
+#		json["levelData"]["Magmoor Caverns"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in phazon_rooms:
+#		json["levelData"]["Phazon Mines"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in tallon_rooms:
+#		json["levelData"]["Tallon Overworld"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#	for x in chozo_rooms:
+#		json["levelData"]["Chozo Ruins"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
+#
+#	var serial=JSON.print(json, "\t")
+#	var file = File.new()
+#	file.open("user://json_test.json", File.WRITE)
+#	file.store_string(serial)
+#	file.close()
 	test_file(default_file)
 	#Json_Handler.Save_Room_Array_Changes("Phendrana Drifts", "Control Tower", "pickups", 0,  {
 	#	"type": "Nothing",
