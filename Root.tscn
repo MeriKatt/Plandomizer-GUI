@@ -51,6 +51,7 @@ text = "Import JSon"
 script = ExtResource( 4 )
 
 [node name="Elevators" type="Container" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -83,11 +84,6 @@ margin_bottom = 567.0
 margin_left = 460.0
 margin_right = 1010.0
 margin_bottom = 567.0
-
-[node name="Room Options" type="Container" parent="Panel/TabContainer"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
 
 [node name="Room Nodes" type="Container" parent="Panel/TabContainer"]
 visible = false
@@ -131,9 +127,188 @@ rect_scale = Vector2( 2, 2 )
 text = "Add Pickup"
 
 [node name="Game Options" type="Container" parent="Panel/TabContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TabContainer" type="TabContainer" parent="Panel/TabContainer/Game Options"]
+margin_top = 30.0
+margin_right = 1020.0
+margin_bottom = 597.0
+
+[node name="Preferences" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Starting Items" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="Item Capacity" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Game Banner" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Artifact Hints" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Tweaks" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Config Options" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1016.0
+margin_bottom = 563.0
+
+[node name="Label" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "Starting Room:"
+
+[node name="StartingRoom" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 200.0
+margin_top = 2.0
+margin_right = 543.0
+margin_bottom = 26.0
+text = "world:room example: Tallon Overworld:Landing Site"
+expand_to_text_length = true
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 27.0
+margin_right = 97.0
+margin_bottom = 41.0
+rect_scale = Vector2( 2, 2 )
+text = "Starting Memo:"
+
+[node name="StartingMemo" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 200.0
+margin_top = 29.0
+margin_right = 258.0
+margin_bottom = 53.0
+text = "null"
+expand_to_text_length = true
+
+[node name="WarpToStart" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 60.0
+margin_right = 111.0
+margin_bottom = 84.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Warp to Start"
+
+[node name="NonVariaHeatDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 80.0
+margin_right = 180.0
+margin_bottom = 104.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Non-Varia Heat Damage"
+
+[node name="StaggeredSuitDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 100.0
+margin_right = 174.0
+margin_bottom = 124.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Staggered Suit Damage"
+
+[node name="HeatDamagePerSecond" type="SpinBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 280.0
+margin_top = 130.0
+margin_right = 354.0
+margin_bottom = 154.0
+
+[node name="Label3" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 130.0
+margin_right = 139.0
+margin_bottom = 144.0
+rect_scale = Vector2( 2, 2 )
+text = "Heat damage per sec:"
+
+[node name="AutoEnableElevators" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 160.0
+margin_right = 168.0
+margin_bottom = 184.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Auto enable elevators"
+
+[node name="BackwardsFrigate" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 180.0
+margin_right = 142.0
+margin_bottom = 204.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Backwards Frigate"
+
+[node name="BackwardsLabs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 200.0
+margin_right = 128.0
+margin_bottom = 224.0
+rect_scale = Vector2( 1.2, 1.2 )
+pressed = true
+text = "Backwards Labs"
+
+[node name="BackwardsUpperMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 220.0
+margin_right = 181.0
+margin_bottom = 244.0
+rect_scale = Vector2( 1.2, 1.2 )
+pressed = true
+text = "Backwards Upper Mines"
+
+[node name="BackwardsLowerMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 240.0
+margin_right = 180.0
+margin_bottom = 264.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Backwards Lower Mines"
+
+[node name="PhazonEliteWithoutDynamo" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 260.0
+margin_right = 215.0
+margin_bottom = 284.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "Phazon Elite without Dynamo"
+
+[node name="Label4" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 290.0
+margin_right = 135.0
+margin_bottom = 304.0
+rect_scale = Vector2( 2, 2 )
+text = "Main Menu Message:"
+
+[node name="MainMenuMessage" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 280.0
+margin_top = 290.0
+margin_right = 680.0
+margin_bottom = 320.0
+
+[node name="CreditsString" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 180.0
+margin_top = 325.0
+margin_right = 480.0
+margin_bottom = 349.0
+text = "null"
+
+[node name="Label5" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_top = 320.0
+margin_right = 89.0
+margin_bottom = 334.0
+rect_scale = Vector2( 2, 2 )
+text = "Credits String:"
 
 [node name="Save" type="Container" parent="Panel/TabContainer"]
 visible = false
