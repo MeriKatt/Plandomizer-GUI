@@ -26,6 +26,7 @@ var door_types = [
 ]
 
 var shield_types = [
+	"null",
 	"Missile",
 	"Power Bomb",
 	"Super Missile",
@@ -53,10 +54,12 @@ func _on_Door_Warp_destination_item_selected(index):
 func _on_Blastshield_Type_item_selected(index):
 	cur_shield = shield_types[index]
 	print(cur_shield)
+	if cur_shield == "null":
+		cur_shield = null
 	door_details["blastShield"] = cur_shield
 	Json_Handler.Save_Room_Array_Changes(Globals.current_world,Globals.current_room,"doors",str(Globals.working_index),door_details)
 	print(Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)])
-
+	print(str(Globals.working_index))
 
 func _on_Door_Type_item_selected(index):
 	cur_type = door_types[index]

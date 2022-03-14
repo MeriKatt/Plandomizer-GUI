@@ -99,7 +99,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Room Nodes" type="Container" parent="Panel/TabContainer"]
-visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1019.0
@@ -113,7 +112,7 @@ margin_bottom = 567.0
 [node name="Nodes" type="ItemList" parent="Panel/TabContainer/Room Nodes"]
 margin_top = 80.0
 margin_right = 495.0
-margin_bottom = 567.0
+margin_bottom = 510.0
 script = ExtResource( 3 )
 
 [node name="Area" type="OptionButton" parent="Panel/TabContainer/Room Nodes"]
@@ -131,6 +130,13 @@ script = ExtResource( 1 )
 margin_left = 505.0
 margin_right = 1015.0
 margin_bottom = 567.0
+
+[node name="Add Pickup Button" type="Button" parent="Panel/TabContainer/Room Nodes"]
+margin_top = 520.0
+margin_right = 12.0
+margin_bottom = 540.0
+rect_scale = Vector2( 2, 2 )
+text = "Add Pickup"
 
 [node name="Game Options" type="Container" parent="Panel/TabContainer"]
 visible = false
@@ -169,5 +175,6 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Area" to="Panel/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
+[connection signal="pressed" from="Panel/TabContainer/Room Nodes/Add Pickup Button" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Add_Pickup_Button_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
 [connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]
