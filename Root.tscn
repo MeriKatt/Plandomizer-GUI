@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
 [ext_resource path="res://Nodes List.gd" type="Script" id=3]
 [ext_resource path="res://Import Button.gd" type="Script" id=4]
 [ext_resource path="res://FileDialog.gd" type="Script" id=5]
+[ext_resource path="res://Save.gd" type="Script" id=6]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -140,6 +141,27 @@ margin_bottom = 40.0
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 6 )
+
+[node name="Save button" type="Button" parent="Panel/TabContainer/Save"]
+margin_left = 380.0
+margin_top = 280.0
+margin_right = 497.0
+margin_bottom = 300.0
+rect_scale = Vector2( 2, 2 )
+text = "Save JSon Layout"
+
+[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer/Save"]
+margin_left = 220.0
+margin_top = 150.0
+margin_right = 820.0
+margin_bottom = 500.0
+popup_exclusive = true
+window_title = "Save JSon Layout"
+access = 2
+filters = PoolStringArray( "*.json" )
+current_dir = "/Users/devta/Documents/Godot/Plandomizer"
+current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 
 [connection signal="file_selected" from="Panel/TabContainer/Import/FileDialog" to="Panel/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Import/Import Button" to="Panel/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
@@ -147,3 +169,5 @@ margin_bottom = 40.0
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Area" to="Panel/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
+[connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]
