@@ -7,7 +7,7 @@ var current_room = null
 var json_layout = {}
 var working_layout = json_layout
 
-var DEBUG = true
+var DEBUG = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

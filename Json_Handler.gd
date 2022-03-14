@@ -13,7 +13,7 @@ func Save_Tweaks_Changes(changes):
 	Globals.working_layout["tweaks"] = changes
 
 func Save_Transporter_Changes(world, transporter, destination):
-	Globals.working_layout["levelData"][world]["transporters"][transporter] = destination
+	Globals.working_layout["levelData"][world]["transports"][transporter] = destination
 
 func Save_Room_Changes(world, room, changed_value, change):
 	Globals.working_layout["levelData"][world]["rooms"][room][changed_value] = change

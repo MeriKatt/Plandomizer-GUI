@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Import Button.gd" type="Script" id=4]
 [ext_resource path="res://FileDialog.gd" type="Script" id=5]
 [ext_resource path="res://Save.gd" type="Script" id=6]
+[ext_resource path="res://Elevators.gd" type="Script" id=7]
+[ext_resource path="res://Elevator.gd" type="Script" id=9]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -49,25 +51,13 @@ text = "Import JSon"
 script = ExtResource( 4 )
 
 [node name="Elevators" type="Container" parent="Panel/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
-
-[node name="Area Label" type="Label" parent="Panel/TabContainer/Elevators"]
-margin_right = 40.0
-margin_bottom = 14.0
-rect_scale = Vector2( 2, 2 )
-text = "Region:"
-
-[node name="Region" type="OptionButton" parent="Panel/TabContainer/Elevators"]
-margin_left = 100.0
-margin_right = 250.0
-margin_bottom = 30.0
-text = "Area to use"
+script = ExtResource( 7 )
 
 [node name="Elevator Label" type="Label" parent="Panel/TabContainer/Elevators"]
 margin_top = 50.0
@@ -82,6 +72,7 @@ margin_top = 50.0
 margin_right = 365.0
 margin_bottom = 80.0
 text = "Elevator Selection"
+script = ExtResource( 9 )
 
 [node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Elevators"]
 margin_left = 450.0
@@ -99,6 +90,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Room Nodes" type="Container" parent="Panel/TabContainer"]
+visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1019.0
@@ -171,6 +163,7 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 
 [connection signal="file_selected" from="Panel/TabContainer/Import/FileDialog" to="Panel/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Import/Import Button" to="Panel/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
+[connection signal="item_selected" from="Panel/TabContainer/Elevators/Elevator" to="Panel/TabContainer/Elevators" method="_on_Elevator_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Nodes" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Nodes_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Area" to="Panel/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
