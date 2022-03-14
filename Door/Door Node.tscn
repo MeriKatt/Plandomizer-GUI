@@ -42,6 +42,7 @@ margin_bottom = 113.0
 script = ExtResource( 2 )
 
 [node name="Door Warp Checkbox" type="CheckBox" parent="."]
+visible = false
 margin_left = 5.0
 margin_top = 126.0
 margin_right = 125.0
@@ -50,6 +51,7 @@ rect_scale = Vector2( 2, 2 )
 text = "Door Warp?"
 
 [node name="Door Warp destination" type="OptionButton" parent="."]
+visible = false
 margin_left = 204.0
 margin_top = 131.0
 margin_right = 524.0

@@ -35,9 +35,10 @@ var shield_types = [
 ]
 
 var rooms = Globals.get_array(Globals.current_world)
+var door_details
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	door_details = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,9 +51,16 @@ func _on_Door_Warp_destination_item_selected(index):
 
 
 func _on_Blastshield_Type_item_selected(index):
-	pass # Replace with function body.
+	cur_shield = shield_types[index]
+	print(cur_shield)
+	door_details["blastShield"] = cur_shield
+	Json_Handler.Save_Room_Array_Changes(Globals.current_world,Globals.current_room,"doors",str(Globals.working_index),door_details)
+	print(Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)])
 
 
 func _on_Door_Type_item_selected(index):
 	cur_type = door_types[index]
 	print(cur_type)
+	door_details["type"] = cur_type
+	Json_Handler.Save_Room_Array_Changes(Globals.current_world,Globals.current_room,"doors",str(Globals.working_index),door_details)
+	print(Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)])

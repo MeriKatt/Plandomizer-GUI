@@ -61,5 +61,6 @@ script = ExtResource( 1 )
 
 [connection signal="item_selected" from="Panel/Area" to="Panel/Room" method="_on_Area_item_selected"]
 [connection signal="item_selected" from="Panel/Room" to="Panel/Room" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/Elevators" to="." method="_on_Elevators_item_selected"]
 [connection signal="item_selected" from="Panel/Elevators" to="Panel/Area" method="_on_Elevators_item_selected"]
 [connection signal="item_selected" from="Panel/Elevators" to="Panel/Room" method="_on_Elevators_item_selected"]

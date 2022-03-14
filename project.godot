@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Json_Handler="*res://Json_Handler.gd"
 Globals="*res://Globals.gd"
 
 [physics]

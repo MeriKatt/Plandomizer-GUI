@@ -1,5 +1,6 @@
 extends Node
 
+var working_index
 var current_world = null
 var current_room = null
 
@@ -499,7 +500,6 @@ func Create_Door(type, blastshield, destination):
 
 func Create_Liquid():
 	return {}
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var json ={
@@ -662,6 +662,20 @@ func _ready():
 	file.open("user://json_test.json", File.WRITE)
 	file.store_string(serial)
 	file.close()
+	test_file(default_file)
+	#Json_Handler.Save_Room_Array_Changes("Phendrana Drifts", "Control Tower", "pickups", 0,  {
+	#	"type": "Nothing",
+	#	"model": "Nothing",
+	#	"scanText": "Nothing",
+	#	"hudmemoText": "Nothing Aquired",
+	#	"currIncrease": 4,
+	#	"maxIncrease": 8,
+	#	"respawn": true
+	#})
+	
+	#print(working_layout["levelData"]["Phendrana Drifts"]["rooms"]["Control Tower"]["pickups"][0])
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

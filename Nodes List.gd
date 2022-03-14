@@ -16,9 +16,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func create_node(_name,type,data):
+func create_node(_name,index, type,data):
 	var node = {
 		"name": _name,
+		"index": index,
 		"type": type,
 		"data": data
 	}
@@ -33,20 +34,19 @@ func _on_Room_item_selected(index):
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.get_array(Globals.current_world)[index]]
 	var i= 1
 	for x in roomData["doors"].values():
-		room_nodes.append( create_node("Door"+str(i), "door", x))
+		room_nodes.append( create_node("Door"+str(i), i-1,"door", x))
 		add_item("Door"+str(i))
 		i+=1
 	i = 1
 	for x in roomData["liquids"]:
-		room_nodes.append(create_node("Liquid"+str(i), "liquid", x))
+		room_nodes.append(create_node("Liquid"+str(i), i-1,"liquid", x))
 		add_item("Liquid"+str(i))
 		i+=1
 	i=1
 	for x in roomData["pickups"]:
-		room_nodes.append(create_node("Pickup"+str(i), "pickup", x))
+		room_nodes.append(create_node("Pickup"+str(i),i-1, "pickup", x))
 		add_item("Pickup"+str(i))
 		i+=1
-
 
 func clear_details():
 	for n in get_parent().get_node("Node Details").get_children():
@@ -68,7 +68,8 @@ func _on_Nodes_item_selected(index):
 	print(index)
 	print(room_nodes[index]["data"]["type"])
 	Globals.node_details = room_nodes[index]["data"]
-
+	Globals.working_index = room_nodes[index]["index"]
+	print(Globals.working_index)
 	details.add_child(node)
 	#if room_nodes[index]["type"] == "pickup":
 	#	var pickup_scene = load("res://Item Node.tscn")

@@ -17,6 +17,7 @@ margin_right = 1023.0
 margin_bottom = 603.0
 
 [node name="Import" type="Container" parent="Panel/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -46,36 +47,86 @@ rect_scale = Vector2( 2, 2 )
 text = "Import JSon"
 script = ExtResource( 4 )
 
-[node name="Create" type="Container" parent="Panel/TabContainer"]
+[node name="Elevators" type="Container" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Area Label" type="Label" parent="Panel/TabContainer/Elevators"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "Region:"
+
+[node name="Region" type="OptionButton" parent="Panel/TabContainer/Elevators"]
+margin_left = 100.0
+margin_right = 250.0
+margin_bottom = 30.0
+text = "Area to use"
+
+[node name="Elevator Label" type="Label" parent="Panel/TabContainer/Elevators"]
+margin_top = 50.0
+margin_right = 55.0
+margin_bottom = 64.0
+rect_scale = Vector2( 2, 2 )
+text = "Elevator:"
+
+[node name="Elevator" type="OptionButton" parent="Panel/TabContainer/Elevators"]
+margin_left = 115.0
+margin_top = 50.0
+margin_right = 365.0
+margin_bottom = 80.0
+text = "Elevator Selection"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Elevators"]
+margin_left = 450.0
+margin_right = 454.0
+margin_bottom = 567.0
+
+[node name="Destination Conainer" type="Panel" parent="Panel/TabContainer/Elevators"]
+margin_left = 460.0
+margin_right = 1010.0
+margin_bottom = 567.0
+
+[node name="Room Options" type="Container" parent="Panel/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Room Nodes" type="Container" parent="Panel/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1019.0
 margin_bottom = 599.0
 
-[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Create"]
+[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Room Nodes"]
 margin_left = 500.0
 margin_right = 504.0
 margin_bottom = 567.0
 
-[node name="Nodes" type="ItemList" parent="Panel/TabContainer/Create"]
+[node name="Nodes" type="ItemList" parent="Panel/TabContainer/Room Nodes"]
 margin_top = 80.0
 margin_right = 495.0
 margin_bottom = 567.0
 script = ExtResource( 3 )
 
-[node name="Area" type="OptionButton" parent="Panel/TabContainer/Create"]
+[node name="Area" type="OptionButton" parent="Panel/TabContainer/Room Nodes"]
 margin_right = 495.0
 margin_bottom = 30.0
 script = ExtResource( 2 )
 
-[node name="Room" type="OptionButton" parent="Panel/TabContainer/Create"]
+[node name="Room" type="OptionButton" parent="Panel/TabContainer/Room Nodes"]
 margin_top = 35.0
 margin_right = 495.0
 margin_bottom = 70.0
 script = ExtResource( 1 )
 
-[node name="Node Details" type="Panel" parent="Panel/TabContainer/Create"]
+[node name="Node Details" type="Panel" parent="Panel/TabContainer/Room Nodes"]
 margin_left = 505.0
 margin_right = 1015.0
 margin_bottom = 567.0
@@ -92,7 +143,7 @@ margin_bottom = 40.0
 
 [connection signal="file_selected" from="Panel/TabContainer/Import/FileDialog" to="Panel/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Import/Import Button" to="Panel/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
-[connection signal="item_selected" from="Panel/TabContainer/Create/Nodes" to="Panel/TabContainer/Create/Nodes" method="_on_Nodes_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Create/Area" to="Panel/TabContainer/Create/Room" method="_on_Area_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Create/Room" to="Panel/TabContainer/Create/Nodes" method="_on_Room_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Create/Room" to="Panel/TabContainer/Create/Room" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Nodes" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Nodes_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Area" to="Panel/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
