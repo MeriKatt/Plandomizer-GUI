@@ -35,6 +35,7 @@ rect_scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 
 [node name="Subtracts" type="CheckBox" parent="Panel"]
+visible = false
 margin_left = -3.0
 margin_top = 38.0
 margin_right = 84.0
@@ -43,6 +44,7 @@ rect_scale = Vector2( 2, 2 )
 text = "Subtracts"
 
 [node name="AmountToSubtract" type="LineEdit" parent="Panel"]
+visible = false
 margin_left = 345.0
 margin_top = 45.0
 margin_right = 403.0
@@ -52,6 +54,7 @@ text = "0"
 align = 1
 
 [node name="AmountToSubtractLabel" type="Label" parent="Panel"]
+visible = false
 margin_left = 182.0
 margin_top = 45.0
 margin_right = 310.0
@@ -122,3 +125,13 @@ text = "Pop-up acquisition text"
 
 [node name="Position" parent="Panel" instance=ExtResource( 2 )]
 position = Vector2( -11, 299 )
+
+[node name="save_button" type="Button" parent="Panel"]
+margin_left = 165.0
+margin_top = 500.0
+margin_right = 241.0
+margin_bottom = 520.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Item"
+
+[connection signal="pressed" from="Panel/save_button" to="." method="_on_save_button_pressed"]
