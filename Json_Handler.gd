@@ -8,6 +8,9 @@ func Save_GameConfig_Change(configOption, change):
 	
 func Save_Preferences_Change(preference, change):
 	Globals.working_layout["preferences"][preference] = change
+
+func Save_StartingItems_Change(item,value):
+	Globals.working_layout["gameConfig"]["startingItems"][item] = value
 	
 func Save_Tweaks_Changes(changes):
 	Globals.working_layout["tweaks"] = changes

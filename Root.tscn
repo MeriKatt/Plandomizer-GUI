@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://FileDialog.gd" type="Script" id=5]
 [ext_resource path="res://Save.gd" type="Script" id=6]
 [ext_resource path="res://Elevators.gd" type="Script" id=7]
+[ext_resource path="res://Label and Number picker.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Elevator.gd" type="Script" id=9]
+[ext_resource path="res://Starting Items.gd" type="Script" id=10]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -146,8 +148,173 @@ margin_bottom = -4.0
 
 [node name="Starting Items" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1021.0
+margin_bottom = 570.0
+script = ExtResource( 10 )
+
+[node name="combatVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_right = 24.0
+margin_bottom = 24.0
+pressed = true
+text = "Combat Visor"
+
+[node name="powerBeam" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 30.0
+margin_right = 24.0
+margin_bottom = 54.0
+pressed = true
+text = "Power Beam"
+
+[node name="scanVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 50.0
+margin_right = 24.0
+margin_bottom = 74.0
+pressed = true
+text = "Scan Visor"
+
+[node name="ice" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 70.0
+margin_right = 24.0
+margin_bottom = 94.0
+text = "Ice Beam"
+
+[node name="wave" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 90.0
+margin_right = 24.0
+margin_bottom = 114.0
+text = "Wave Beam"
+
+[node name="plasma" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 110.0
+margin_right = 24.0
+margin_bottom = 134.0
+text = "Plasma Beam"
+
+[node name="bombs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 130.0
+margin_right = 73.0
+margin_bottom = 154.0
+text = "Bombs"
+
+[node name="flamethrower" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 150.0
+margin_right = 24.0
+margin_bottom = 174.0
+text = "Flamethrower"
+
+[node name="thermalVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 170.0
+margin_right = 24.0
+margin_bottom = 194.0
+text = "Thermal Visor"
+
+[node name="charge" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 190.0
+margin_right = 24.0
+margin_bottom = 214.0
+text = "Charge Beam"
+
+[node name="superMissile" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 210.0
+margin_right = 24.0
+margin_bottom = 234.0
+text = "Super Missile"
+
+[node name="grapple" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 230.0
+margin_right = 24.0
+margin_bottom = 254.0
+text = "Grapple Beam"
+
+[node name="xray" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 250.0
+margin_right = 24.0
+margin_bottom = 274.0
+text = "X-ray Visor"
+
+[node name="iceSpreader" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 270.0
+margin_right = 24.0
+margin_bottom = 294.0
+text = "Ice Spreader"
+
+[node name="spaceJump" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 290.0
+margin_right = 24.0
+margin_bottom = 314.0
+text = "Space Jump"
+
+[node name="morphBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 310.0
+margin_right = 24.0
+margin_bottom = 334.0
+text = "Morph Ball"
+
+[node name="boostBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 330.0
+margin_right = 24.0
+margin_bottom = 354.0
+text = "Boost Ball"
+
+[node name="spiderBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 350.0
+margin_right = 24.0
+margin_bottom = 374.0
+text = "Spider Ball"
+
+[node name="variaSuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 370.0
+margin_right = 24.0
+margin_bottom = 394.0
+text = "Varia Suit"
+
+[node name="gravitySuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 390.0
+margin_right = 24.0
+margin_bottom = 414.0
+text = "Gravity Suit"
+
+[node name="phazonSuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 410.0
+margin_right = 24.0
+margin_bottom = 434.0
+text = "Phazon Suit"
+
+[node name="wavebuster" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_top = 430.0
+margin_right = 24.0
+margin_bottom = 454.0
+text = "Wavebuster"
+
+[node name="missiles" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+margin_left = 200.0
+margin_right = -587.0
+margin_bottom = -538.0
+label_text = "Missiles:"
+
+[node name="powerBombs" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+margin_left = 200.0
+margin_top = 50.0
+margin_right = -587.0
+margin_bottom = -488.0
+label_text = "Power Bombs:"
+
+[node name="energyTanks" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = -587.0
+margin_bottom = -438.0
+label_text = "Energy Tanks:"
+
+[node name="saveStartingItemsButton" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+margin_left = 396.0
+margin_top = 438.0
+margin_right = 531.0
+margin_bottom = 458.0
+rect_scale = Vector2( 1.5, 2 )
+text = "Save Starting Items"
 
 [node name="Item Capacity" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
@@ -344,5 +511,6 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Room Nodes/Add Pickup Button" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Add_Pickup_Button_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
 [connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]
