@@ -6,6 +6,7 @@ var current_room = null
 
 var json_layout = {}
 var working_layout = json_layout
+var vanilla = {}
 
 var DEBUG = false
 # Declare member variables here. Examples:
@@ -435,6 +436,16 @@ func test_file(file):
 		return
 	data = data_parse.result
 	working_layout = data
+	vanilla = data
+func vanilla_data(file):
+	if file.open("res://vanilla.json", File.READ) != OK:
+		return
+	data_text = default_file.get_as_text()
+	data_parse = JSON.parse(data_text)
+	if data_parse.error != OK:
+		return
+	data = data_parse.result
+	vanilla = data
 
 var world_element = {
 	"transports": {},

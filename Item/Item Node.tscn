@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Item/Item Selection.gd" type="Script" id=1]
 [ext_resource path="res://Position.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Item/Item Node.gd" type="Script" id=3]
+[ext_resource path="res://Label and Number picker.tscn" type="PackedScene" id=4]
 
 [node name="Item Node" type="Node2D"]
 script = ExtResource( 3 )
@@ -87,15 +88,6 @@ margin_bottom = 165.0
 rect_scale = Vector2( 2, 2 )
 text = "Acquisition Text:"
 
-[node name="Model Text" type="LineEdit" parent="Panel"]
-margin_left = 183.0
-margin_top = 85.0
-margin_right = 343.0
-margin_bottom = 115.0
-text = "Missile"
-align = 1
-expand_to_text_length = true
-
 [node name="Scan Text" type="LineEdit" parent="Panel"]
 margin_left = 147.0
 margin_top = 116.0
@@ -133,5 +125,33 @@ margin_right = 241.0
 margin_bottom = 520.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Item"
+
+[node name="maxIncrease" parent="Panel" instance=ExtResource( 4 )]
+margin_left = 4.0
+margin_top = 400.0
+margin_right = -506.0
+margin_bottom = -160.0
+label_text = "Max Increase:"
+
+[node name="currIncrease" parent="Panel" instance=ExtResource( 4 )]
+margin_left = 4.0
+margin_top = 450.0
+margin_right = -506.0
+margin_bottom = -110.0
+label_text = "# to Give:"
+
+[node name="CheckBox2" type="CheckBox" parent="Panel"]
+margin_left = 297.0
+margin_top = 431.0
+margin_right = 381.0
+margin_bottom = 455.0
+rect_scale = Vector2( 1.5, 2 )
+text = "Respawn"
+
+[node name="ModelButton" type="OptionButton" parent="Panel"]
+margin_left = 180.0
+margin_top = 80.0
+margin_right = 480.0
+margin_bottom = 110.0
 
 [connection signal="pressed" from="Panel/save_button" to="." method="_on_save_button_pressed"]

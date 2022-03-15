@@ -10,6 +10,7 @@ extends ItemList
 func _ready():
 	Globals.test_file(Globals.default_file)
 	print(Globals.working_layout["gameConfig"]["startingRoom"])
+	Globals.vanilla_data(Globals.default_file)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,20 +34,20 @@ func _on_Room_item_selected(index):
 	room_nodes = []
 	Globals.current_room = Globals.get_array(Globals.current_world)[index]
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.get_array(Globals.current_world)[index]]
-	var i= 1
+	var i= 0
 	for x in roomData["doors"].values():
-		room_nodes.append( create_node("Door"+str(i), i-1,"door", x))
-		add_item("Door"+str(i))
+		room_nodes.append( create_node("Door"+str(i), i,"door", x))
+		add_item("Door "+str(i))
 		i+=1
-	i = 1
+	i = 0
 	for x in roomData["liquids"]:
-		room_nodes.append(create_node("Liquid"+str(i), i-1,"liquid", x))
-		add_item("Liquid"+str(i))
+		room_nodes.append(create_node("Liquid"+str(i), i,"liquid", x))
+		add_item("Liquid "+str(i))
 		i+=1
-	i=1
+	i=0
 	for x in roomData["pickups"]:
-		room_nodes.append(create_node("Pickup"+str(i),i-1, "pickup", x))
-		add_item("Pickup"+str(i))
+		room_nodes.append(create_node("Pickup"+str(i),i, "pickup", x))
+		add_item("Pickup "+str(i))
 		i+=1
 
 func clear_details():
@@ -70,9 +71,9 @@ func _on_Nodes_item_selected(index):
 	print(room_nodes[index]["data"]["type"])
 	Globals.node_details = room_nodes[index]["data"]
 	Globals.working_index = room_nodes[index]["index"]
-	print(Globals.working_index)
 	details.add_child(node)
-	if "Pickup" in room_nodes[index]["name"]:
+	print(Globals.vanilla["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].size())
+	if "Pickup" in room_nodes[index]["name"] and (int(room_nodes[index]["name"].right(6)) >= Globals.vanilla["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].size()):
 		details.get_node("Item Node").get_node("Panel").get_node("Position").get_node("ChangePosition").pressed = true
 		details.get_node("Item Node").get_node("Panel").get_node("Position").get_node("ChangePosition").disabled = true
 	
@@ -86,20 +87,20 @@ func refresh_nodes():
 	clear()
 	room_nodes = []
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]
-	var i= 1
+	var i= 0
 	for x in roomData["doors"].values():
 		room_nodes.append( create_node("Door"+str(i), i-1,"door", x))
-		add_item("Door"+str(i))
+		add_item("Door "+str(i))
 		i+=1
-	i = 1
+	i = 0
 	for x in roomData["liquids"]:
 		room_nodes.append(create_node("Liquid"+str(i), i-1,"liquid", x))
-		add_item("Liquid"+str(i))
+		add_item("Liquid "+str(i))
 		i+=1
-	i=1
+	i=0
 	for x in roomData["pickups"]:
 		room_nodes.append(create_node("Pickup"+str(i),i-1, "pickup", x))
-		add_item("Pickup"+str(i))
+		add_item("Pickup "+str(i))
 		i+=1
 
 func _on_Add_Pickup_Button_pressed():

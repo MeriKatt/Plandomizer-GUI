@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Label and Number picker.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Elevator.gd" type="Script" id=9]
 [ext_resource path="res://Starting Items.gd" type="Script" id=10]
+[ext_resource path="res://Config Options.gd" type="Script" id=11]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -138,7 +139,6 @@ margin_right = 1020.0
 margin_bottom = 597.0
 
 [node name="Preferences" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -337,11 +337,11 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Config Options" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
-visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1016.0
 margin_bottom = 563.0
+script = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_right = 40.0
@@ -349,7 +349,7 @@ margin_bottom = 14.0
 rect_scale = Vector2( 2, 2 )
 text = "Starting Room:"
 
-[node name="StartingRoom" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="startingRoom" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 200.0
 margin_top = 2.0
 margin_right = 543.0
@@ -364,7 +364,7 @@ margin_bottom = 41.0
 rect_scale = Vector2( 2, 2 )
 text = "Starting Memo:"
 
-[node name="StartingMemo" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="startingMemo" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 200.0
 margin_top = 29.0
 margin_right = 258.0
@@ -372,21 +372,21 @@ margin_bottom = 53.0
 text = "null"
 expand_to_text_length = true
 
-[node name="WarpToStart" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="warpToStart" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 60.0
 margin_right = 111.0
 margin_bottom = 84.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Warp to Start"
 
-[node name="NonVariaHeatDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="nonvariaHeatDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 80.0
 margin_right = 180.0
 margin_bottom = 104.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Non-Varia Heat Damage"
 
-[node name="StaggeredSuitDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="staggeredSuitDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 100.0
 margin_right = 174.0
 margin_bottom = 124.0
@@ -406,21 +406,21 @@ margin_bottom = 144.0
 rect_scale = Vector2( 2, 2 )
 text = "Heat damage per sec:"
 
-[node name="AutoEnableElevators" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="autoEnabledElevators" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 160.0
 margin_right = 168.0
 margin_bottom = 184.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Auto enable elevators"
 
-[node name="BackwardsFrigate" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsFrigate" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 180.0
 margin_right = 142.0
 margin_bottom = 204.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Backwards Frigate"
 
-[node name="BackwardsLabs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsLabs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 200.0
 margin_right = 128.0
 margin_bottom = 224.0
@@ -428,7 +428,7 @@ rect_scale = Vector2( 1.2, 1.2 )
 pressed = true
 text = "Backwards Labs"
 
-[node name="BackwardsUpperMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsUpperMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 220.0
 margin_right = 181.0
 margin_bottom = 244.0
@@ -436,14 +436,14 @@ rect_scale = Vector2( 1.2, 1.2 )
 pressed = true
 text = "Backwards Upper Mines"
 
-[node name="BackwardsLowerMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsLowerMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 240.0
 margin_right = 180.0
 margin_bottom = 264.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Backwards Lower Mines"
 
-[node name="PhazonEliteWithoutDynamo" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="phazonEliteWithoutDynamo" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 260.0
 margin_right = 215.0
 margin_bottom = 284.0
@@ -457,13 +457,13 @@ margin_bottom = 304.0
 rect_scale = Vector2( 2, 2 )
 text = "Main Menu Message:"
 
-[node name="MainMenuMessage" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="mainMenuMessage" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 280.0
 margin_top = 290.0
 margin_right = 680.0
 margin_bottom = 320.0
 
-[node name="CreditsString" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="creditsString" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 180.0
 margin_top = 325.0
 margin_right = 480.0
@@ -476,6 +476,14 @@ margin_right = 89.0
 margin_bottom = 334.0
 rect_scale = Vector2( 2, 2 )
 text = "Credits String:"
+
+[node name="SaveConfigOptions" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 350.0
+margin_top = 400.0
+margin_right = 489.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Config Options"
 
 [node name="Save" type="Container" parent="Panel/TabContainer"]
 visible = false
@@ -512,5 +520,6 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Room Nodes/Add Pickup Button" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Add_Pickup_Button_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Config Options/SaveConfigOptions" to="Panel/TabContainer/Game Options/TabContainer/Config Options" method="_on_SaveConfigOptions_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
 [connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]

@@ -40,7 +40,11 @@ var door_details
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	door_details = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)]
+	var i = 1
 
+	for x in rooms:
+		get_node("Door Warp destination").add_item(x, i)
+		i+=1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -48,8 +52,13 @@ func _ready():
 
 
 func _on_Door_Warp_destination_item_selected(index):
-	pass # Replace with function body.
-
+	cur_warp = rooms[index]
+	var x = 1
+	var i = 0
+	while x <= (Globals.working_layout["levelData"][Globals.current_world]["rooms"][rooms[index]]["doors"].size()):
+		get_node("warpDock").add_item(str(i), x)
+		x+=1
+		i+=1
 
 func _on_Blastshield_Type_item_selected(index):
 	cur_shield = shield_types[index]
@@ -67,3 +76,13 @@ func _on_Door_Type_item_selected(index):
 	door_details["type"] = cur_type
 	Json_Handler.Save_Room_Array_Changes(Globals.current_world,Globals.current_room,"doors",str(Globals.working_index),door_details)
 	print(Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)])
+
+
+func _on_warpDock_item_selected(index):
+	var cur_dock = int(get_node("warpDock").get_item_text(index))
+	door_details["destination"] = {
+		"roomName": cur_warp,
+		"dockNum": cur_dock
+	}
+	if get_node("Door Warp Checkbox").pressed:
+		Json_Handler.Save_Room_Array_Changes(Globals.current_world,Globals.current_room,"doors",str(Globals.working_index),door_details)
