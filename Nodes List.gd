@@ -5,14 +5,28 @@ extends ItemList
 # var a = 2
 # var b = "text"
 
+var actions = [
+	"Add",
+	"Delete"
+]
 
+var types = [
+	"Pickup",
+	"Liquid"
+]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.test_file(Globals.default_file)
 	print(Globals.working_layout["gameConfig"]["startingRoom"])
 	Globals.vanilla_data(Globals.default_file)
-
-
+	var i = 0
+	for x in actions:
+		get_parent().get_node("ActionButton").add_item(x, i)
+		i+=1
+	i = 0
+	for x in types:
+		get_parent().get_node("TypeChoice").add_item(x, i)
+		i+=1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -32,6 +46,8 @@ var room_nodes = []
 func _on_Room_item_selected(index):
 	clear()
 	room_nodes = []
+	if not Globals.current_world:
+		Globals.current_world = get_parent().get_node("Area").get_item_text(get_parent().get_node("Area").get_selected_id())
 	Globals.current_room = Globals.get_array(Globals.current_world)[index]
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.get_array(Globals.current_world)[index]]
 	var i= 0
@@ -103,7 +119,7 @@ func refresh_nodes():
 		add_item("Pickup "+str(i))
 		i+=1
 
-func _on_Add_Pickup_Button_pressed():
+func _on_Button_pressed():
 	var new_pickup = {
 		"type": "Nothing",
 		"model": "Nothing",
@@ -116,7 +132,40 @@ func _on_Add_Pickup_Button_pressed():
 		"position": null,
 		"destination": null
 	}
-	if Globals.current_room == null:
-		return
-	Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].push_back(new_pickup)
-	refresh_nodes()
+	var new_liquid = {
+		"type": "Water"
+	}
+	var type_node = get_parent().get_node("TypeChoice")
+	var action_node = get_parent().get_node("ActionButton")
+	var type = type_node.get_item_text(type_node.get_selected_id())
+	var action = action_node.get_item_text(action_node.get_selected_id())
+	print(action)
+	print(type)
+	if type == "Pickup":
+		if action == "Delete":
+			if typeof(Globals.working_index) == TYPE_INT:
+				print(Globals.working_index)
+				if get_parent().has_node("Node Details/Item Node"):
+					if get_parent().get_node("Node Details/Item Node/Panel/Position/ChangePosition").disabled:
+						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].pop_at(Globals.working_index)
+						Globals.working_index -= 1
+						refresh_nodes()
+		else:
+			if Globals.current_room == null:
+				return
+			Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].push_back(new_pickup)
+			refresh_nodes()
+	else:
+		if action == "Delete":
+			if typeof(Globals.working_index) == TYPE_INT:
+				print(Globals.working_index)
+				if get_parent().has_node("Node Details/Liquid node"):
+					if get_parent().get_node("Node Details/Liquid node/Position/Position/ChangePosition").disabled:
+						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["liquids"].pop_at(Globals.working_index)
+						Globals.working_index -= 1
+						refresh_nodes()
+		else:
+			if Globals.current_room == null:
+				return
+			Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["liquids"].push_back(new_liquid)
+			refresh_nodes()

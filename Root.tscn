@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
@@ -17,6 +17,12 @@
 [ext_resource path="res://Label and ChoiceBox.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Preferences.gd" type="Script" id=16]
 [ext_resource path="res://Tweaks.gd" type="Script" id=17]
+[ext_resource path="res://Preferences_Play.gd" type="Script" id=18]
+[ext_resource path="res://Layout Select.gd" type="Script" id=19]
+[ext_resource path="res://Save Iso.gd" type="Script" id=20]
+[ext_resource path="res://Room Options.gd" type="Script" id=21]
+[ext_resource path="res://Room 2.gd" type="Script" id=22]
+[ext_resource path="res://Area 2.gd" type="Script" id=23]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -24,11 +30,11 @@
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="TabContainer" type="TabContainer" parent="Panel"]
-margin_right = 1023.0
-margin_bottom = 603.0
+[node name="TabContainer2" type="TabContainer" parent="Panel"]
+margin_right = 1025.0
+margin_bottom = 600.0
 
-[node name="Import" type="Container" parent="Panel/TabContainer"]
+[node name="Play" type="Container" parent="Panel/TabContainer2"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,7 +43,167 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer/Import"]
+[node name="TabContainer" type="TabContainer" parent="Panel/TabContainer2/Play"]
+margin_right = 1017.0
+margin_bottom = 567.0
+
+[node name="Layout Select" type="Container" parent="Panel/TabContainer2/Play/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 19 )
+
+[node name="Import" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Layout Select"]
+margin_left = 380.0
+margin_top = 400.0
+margin_right = 482.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2, 2 )
+text = "Import Layout"
+
+[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer2/Play/TabContainer/Layout Select"]
+margin_right = 600.0
+margin_bottom = 300.0
+window_title = "Open a File"
+mode = 0
+filters = PoolStringArray( "*.json" )
+
+[node name="WindowDialog" type="WindowDialog" parent="Panel/TabContainer2/Play/TabContainer/Layout Select"]
+margin_right = 500.0
+margin_bottom = 300.0
+popup_exclusive = true
+window_title = "Error"
+
+[node name="Label" type="Label" parent="Panel/TabContainer2/Play/TabContainer/Layout Select/WindowDialog"]
+margin_left = 100.0
+margin_top = 130.0
+margin_right = 219.0
+margin_bottom = 161.0
+rect_scale = Vector2( 2, 2 )
+text = "Invalid JSon Layout
+"
+
+[node name="WindowDialog2" type="WindowDialog" parent="Panel/TabContainer2/Play/TabContainer/Layout Select"]
+margin_right = 500.0
+margin_bottom = 300.0
+popup_exclusive = true
+window_title = "Attention"
+
+[node name="Label" type="Label" parent="Panel/TabContainer2/Play/TabContainer/Layout Select/WindowDialog2"]
+margin_left = 100.0
+margin_top = 130.0
+margin_right = 219.0
+margin_bottom = 161.0
+rect_scale = Vector2( 2, 2 )
+text = "Json Layout Accepted
+"
+
+[node name="Preferences" type="Container" parent="Panel/TabContainer2/Play/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 18 )
+
+[node name="hudColor" parent="Panel/TabContainer2/Play/TabContainer/Preferences" instance=ExtResource( 12 )]
+label_text = " Hud Color (R,G,B):"
+
+[node name="saveButton" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Preferences"]
+margin_left = 360.0
+margin_top = 400.0
+margin_right = 481.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Preferences"
+
+[node name="Save Iso" type="Container" parent="Panel/TabContainer2/Play/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 20 )
+
+[node name="select" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_top = 40.0
+margin_right = 117.0
+margin_bottom = 60.0
+rect_scale = Vector2( 2, 2 )
+text = "Select Input Iso:"
+
+[node name="input" type="FileDialog" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_right = 500.0
+margin_bottom = 400.0
+popup_exclusive = true
+window_title = "Open a File"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.iso" )
+current_dir = "/Users/devta/Documents/Godot/Plandomizer"
+current_path = "/Users/devta/Documents/Godot/Plandomizer/"
+
+[node name="LineEdit" type="LineEdit" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_left = 260.0
+margin_top = 40.0
+margin_right = 760.0
+margin_bottom = 75.0
+editable = false
+
+[node name="select_output" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_top = 100.0
+margin_right = 167.0
+margin_bottom = 120.0
+rect_scale = Vector2( 2, 2 )
+text = "Select Output Directory:"
+
+[node name="output" type="FileDialog" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_right = 500.0
+margin_bottom = 400.0
+popup_exclusive = true
+access = 2
+filters = PoolStringArray( "*.iso" )
+current_dir = "/Users/devta/Documents/Godot/Plandomizer"
+current_path = "/Users/devta/Documents/Godot/Plandomizer/"
+
+[node name="LineEdit2" type="LineEdit" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_left = 360.0
+margin_top = 100.0
+margin_right = 860.0
+margin_bottom = 135.0
+editable = false
+
+[node name="Save" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+margin_left = 400.0
+margin_top = 400.0
+margin_right = 465.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Iso"
+
+[node name="Create" type="Container" parent="Panel/TabContainer2"]
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1021.0
+margin_bottom = 599.0
+
+[node name="TabContainer" type="TabContainer" parent="Panel/TabContainer2/Create"]
+margin_right = 1023.0
+margin_bottom = 575.0
+
+[node name="Import" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer2/Create/TabContainer/Import"]
 margin_left = 150.0
 margin_right = 850.0
 margin_bottom = 500.0
@@ -50,7 +216,7 @@ current_dir = "/Users/devta/Documents/Godot/Plandomizer"
 current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 script = ExtResource( 5 )
 
-[node name="Import Button" type="Button" parent="Panel/TabContainer/Import"]
+[node name="Import Button" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Import"]
 margin_left = 420.0
 margin_top = 220.0
 margin_right = 506.0
@@ -59,7 +225,7 @@ rect_scale = Vector2( 2, 2 )
 text = "Import JSon"
 script = ExtResource( 4 )
 
-[node name="Elevators" type="Container" parent="Panel/TabContainer"]
+[node name="Elevators" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -69,14 +235,14 @@ margin_right = -4.0
 margin_bottom = -4.0
 script = ExtResource( 7 )
 
-[node name="Elevator Label" type="Label" parent="Panel/TabContainer/Elevators"]
+[node name="Elevator Label" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Elevators"]
 margin_top = 50.0
 margin_right = 55.0
 margin_bottom = 64.0
 rect_scale = Vector2( 2, 2 )
 text = "Elevator:"
 
-[node name="Elevator" type="OptionButton" parent="Panel/TabContainer/Elevators"]
+[node name="Elevator" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Elevators"]
 margin_left = 115.0
 margin_top = 50.0
 margin_right = 365.0
@@ -84,68 +250,131 @@ margin_bottom = 80.0
 text = "Elevator Selection"
 script = ExtResource( 9 )
 
-[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Elevators"]
+[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer2/Create/TabContainer/Elevators"]
 margin_left = 450.0
 margin_right = 454.0
 margin_bottom = 567.0
 
-[node name="Destination Conainer" type="Panel" parent="Panel/TabContainer/Elevators"]
+[node name="Destination Conainer" type="Panel" parent="Panel/TabContainer2/Create/TabContainer/Elevators"]
 margin_left = 460.0
 margin_right = 1010.0
 margin_bottom = 567.0
 
-[node name="Room Nodes" type="Container" parent="Panel/TabContainer"]
+[node name="Room Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 21 )
+
+[node name="Area" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Options"]
+margin_top = 35.0
+margin_right = 495.0
+margin_bottom = 65.0
+script = ExtResource( 23 )
+
+[node name="Room" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Options"]
+margin_left = 500.0
+margin_top = 35.0
+margin_right = 995.0
+margin_bottom = 70.0
+script = ExtResource( 22 )
+
+[node name="RoomOptions" type="Panel" parent="Panel/TabContainer2/Create/TabContainer/Room Options"]
+margin_top = 80.0
+margin_right = 1017.0
+margin_bottom = 560.0
+
+[node name="superheated" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_scale = Vector2( 2, 2 )
+text = "Super Heated"
+
+[node name="drainLiquids" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
+margin_top = 35.0
+margin_right = 112.0
+margin_bottom = 59.0
+rect_scale = Vector2( 2, 2 )
+text = "Drain Liquids"
+
+[node name="submergeRoom" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
+margin_top = 75.0
+margin_right = 133.0
+margin_bottom = 99.0
+rect_scale = Vector2( 2, 2 )
+text = "Submerge Room"
+
+[node name="saveRoomOptions" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
+margin_left = 394.0
+margin_top = 335.0
+margin_right = 531.0
+margin_bottom = 355.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Save Room Options"
+
+[node name="Room Nodes" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1019.0
-margin_bottom = 599.0
+margin_bottom = 572.0
 
-[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer/Room Nodes"]
+[node name="VSeparator" type="VSeparator" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_left = 500.0
 margin_right = 504.0
 margin_bottom = 567.0
 
-[node name="Nodes" type="ItemList" parent="Panel/TabContainer/Room Nodes"]
+[node name="Nodes" type="ItemList" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_top = 80.0
 margin_right = 495.0
 margin_bottom = 510.0
 script = ExtResource( 3 )
 
-[node name="Area" type="OptionButton" parent="Panel/TabContainer/Room Nodes"]
+[node name="Area" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_right = 495.0
 margin_bottom = 30.0
 script = ExtResource( 2 )
 
-[node name="Room" type="OptionButton" parent="Panel/TabContainer/Room Nodes"]
+[node name="Room" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_top = 35.0
 margin_right = 495.0
 margin_bottom = 70.0
 script = ExtResource( 1 )
 
-[node name="Node Details" type="Panel" parent="Panel/TabContainer/Room Nodes"]
+[node name="Node Details" type="Panel" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_left = 505.0
 margin_right = 1015.0
-margin_bottom = 567.0
+margin_bottom = 550.0
 
-[node name="Add Pickup Button" type="Button" parent="Panel/TabContainer/Room Nodes"]
-margin_top = 520.0
-margin_right = 12.0
-margin_bottom = 540.0
-rect_scale = Vector2( 2, 2 )
-text = "Add Pickup"
+[node name="TypeChoice" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
+margin_top = 500.0
+margin_right = 150.0
+margin_bottom = 535.0
 
-[node name="Game Options" type="Container" parent="Panel/TabContainer"]
+[node name="ActionButton" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
+margin_left = 160.0
+margin_top = 500.0
+margin_right = 260.0
+margin_bottom = 535.0
+
+[node name="Button" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
+margin_left = 280.0
+margin_top = 500.0
+margin_right = 310.0
+margin_bottom = 520.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Go"
+
+[node name="Game Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="TabContainer" type="TabContainer" parent="Panel/TabContainer/Game Options"]
+[node name="TabContainer" type="TabContainer" parent="Panel/TabContainer2/Create/TabContainer/Game Options"]
 margin_top = 30.0
 margin_right = 1020.0
 margin_bottom = 597.0
 
-[node name="Preferences" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
-visible = false
+[node name="Preferences" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -154,14 +383,14 @@ margin_right = -4.0
 margin_bottom = -4.0
 script = ExtResource( 16 )
 
-[node name="qolGameBreaking" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+[node name="qolGameBreaking" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences"]
 margin_right = 24.0
 margin_bottom = 24.0
 rect_scale = Vector2( 1.5, 1.5 )
 pressed = true
 text = "QoL Game Breaking"
 
-[node name="qolCosmetic" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+[node name="qolCosmetic" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences"]
 margin_top = 35.0
 margin_right = 118.0
 margin_bottom = 59.0
@@ -169,7 +398,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 pressed = true
 text = "QoL Cosmetic"
 
-[node name="qolPickupScans" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+[node name="qolPickupScans" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences"]
 margin_top = 70.0
 margin_right = 140.0
 margin_bottom = 94.0
@@ -177,22 +406,22 @@ rect_scale = Vector2( 1.5, 1.5 )
 pressed = true
 text = "QoL Pickup Scans"
 
-[node name="artifactHintBehavior" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+[node name="artifactHintBehavior" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
 margin_top = 120.0
 margin_bottom = -396.0
 label_name = " Artifact Hint Behavior:"
 
-[node name="qolCutscenes" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+[node name="qolCutscenes" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
 margin_top = 160.0
 margin_bottom = -356.0
 label_name = "QoL Cutscenes "
 
-[node name="mapDefaultState" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+[node name="mapDefaultState" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
 margin_top = 200.0
 margin_bottom = -316.0
 label_name = " Default Map State:"
 
-[node name="SavePreferences" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+[node name="SavePreferences" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences"]
 margin_left = 396.0
 margin_top = 318.0
 margin_right = 517.0
@@ -200,7 +429,7 @@ margin_bottom = 338.0
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Save Preferences"
 
-[node name="Starting Items" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+[node name="Starting Items" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
@@ -208,161 +437,161 @@ margin_right = 1021.0
 margin_bottom = 570.0
 script = ExtResource( 10 )
 
-[node name="combatVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="combatVisor" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_right = 24.0
 margin_bottom = 24.0
 pressed = true
 text = "Combat Visor"
 
-[node name="powerBeam" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="powerBeam" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 30.0
 margin_right = 24.0
 margin_bottom = 54.0
 pressed = true
 text = "Power Beam"
 
-[node name="scanVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="scanVisor" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 50.0
 margin_right = 24.0
 margin_bottom = 74.0
 pressed = true
 text = "Scan Visor"
 
-[node name="ice" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="ice" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 70.0
 margin_right = 24.0
 margin_bottom = 94.0
 text = "Ice Beam"
 
-[node name="wave" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="wave" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 90.0
 margin_right = 24.0
 margin_bottom = 114.0
 text = "Wave Beam"
 
-[node name="plasma" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="plasma" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 110.0
 margin_right = 24.0
 margin_bottom = 134.0
 text = "Plasma Beam"
 
-[node name="bombs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="bombs" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 130.0
 margin_right = 73.0
 margin_bottom = 154.0
 text = "Bombs"
 
-[node name="flamethrower" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="flamethrower" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 150.0
 margin_right = 24.0
 margin_bottom = 174.0
 text = "Flamethrower"
 
-[node name="thermalVisor" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="thermalVisor" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 170.0
 margin_right = 24.0
 margin_bottom = 194.0
 text = "Thermal Visor"
 
-[node name="charge" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="charge" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 190.0
 margin_right = 24.0
 margin_bottom = 214.0
 text = "Charge Beam"
 
-[node name="superMissile" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="superMissile" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 210.0
 margin_right = 24.0
 margin_bottom = 234.0
 text = "Super Missile"
 
-[node name="grapple" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="grapple" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 230.0
 margin_right = 24.0
 margin_bottom = 254.0
 text = "Grapple Beam"
 
-[node name="xray" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="xray" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 250.0
 margin_right = 24.0
 margin_bottom = 274.0
 text = "X-ray Visor"
 
-[node name="iceSpreader" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="iceSpreader" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 270.0
 margin_right = 24.0
 margin_bottom = 294.0
 text = "Ice Spreader"
 
-[node name="spaceJump" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="spaceJump" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 290.0
 margin_right = 24.0
 margin_bottom = 314.0
 text = "Space Jump"
 
-[node name="morphBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="morphBall" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 310.0
 margin_right = 24.0
 margin_bottom = 334.0
 text = "Morph Ball"
 
-[node name="boostBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="boostBall" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 330.0
 margin_right = 24.0
 margin_bottom = 354.0
 text = "Boost Ball"
 
-[node name="spiderBall" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="spiderBall" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 350.0
 margin_right = 24.0
 margin_bottom = 374.0
 text = "Spider Ball"
 
-[node name="variaSuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="variaSuit" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 370.0
 margin_right = 24.0
 margin_bottom = 394.0
 text = "Varia Suit"
 
-[node name="gravitySuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="gravitySuit" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 390.0
 margin_right = 24.0
 margin_bottom = 414.0
 text = "Gravity Suit"
 
-[node name="phazonSuit" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="phazonSuit" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 410.0
 margin_right = 24.0
 margin_bottom = 434.0
 text = "Phazon Suit"
 
-[node name="wavebuster" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="wavebuster" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_top = 430.0
 margin_right = 24.0
 margin_bottom = 454.0
 text = "Wavebuster"
 
-[node name="missiles" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+[node name="missiles" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
 margin_left = 200.0
 margin_right = -587.0
 margin_bottom = -538.0
 label_text = "Missiles:"
 
-[node name="powerBombs" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+[node name="powerBombs" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
 margin_left = 200.0
 margin_top = 50.0
 margin_right = -587.0
 margin_bottom = -488.0
 label_text = "Power Bombs:"
 
-[node name="energyTanks" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
+[node name="energyTanks" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items" instance=ExtResource( 8 )]
 margin_left = 200.0
 margin_top = 100.0
 margin_right = -587.0
 margin_bottom = -438.0
 label_text = "Energy Tanks:"
 
-[node name="saveStartingItemsButton" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Starting Items"]
+[node name="saveStartingItemsButton" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
 margin_left = 396.0
 margin_top = 438.0
 margin_right = 531.0
@@ -370,7 +599,7 @@ margin_bottom = 458.0
 rect_scale = Vector2( 1.5, 2 )
 text = "Save Starting Items"
 
-[node name="Item Capacity" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+[node name="Item Capacity" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
@@ -378,28 +607,28 @@ margin_right = 1021.0
 margin_bottom = 568.0
 script = ExtResource( 14 )
 
-[node name="etankCapacity" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+[node name="etankCapacity" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
 margin_top = 32.0
 margin_right = -1017.0
 margin_bottom = -504.0
 label_text = "E-Tank Capacity"
 
-[node name="Energy Tank" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+[node name="Energy Tank" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
 margin_top = 65.0
 margin_bottom = -471.0
 label_text = "E-Tank Max:"
 
-[node name="Missile" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+[node name="Missile" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
 margin_top = 100.0
 margin_bottom = -436.0
 label_text = "Max Missiles:"
 
-[node name="Power Bomb" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+[node name="Power Bomb" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
 margin_top = 140.0
 margin_bottom = -396.0
 label_text = "Max PB:"
 
-[node name="SaveItemCapacitty" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity"]
+[node name="SaveItemCapacitty" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity"]
 margin_left = 340.0
 margin_top = 400.0
 margin_right = 473.0
@@ -407,7 +636,7 @@ margin_bottom = 420.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Item Capacity"
 
-[node name="Artifact Hints" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+[node name="Artifact Hints" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
@@ -415,65 +644,65 @@ margin_right = 1021.0
 margin_bottom = 569.0
 script = ExtResource( 13 )
 
-[node name="Artifact of Chozo" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Chozo" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 label_text = "Artifact of Chozo: "
 
-[node name="Artifact of Nature" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Nature" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 35.0
 margin_bottom = -492.0
 label_text = " Artifact of Nature:"
 
-[node name="Artifact of Sun" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Sun" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 70.0
 margin_bottom = -457.0
 label_text = "Artifact of Sun: "
 
-[node name="Artifact of World" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of World" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 100.0
 margin_bottom = -427.0
 label_text = " Artifact of World"
 
-[node name="Artifact of Spirit" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Spirit" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 135.0
 margin_bottom = -392.0
 label_text = " Artifact of Spirit:"
 
-[node name="Artifact of Newborn" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Newborn" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 170.0
 margin_bottom = -357.0
 label_text = " Artifact of Newborn:"
 
-[node name="Artifact of Truth" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Truth" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 205.0
 margin_bottom = -322.0
 label_text = " Artifact of Truth:"
 
-[node name="Artifact of Strength" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Strength" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 240.0
 margin_bottom = -287.0
 label_text = "Artifact of Strength: "
 
-[node name="Artifact of Elder" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Elder" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 275.0
 margin_bottom = -252.0
 label_text = "Artifact of Elder: "
 
-[node name="Artifact of Wild" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Wild" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 310.0
 margin_bottom = -217.0
 label_text = " Artifact of Wild:"
 
-[node name="Artifact of Lifegiver" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Lifegiver" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 345.0
 margin_bottom = -182.0
 label_text = " Artifact of Lifegiver:"
 
-[node name="Artifact of Warrior" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+[node name="Artifact of Warrior" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
 margin_top = 380.0
 margin_bottom = -147.0
 label_text = "Artifact of Warrior: "
 
-[node name="SaveHints" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints"]
+[node name="SaveHints" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints"]
 margin_left = 420.0
 margin_top = 450.0
 margin_right = 499.0
@@ -481,20 +710,21 @@ margin_bottom = 470.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Hints"
 
-[node name="Tweaks" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+[node name="Tweaks" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
+visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1021.0
 margin_bottom = 569.0
 script = ExtResource( 17 )
 
-[node name="smallSamus" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks"]
+[node name="smallSamus" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks"]
 margin_right = 24.0
 margin_bottom = 24.0
 rect_scale = Vector2( 2, 2 )
 text = "Small Samus"
 
-[node name="SaveTweaks" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks"]
+[node name="SaveTweaks" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks"]
 margin_left = 396.0
 margin_top = 338.0
 margin_right = 487.0
@@ -502,22 +732,22 @@ margin_bottom = 358.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Tweaks"
 
-[node name="variaDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+[node name="variaDamageReduction" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
 margin_top = 40.0
 margin_bottom = -487.0
 label_text = " Varia Dmg Reduction:"
 
-[node name="gravityDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+[node name="gravityDamageReduction" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
 margin_top = 80.0
 margin_bottom = -447.0
 label_text = " Gravity Dmg Reduction:"
 
-[node name="phazonDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+[node name="phazonDamageReduction" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
 margin_top = 120.0
 margin_bottom = -407.0
 label_text = " Phazon Dmg Reduction:"
 
-[node name="Config Options" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+[node name="Config Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
 margin_left = 4.0
 margin_top = 32.0
@@ -525,13 +755,13 @@ margin_right = 1016.0
 margin_bottom = 563.0
 script = ExtResource( 11 )
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="Label" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_right = 40.0
 margin_bottom = 14.0
 rect_scale = Vector2( 2, 2 )
 text = "Starting Room:"
 
-[node name="startingRoom" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="startingRoom" type="LineEdit" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 200.0
 margin_top = 2.0
 margin_right = 543.0
@@ -539,14 +769,14 @@ margin_bottom = 26.0
 text = "world:room example: Tallon Overworld:Landing Site"
 expand_to_text_length = true
 
-[node name="Label2" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="Label2" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 27.0
 margin_right = 97.0
 margin_bottom = 41.0
 rect_scale = Vector2( 2, 2 )
 text = "Starting Memo:"
 
-[node name="startingMemo" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="startingMemo" type="LineEdit" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 200.0
 margin_top = 29.0
 margin_right = 258.0
@@ -554,55 +784,55 @@ margin_bottom = 53.0
 text = "null"
 expand_to_text_length = true
 
-[node name="warpToStart" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="warpToStart" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 60.0
 margin_right = 111.0
 margin_bottom = 84.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Warp to Start"
 
-[node name="nonvariaHeatDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="nonvariaHeatDamage" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 80.0
 margin_right = 180.0
 margin_bottom = 104.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Non-Varia Heat Damage"
 
-[node name="staggeredSuitDamage" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="staggeredSuitDamage" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 100.0
 margin_right = 174.0
 margin_bottom = 124.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Staggered Suit Damage"
 
-[node name="HeatDamagePerSecond" type="SpinBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="HeatDamagePerSecond" type="SpinBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 280.0
 margin_top = 130.0
 margin_right = 354.0
 margin_bottom = 154.0
 
-[node name="Label3" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="Label3" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 130.0
 margin_right = 139.0
 margin_bottom = 144.0
 rect_scale = Vector2( 2, 2 )
 text = "Heat damage per sec:"
 
-[node name="autoEnabledElevators" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="autoEnabledElevators" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 160.0
 margin_right = 168.0
 margin_bottom = 184.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Auto enable elevators"
 
-[node name="backwardsFrigate" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsFrigate" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 180.0
 margin_right = 142.0
 margin_bottom = 204.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Backwards Frigate"
 
-[node name="backwardsLabs" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsLabs" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 200.0
 margin_right = 128.0
 margin_bottom = 224.0
@@ -610,7 +840,7 @@ rect_scale = Vector2( 1.2, 1.2 )
 pressed = true
 text = "Backwards Labs"
 
-[node name="backwardsUpperMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsUpperMines" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 220.0
 margin_right = 181.0
 margin_bottom = 244.0
@@ -618,48 +848,48 @@ rect_scale = Vector2( 1.2, 1.2 )
 pressed = true
 text = "Backwards Upper Mines"
 
-[node name="backwardsLowerMines" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="backwardsLowerMines" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 240.0
 margin_right = 180.0
 margin_bottom = 264.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Backwards Lower Mines"
 
-[node name="phazonEliteWithoutDynamo" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="phazonEliteWithoutDynamo" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 260.0
 margin_right = 215.0
 margin_bottom = 284.0
 rect_scale = Vector2( 1.2, 1.2 )
 text = "Phazon Elite without Dynamo"
 
-[node name="Label4" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="Label4" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 290.0
 margin_right = 135.0
 margin_bottom = 304.0
 rect_scale = Vector2( 2, 2 )
 text = "Main Menu Message:"
 
-[node name="mainMenuMessage" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="mainMenuMessage" type="LineEdit" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 280.0
 margin_top = 290.0
 margin_right = 680.0
 margin_bottom = 320.0
 
-[node name="creditsString" type="LineEdit" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="creditsString" type="LineEdit" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 180.0
 margin_top = 325.0
 margin_right = 480.0
 margin_bottom = 349.0
 text = "null"
 
-[node name="Label5" type="Label" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="Label5" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_top = 320.0
 margin_right = 89.0
 margin_bottom = 334.0
 rect_scale = Vector2( 2, 2 )
 text = "Credits String:"
 
-[node name="SaveConfigOptions" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Config Options"]
+[node name="SaveConfigOptions" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
 margin_left = 350.0
 margin_top = 400.0
 margin_right = 489.0
@@ -667,13 +897,13 @@ margin_bottom = 420.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Config Options"
 
-[node name="Save" type="Container" parent="Panel/TabContainer"]
+[node name="Save" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 6 )
 
-[node name="Save button" type="Button" parent="Panel/TabContainer/Save"]
+[node name="Save button" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Save"]
 margin_left = 380.0
 margin_top = 280.0
 margin_right = 497.0
@@ -681,7 +911,7 @@ margin_bottom = 300.0
 rect_scale = Vector2( 2, 2 )
 text = "Save JSon Layout"
 
-[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer/Save"]
+[node name="FileDialog" type="FileDialog" parent="Panel/TabContainer2/Create/TabContainer/Save"]
 margin_left = 220.0
 margin_top = 150.0
 margin_right = 820.0
@@ -693,19 +923,30 @@ filters = PoolStringArray( "*.json" )
 current_dir = "/Users/devta/Documents/Godot/Plandomizer"
 current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 
-[connection signal="file_selected" from="Panel/TabContainer/Import/FileDialog" to="Panel/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
-[connection signal="pressed" from="Panel/TabContainer/Import/Import Button" to="Panel/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
-[connection signal="item_selected" from="Panel/TabContainer/Elevators/Elevator" to="Panel/TabContainer/Elevators" method="_on_Elevator_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Nodes" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Nodes_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Area" to="Panel/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
-[connection signal="pressed" from="Panel/TabContainer/Room Nodes/Add Pickup Button" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Add_Pickup_Button_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Preferences/SavePreferences" to="Panel/TabContainer/Game Options/TabContainer/Preferences" method="_on_SavePreferences_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Item Capacity/SaveItemCapacitty" to="Panel/TabContainer/Game Options/TabContainer/Item Capacity" method="_on_SaveItemCapacitty_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Artifact Hints/SaveHints" to="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" method="_on_SaveHints_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Tweaks/SaveTweaks" to="Panel/TabContainer/Game Options/TabContainer/Tweaks" method="_on_SaveTweaks_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Config Options/SaveConfigOptions" to="Panel/TabContainer/Game Options/TabContainer/Config Options" method="_on_SaveConfigOptions_pressed"]
-[connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
-[connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Layout Select/Import" to="Panel/TabContainer2/Play/TabContainer/Layout Select" method="_on_Import_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer2/Play/TabContainer/Layout Select/FileDialog" to="Panel/TabContainer2/Play/TabContainer/Layout Select" method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Preferences/saveButton" to="Panel/TabContainer2/Play/TabContainer/Preferences" method="_on_saveButton_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Save Iso/select" to="Panel/TabContainer2/Play/TabContainer/Save Iso" method="_on_select_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer2/Play/TabContainer/Save Iso/input" to="Panel/TabContainer2/Play/TabContainer/Save Iso" method="_on_input_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Save Iso/select_output" to="Panel/TabContainer2/Play/TabContainer/Save Iso" method="_on_select_output_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer2/Play/TabContainer/Save Iso/output" to="Panel/TabContainer2/Play/TabContainer/Save Iso" method="_on_output_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Save Iso/Save" to="Panel/TabContainer2/Play/TabContainer/Save Iso" method="_on_Save_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer2/Create/TabContainer/Import/FileDialog" to="Panel/TabContainer2/Create/TabContainer/Import/FileDialog" method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Import/Import Button" to="Panel/TabContainer2/Create/TabContainer/Import/FileDialog" method="_on_Import_Button_pressed"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Elevators/Elevator" to="Panel/TabContainer2/Create/TabContainer/Elevators" method="_on_Elevator_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Options/Area" to="Panel/TabContainer2/Create/TabContainer/Room Options/Room" method="_on_Area_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Options/Room" to="Panel/TabContainer2/Create/TabContainer/Room Options/Room" method="_on_Room_item_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions/saveRoomOptions" to="Panel/TabContainer2/Create/TabContainer/Room Options" method="_on_saveRoomOptions_pressed"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Nodes_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Area" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Button" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences/SavePreferences" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences" method="_on_SavePreferences_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity/SaveItemCapacitty" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" method="_on_SaveItemCapacitty_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints/SaveHints" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" method="_on_SaveHints_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks/SaveTweaks" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks" method="_on_SaveTweaks_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options/SaveConfigOptions" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options" method="_on_SaveConfigOptions_pressed"]
+[connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Save/Save button" to="Panel/TabContainer2/Create/TabContainer/Save" method="_on_Save_button_pressed"]
+[connection signal="file_selected" from="Panel/TabContainer2/Create/TabContainer/Save/FileDialog" to="Panel/TabContainer2/Create/TabContainer/Save" method="_on_FileDialog_file_selected"]

@@ -104,7 +104,6 @@ var elevators_room = {
 	"Credits": "Credits"
 }
 
-
 var frigate_rooms = [
 	"Air Lock",
 	"Biohazard Containment",
@@ -113,7 +112,6 @@ var frigate_rooms = [
 	"Cargo Freight Lift to Deck Gamma",
 	"Connection Elevator to Deck Alpha",
 	"Connection Elevator to Deck Beta",
-	"Connection Elevator to Deck Beta (2)",
 	"Deck Alpha Access Hall",
 	"Deck Alpha Mech Shaft",
 	"Deck Alpha Umbilical Hall",
