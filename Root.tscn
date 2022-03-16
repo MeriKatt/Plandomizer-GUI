@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
 [ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Elevator.gd" type="Script" id=9]
 [ext_resource path="res://Starting Items.gd" type="Script" id=10]
 [ext_resource path="res://Config Options.gd" type="Script" id=11]
+[ext_resource path="res://LineEdit and Label.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Artifact Hints.gd" type="Script" id=13]
+[ext_resource path="res://Item Capacity.gd" type="Script" id=14]
+[ext_resource path="res://Label and ChoiceBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Preferences.gd" type="Script" id=16]
+[ext_resource path="res://Tweaks.gd" type="Script" id=17]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -139,12 +145,60 @@ margin_right = 1020.0
 margin_bottom = 597.0
 
 [node name="Preferences" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
+script = ExtResource( 16 )
+
+[node name="qolGameBreaking" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_scale = Vector2( 1.5, 1.5 )
+pressed = true
+text = "QoL Game Breaking"
+
+[node name="qolCosmetic" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+margin_top = 35.0
+margin_right = 118.0
+margin_bottom = 59.0
+rect_scale = Vector2( 1.5, 1.5 )
+pressed = true
+text = "QoL Cosmetic"
+
+[node name="qolPickupScans" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+margin_top = 70.0
+margin_right = 140.0
+margin_bottom = 94.0
+rect_scale = Vector2( 1.5, 1.5 )
+pressed = true
+text = "QoL Pickup Scans"
+
+[node name="artifactHintBehavior" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+margin_top = 120.0
+margin_bottom = -396.0
+label_name = " Artifact Hint Behavior:"
+
+[node name="qolCutscenes" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+margin_top = 160.0
+margin_bottom = -356.0
+label_name = "QoL Cutscenes "
+
+[node name="mapDefaultState" parent="Panel/TabContainer/Game Options/TabContainer/Preferences" instance=ExtResource( 15 )]
+margin_top = 200.0
+margin_bottom = -316.0
+label_name = " Default Map State:"
+
+[node name="SavePreferences" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Preferences"]
+margin_left = 396.0
+margin_top = 318.0
+margin_right = 517.0
+margin_bottom = 338.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Save Preferences"
 
 [node name="Starting Items" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
@@ -318,25 +372,153 @@ text = "Save Starting Items"
 
 [node name="Item Capacity" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1021.0
+margin_bottom = 568.0
+script = ExtResource( 14 )
 
-[node name="Game Banner" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="etankCapacity" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+margin_top = 32.0
+margin_right = -1017.0
+margin_bottom = -504.0
+label_text = "E-Tank Capacity"
+
+[node name="Energy Tank" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+margin_top = 65.0
+margin_bottom = -471.0
+label_text = "E-Tank Max:"
+
+[node name="Missile" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+margin_top = 100.0
+margin_bottom = -436.0
+label_text = "Max Missiles:"
+
+[node name="Power Bomb" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
+margin_top = 140.0
+margin_bottom = -396.0
+label_text = "Max PB:"
+
+[node name="SaveItemCapacitty" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Item Capacity"]
+margin_left = 340.0
+margin_top = 400.0
+margin_right = 473.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Item Capacity"
 
 [node name="Artifact Hints" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1021.0
+margin_bottom = 569.0
+script = ExtResource( 13 )
+
+[node name="Artifact of Chozo" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+label_text = "Artifact of Chozo: "
+
+[node name="Artifact of Nature" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 35.0
+margin_bottom = -492.0
+label_text = " Artifact of Nature:"
+
+[node name="Artifact of Sun" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 70.0
+margin_bottom = -457.0
+label_text = "Artifact of Sun: "
+
+[node name="Artifact of World" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 100.0
+margin_bottom = -427.0
+label_text = " Artifact of World"
+
+[node name="Artifact of Spirit" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 135.0
+margin_bottom = -392.0
+label_text = " Artifact of Spirit:"
+
+[node name="Artifact of Newborn" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 170.0
+margin_bottom = -357.0
+label_text = " Artifact of Newborn:"
+
+[node name="Artifact of Truth" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 205.0
+margin_bottom = -322.0
+label_text = " Artifact of Truth:"
+
+[node name="Artifact of Strength" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 240.0
+margin_bottom = -287.0
+label_text = "Artifact of Strength: "
+
+[node name="Artifact of Elder" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 275.0
+margin_bottom = -252.0
+label_text = "Artifact of Elder: "
+
+[node name="Artifact of Wild" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 310.0
+margin_bottom = -217.0
+label_text = " Artifact of Wild:"
+
+[node name="Artifact of Lifegiver" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 345.0
+margin_bottom = -182.0
+label_text = " Artifact of Lifegiver:"
+
+[node name="Artifact of Warrior" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
+margin_top = 380.0
+margin_bottom = -147.0
+label_text = "Artifact of Warrior: "
+
+[node name="SaveHints" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Artifact Hints"]
+margin_left = 420.0
+margin_top = 450.0
+margin_right = 499.0
+margin_bottom = 470.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Hints"
 
 [node name="Tweaks" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = 1021.0
+margin_bottom = 569.0
+script = ExtResource( 17 )
+
+[node name="smallSamus" type="CheckBox" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_scale = Vector2( 2, 2 )
+text = "Small Samus"
+
+[node name="SaveTweaks" type="Button" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks"]
+margin_left = 396.0
+margin_top = 338.0
+margin_right = 487.0
+margin_bottom = 358.0
+rect_scale = Vector2( 2, 2 )
+text = "Save Tweaks"
+
+[node name="variaDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+margin_top = 40.0
+margin_bottom = -487.0
+label_text = " Varia Dmg Reduction:"
+
+[node name="gravityDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+margin_top = 80.0
+margin_bottom = -447.0
+label_text = " Gravity Dmg Reduction:"
+
+[node name="phazonDamageReduction" parent="Panel/TabContainer/Game Options/TabContainer/Tweaks" instance=ExtResource( 12 )]
+margin_top = 120.0
+margin_bottom = -407.0
+label_text = " Phazon Dmg Reduction:"
 
 [node name="Config Options" type="Container" parent="Panel/TabContainer/Game Options/TabContainer"]
+visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1016.0
@@ -519,7 +701,11 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer/Room Nodes/Room" to="Panel/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
 [connection signal="pressed" from="Panel/TabContainer/Room Nodes/Add Pickup Button" to="Panel/TabContainer/Room Nodes/Nodes" method="_on_Add_Pickup_Button_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Preferences/SavePreferences" to="Panel/TabContainer/Game Options/TabContainer/Preferences" method="_on_SavePreferences_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Item Capacity/SaveItemCapacitty" to="Panel/TabContainer/Game Options/TabContainer/Item Capacity" method="_on_SaveItemCapacitty_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Artifact Hints/SaveHints" to="Panel/TabContainer/Game Options/TabContainer/Artifact Hints" method="_on_SaveHints_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Tweaks/SaveTweaks" to="Panel/TabContainer/Game Options/TabContainer/Tweaks" method="_on_SaveTweaks_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Game Options/TabContainer/Config Options/SaveConfigOptions" to="Panel/TabContainer/Game Options/TabContainer/Config Options" method="_on_SaveConfigOptions_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Save/Save button" to="Panel/TabContainer/Save" method="_on_Save_button_pressed"]
 [connection signal="file_selected" from="Panel/TabContainer/Save/FileDialog" to="Panel/TabContainer/Save" method="_on_FileDialog_file_selected"]
