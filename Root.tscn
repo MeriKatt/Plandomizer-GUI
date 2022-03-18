@@ -35,7 +35,6 @@ margin_right = 1025.0
 margin_bottom = 600.0
 
 [node name="Play" type="Container" parent="Panel/TabContainer2"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -200,6 +199,7 @@ margin_bottom = 320.0
 rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="Create" type="Container" parent="Panel/TabContainer2"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -212,7 +212,6 @@ margin_right = 1023.0
 margin_bottom = 575.0
 
 [node name="Import" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -389,6 +388,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 text = "Go"
 
 [node name="Game Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -402,7 +402,6 @@ margin_right = 1020.0
 margin_bottom = 597.0
 
 [node name="Preferences" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -784,6 +783,7 @@ margin_bottom = -407.0
 label_text = " Phazon Dmg Reduction:"
 
 [node name="Config Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -1019,8 +1019,8 @@ current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 [connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions/saveRoomOptions" to="Panel/TabContainer2/Create/TabContainer/Room Options" method="_on_saveRoomOptions_pressed"]
 [connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Nodes_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Area" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" method="_on_Area_item_selected"]
-[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" method="_on_Room_item_selected"]
+[connection signal="item_selected" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Room" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Room_item_selected"]
 [connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Room Nodes/Button" to="Panel/TabContainer2/Create/TabContainer/Room Nodes/Nodes" method="_on_Button_pressed"]
 [connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences/SavePreferences" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Preferences" method="_on_SavePreferences_pressed"]
 [connection signal="pressed" from="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items/saveStartingItemsButton" to="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items" method="_on_saveStartingItemsButton_pressed"]

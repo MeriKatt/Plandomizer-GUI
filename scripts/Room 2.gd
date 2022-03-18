@@ -46,6 +46,6 @@ func _on_Room_item_selected(index):
 	Globals.current_room = get_item_text(get_selected_id() -1)
 	DePrint(Globals.current_room)
 	var room = Globals.working_layout["levelData"][Globals.current_world]["rooms"][str(Globals.current_room)]
-	RoomOptions.get_node("drainLiquids").pressed = room["drainLiquids"]
+	RoomOptions.get_node("drainLiquids").pressed = room["removeWater"]
 	RoomOptions.get_node("superheated").pressed = room["superheated"]
 	RoomOptions.get_node("submergeRoom").pressed = false
