@@ -11,7 +11,10 @@ func _ready():
 	for x in get_children():
 		if x.get_class() != "Label":
 			if x.get_class() == "CheckBox":
-				x.pressed = Globals.working_layout["gameConfig"][x.get_name()]
+				if not Globals.working_layout["gameConfig"].has(x.get_name()):
+					x.pressed = false
+				else:
+					x.pressed = Globals.working_layout["gameConfig"][x.get_name()]
 			elif x.get_class() == "LineEdit":
 				if Globals.working_layout["gameConfig"][x.get_name()] == null:
 					x.text = "null"

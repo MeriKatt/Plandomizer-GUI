@@ -19,18 +19,19 @@ class save_iso(Node):
 		"""
 		self.globals = self.get_node("/root/Globals").working_layout
 		pass
-	updaters = []
 	def dumper(self, obj):
 		try:
 			return obj.toJSON()
 		except:
 			return obj.__dict__
 	def save(self ,json):
+		updaters = []
 		try:
 			py_randomprime.patch_iso_raw(
 				json,
 				  py_randomprime.ProgressNotifier(lambda percent, msg: updaters[-1](msg, percent)),
 				)
+			#self.get_node("ProgressBar").value = updaters[0]
 		except BaseException as e:
 			if isinstance(e, Exception):
 				raise

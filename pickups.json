@@ -1,0 +1,276 @@
+{
+  "Chozo Ruins": {
+    "Main Plaza": {
+      "0": "Half-Pipe (Missle Expansion)",
+      "1": "Grapple Ledge (Missile Expansion)",
+      "2": "Tree (Missile Expansion)",
+      "3": "Vault Ledge (E-Tank)"
+    },
+    "Ruined Fountain": {
+      "0": "Missile Expansion"
+    },
+    "Ruined Shrine": {
+      "0": "Morph Ball",
+      "1": "Half-Pipe (Missile Expansion)",
+      "2": "Tunnel (Missile Expansion)"
+    },
+    "Vault": {
+      "0": "Missile Expansion"
+    },
+    "Training Chamber": {
+      "0": "E-Tank"
+    },
+    "Ruined Nursery": {
+      "0": "Missile Expansion"
+    },
+    "Training Chamber Access": {
+      "0": "Missile Expansion"
+    },
+    "Magma Pool": {
+      "0": "PB Expansion"
+    },
+    "Tower of Light": {
+      "0": "Wavebuster"
+    },
+    "Tower Chamber": {
+      "0": "Artifact of Lifegiver"
+    },
+    "Ruined Gallery": {
+      "0": "Missile Wall (Missile Expansion)",
+      "1": "Tunnel (Missile Expansion)"
+    },
+    "Transport Access North": {
+      "0": "E-Tank"
+    },
+    "Gathering Hall": {
+      "0": "Missile Expansion"
+    },
+    "Hive Totem": {
+      "0": "Missile Launcher"
+    },
+    "Sunchamber": {
+      "0": "Flaahgra (Varia Suit)",
+      "1": "Ghosts (Artifact of Wild)"
+    },
+    "Watery Hall Access": {
+      "0": "Missile Expansion"
+    },
+    "Watery Hall": {
+      "0": "Scan Puzzle (Charge Beam)",
+      "1": "Underwater (Missile Expansion)"
+    },
+    "Dynamo": {
+      "0": "Lower (Missile Expansion)",
+      "1": "Spider Track (Missile Expansion)"
+    },
+    "Burn Dome": {
+      "1": "Zoid (Morph Ball Bombs)",
+      "0": "Tunnel (Missile Expansion)"
+    },
+    "Furnace": {
+      "0": "Spider Track (Missile Expansion)",
+      "1": "Lower (E-Tank)"
+    },
+    "Hall of the Elders": {
+      "0": "E-Tank"
+    },
+    "Crossway": {
+      "0": "Missile Expansion"
+    },
+    "Elder Chamber": {
+      "0": "Artifact of World"
+    },
+    "Antechamber": {
+      "0": "Ice Beam"
+    }
+  },
+  "Phendrana Drifts": {
+    "Phendrana Shoreline": {
+      "0": "Behind Ice (Missile Expansion)",
+      "1": "Tower (Missile Expansion)"
+    },
+    "Chozo Ice Temple": {
+      "0": "Artifact of Sun"
+    },
+    "Ice Ruins West": {
+      "0": "PB Expansion"
+    },
+    "Ice Ruins East": {
+      "0": "Behind Ice (Missile Expansion)",
+      "1": "Spider Track (Missile Expansion)"
+    },
+    "Chapel of the Elders": {
+      "0": "Wave Beam"
+    },
+    "Ruined Courtyard": {
+      "0": "E-Tank"
+    },
+    "Phendrana Canyon": {
+      "0": "Boost Ball"
+    },
+    "Quarantine Cave": {
+      "0": "Spider Ball"
+    },
+    "Research Lab Hydra": {
+      "0": "Missile Expansion"
+    },
+    "Quarantine Monitor": {
+      "0": "Missile Expansion"
+    },
+    "Observatory": {
+      "0": "Super Missile"
+    },
+    "Transport Access": {
+      "0": "E-Tank"
+    },
+    "Control Tower": {
+      "0": "Artifact of Elder"
+    },
+    "Research Core": {
+      "0": "Thermal Visor"
+    },
+    "Frost Cave": {
+      "0": "Missile Expansion"
+    },
+    "Research Lab Aether": {
+      "0": "Tank (E-Tank)",
+      "1": "Morph Track (Missile Expansion)"
+    },
+    "Gravity Chamber": {
+      "0": "Gravity Suit",
+      "1": "Grapple Ledge (Missile Expansion)"
+    },
+    "Storage Cave": {
+      "0": "Artifact of Spirit"
+    },
+    "Security Cave": {
+      "0": "PB Expansion"
+    }
+  },
+  "Magmoor Caverns": {
+    "Lava Lake": {
+      "0": "Artifact of Nature"
+    },
+    "Triclops Pit": {
+      "0": "Missile Expansion"
+    },
+    "Storage Cavern": {
+      "0": "Missile Expansion"
+    },
+    "Transport Tunnel A": {
+      "0": "E-Tank"
+    },
+    "Warrior Shrine": {
+      "0": "Artifact of Strength"
+    },
+    "Shore Tunnel": {
+      "0": "Ice Spreader"
+    },
+    "Fiery Shores": {
+      "0": "Morph Track (Missile Expansion)",
+      "1": "Under Warrior Shrine (PB Expansion)"
+    },
+    "Plasma Processing": {
+      "0": "Plasma Beam"
+    },
+    "Magmoor Workstation": {
+      "0": "E-Tank"
+    }
+  },
+  "Phazon Mines": {
+    "Main Quarry": {
+      "0": "Missile Expansion"
+    },
+    "Security Access A": {
+      "0": "Missile Expansion"
+    },
+    "Storage Depot B": {
+      "0": "Grapple Beam"
+    },
+    "Storage Depot A": {
+      "0": "Flamethrower"
+    },
+    "Elite Research": {
+      "0": "Phazon Elite (Artifact of Warrior)",
+      "1": "Laser (Missile Expansion)"
+    },
+    "Elite Control Access": {
+      "0": "Missile Expansion"
+    },
+    "Ventilation Shaft": {
+      "0": "E-Tank"
+    },
+    "Phazon Processing Center": {
+      "0": "Missile Expansion"
+    },
+    "Processing Center Access": {
+      "0": "E-Tank"
+    },
+    "Elite Quarters": {
+      "0": "Phazon Suit"
+    },
+    "Central Dynamo": {
+      "0": "Power Bomb"
+    },
+    "Metroid Quarantine B": {
+      "0": "Missile Expansion"
+    },
+    "Metroid Quarantine A": {
+      "0": "Missile Expansion"
+    },
+    "Fungal Hall B": {
+      "0": "Missile Expansion"
+    },
+    "Phazon Mining Tunnel": {
+      "0": "Artifact of Newborn"
+    },
+    "Fungal Hall Access": {
+      "0": "Missile Expansion"
+    }
+  },
+  "Tallon Overworld": {
+    "Landing Site": {
+      "0": "Missile Expansion"
+    },
+    "Alcove": {
+      "0": "Space Jump Boots"
+    },
+    "Frigate Crash Site": {
+      "0": "Missile Expansion"
+    },
+    "Overgrown Cavern": {
+      "0": "Missile Expansion"
+    },
+    "Root Cave": {
+      "0": "Missile Expansion"
+    },
+    "Artifact Temple": {
+      "0": "Artifact of Truth"
+    },
+    "Transport Tunnel B": {
+      "0": "Missile Expansion"
+    },
+    "Arbor Chamber": {
+      "0": "Missile Expansion"
+    },
+    "Cargo Freight Lift to Deck Gamma": {
+      "0": "Missile Expansion"
+    },
+    "Biohazard Containment": {
+      "0": "Missile Expansion"
+    },
+    "Hydro Access Tunnel": {
+      "0": "E-Tank"
+    },
+    "Great Tree Chamber": {
+      "0": "Missile Expansion"
+    },
+    "Life Grove Tunnel": {
+      "0": "Missile Expansion"
+    },
+    "Life Grove": {
+      "0": "X-Ray Visor",
+      "1": "Spinner (Artifact of Chozo)"
+    }
+  }
+}

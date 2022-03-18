@@ -50,18 +50,20 @@ func _on_Room_item_selected(index):
 		Globals.current_world = get_parent().get_node("Area").get_item_text(get_parent().get_node("Area").get_selected_id())
 	Globals.current_room = Globals.get_array(Globals.current_world)[index]
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.get_array(Globals.current_world)[index]]
+	print(roomData["doors"])
 	var i= 0
 	for x in roomData["doors"].values():
 		var doorName
-		if Globals.names.has(Globals.current_room):
-			if Globals.names[Globals.current_room].has(str(i)):
-				doorName = Globals.names[Globals.current_room][str(i)]
+		if Globals.names[Globals.current_world].has(Globals.current_room):
+			if Globals.names[Globals.current_world][Globals.current_room].has(str(i)):
+				doorName = Globals.names[Globals.current_world][Globals.current_room][str(i)]
 			else:
 				doorName = str(i)
 		else:
 			doorName = str(i)
-		room_nodes.append( create_node("Door"+str(i), i,"door", x))
-		add_item("Door to "+doorName)
+		if Globals.names[Globals.current_world].has(Globals.current_room)and Globals.names[Globals.current_world][Globals.current_room].has(str(i)):
+			room_nodes.append( create_node("Door"+str(i), i,"door", x))
+			add_item("Door to "+doorName)
 		i+=1
 	i = 0
 	for x in roomData["liquids"]:
@@ -70,8 +72,16 @@ func _on_Room_item_selected(index):
 		i+=1
 	i=0
 	for x in roomData["pickups"]:
+		var pickupName
+		if Globals.pickups[Globals.current_world].has(Globals.current_room):
+			if Globals.pickups[Globals.current_world][Globals.current_room].has(str(i)):
+				pickupName = Globals.pickups[Globals.current_world][Globals.current_room][str(i)]
+			else:
+				pickupName = "Piclup "+str(i)
+		else:
+			pickupName = "Pickup "+str(i)
 		room_nodes.append(create_node("Pickup"+str(i),i, "pickup", x))
-		add_item("Pickup "+str(i))
+		add_item(pickupName)
 		i+=1
 
 func clear_details():
@@ -115,9 +125,17 @@ func refresh_nodes():
 	var roomData = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]
 	var i= 0
 	for x in roomData["doors"].values():
-		var doorName = Globals.names[Globals.current_room][str(i)]
-		room_nodes.append( create_node("Door"+str(i), i,"door", x))
-		add_item("Door to "+doorName)
+		var doorName
+		if Globals.names[Globals.current_world].has(Globals.current_room):
+			if Globals.names[Globals.current_world][Globals.current_room].has(str(i)):
+				doorName = Globals.names[Globals.current_world][Globals.current_room][str(i)]
+			else:
+				doorName = str(i)
+		else:
+			doorName = str(i)
+		if Globals.names[Globals.current_world][Globals.current_room].has(str(i)):
+			room_nodes.append( create_node("Door"+str(i), i,"door", x))
+			add_item("Door to "+doorName)
 		i+=1
 	i = 0
 	for x in roomData["liquids"]:
@@ -126,8 +144,16 @@ func refresh_nodes():
 		i+=1
 	i=0
 	for x in roomData["pickups"]:
+		var pickupName
+		if Globals.pickups[Globals.current_world].has(Globals.current_room):
+			if Globals.pickups[Globals.current_world][Globals.current_room].has(str(i)):
+				pickupName = Globals.pickups[Globals.current_world][Globals.current_room][str(i)]
+			else:
+				pickupName = "Piclup "+str(i)
+		else:
+			pickupName = "Pickup "+str(i)
 		room_nodes.append(create_node("Pickup"+str(i),i, "pickup", x))
-		add_item("Pickup "+str(i))
+		add_item(pickupName)
 		i+=1
 
 func _on_Button_pressed():

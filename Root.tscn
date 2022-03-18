@@ -186,6 +186,14 @@ margin_bottom = 420.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Iso"
 
+[node name="ProgressBar" type="ProgressBar" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
+visible = false
+margin_left = 300.0
+margin_top = 300.0
+margin_right = 600.0
+margin_bottom = 320.0
+rect_scale = Vector2( 1.5, 1.5 )
+
 [node name="Create" type="Container" parent="Panel/TabContainer2"]
 visible = false
 margin_left = 4.0
@@ -899,6 +907,29 @@ margin_right = 489.0
 margin_bottom = 420.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Config Options"
+
+[node name="springBall" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 600.0
+margin_right = 624.0
+margin_bottom = 24.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Spring Ball"
+
+[node name="mainPlazaDoor" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 600.0
+margin_top = 40.0
+margin_right = 624.0
+margin_bottom = 64.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Unlock Vault Ledge"
+
+[node name="disableItemLoss" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 600.0
+margin_top = 80.0
+margin_right = 624.0
+margin_bottom = 104.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Disable Frigate Item Loss"
 
 [node name="Save" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false

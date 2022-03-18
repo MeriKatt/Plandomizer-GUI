@@ -27,8 +27,8 @@
 			"plasma": false,
 			"missiles": 0,
 			"bombs": false,
-			"powerBombs": 2,
-			"flamethrower": true,
+			"powerBombs": 0,
+			"flamethrower": false,
 			"thermalVisor": false,
 			"charge": false,
 			"superMissile": false,
@@ -58,10 +58,10 @@
 		"phazonEliteWithoutDynamo": true,
 		"gameBanner": {
 			"gameName": "Metroid Prime: Plandomizer",
-			"gameNameFull": "Metroid Prime Plandomizer",
+			"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
 			"description": "github.com/toasterparty/metroid-prime-plandomizer"
 		},
-		"mainMenuMessage": "Metroid Prime Plandomizer",
+		"mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
 		"creditsString": null,
 		"artifactHints": {
 			"Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
@@ -1293,11 +1293,6 @@
 							"type": null,
 							"blastShield": null,
 							"destination": null
-						},
-						"1": {
-							"type": null,
-							"blastShield": null,
-							"destination": null
 						}
 					}
 				},
@@ -1650,11 +1645,6 @@
 					"removeWater": false,
 					"liquids": [],
 					"doors": {
-						"0": {
-							"type": null,
-							"blastShield": null,
-							"destination": null
-						},
 						"1": {
 							"type": null,
 							"blastShield": null,
@@ -1700,6 +1690,24 @@
 					"liquids": [],
 					"doors": {
 						"0": {
+							"type": null,
+							"blastShield": null,
+							"destination": null
+						}
+					}
+				},
+				"Connection Elevator to Deck Beta (2)": {
+					"pickups": [],
+					"superheated": false,
+					"removeWater": false,
+					"liquids": [],
+					"doors": {
+						"0": {
+							"type": null,
+							"blastShield": null,
+							"destination": null
+						},
+						"1": {
 							"type": null,
 							"blastShield": null,
 							"destination": null
@@ -1896,6 +1904,9 @@
 				},
 				"Reactor Core": {
 					"pickups": [],
+					"superheated": false,
+					"removeWater": false,
+					"liquids": [],
 					"doors": {
 						"1": {
 							"type": null,
@@ -6150,6 +6161,6 @@
 			}
 		}
 	},
-	"inputIso": "D:\\Prime_Series\\Isos\\Metroid Prime (USA) (v1.00).iso",
-	"outputIso": "D:\\Prime_Series\\Isos\\test.iso"
+	"inputIso": "prime.iso",
+	"outputIso": "primeOut.iso"
 }

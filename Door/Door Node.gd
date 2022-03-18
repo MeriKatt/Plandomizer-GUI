@@ -39,7 +39,10 @@ var rooms = Globals.get_array(Globals.current_world)
 var door_details
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	door_details = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)]
+	if Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"].has(str(Globals.working_index)):
+		door_details = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index)]
+	else:
+		door_details = Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["doors"][str(Globals.working_index + 1)]
 	var i = 1
 
 	for x in rooms:

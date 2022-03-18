@@ -1,994 +1,1133 @@
 {
-	"Transport to Tallon Overworld North": {
-		"0": "Ruins Entrance"
-	},
-	"Ruins Entrance": {
-		"0": "Main Plaza",
-		"1": "Transport to Tallon Overworld North"
-	},
-	"Main Plaza": {
-		"0": "Ruined Fountain Access",
-		"1": "Ruins Entrance",
-		"2": "Ruined Shrine Access",
-		"3": "Nursery Access",
-		"4": "Plaza Access",
-		"5": "Piston Tunnel"
-	},
-	"Ruined Fountain Access": {
-		"0": "Main Plaza",
-		"1": "Ruined Fountain"
-	},
-	"Ruined Shrine Access": {
-		"0": "Ruined Shrine",
-		"1": "Main Plaza"
-	},
-	"Nursery Access": {
-		"0": "Eyon Tunnel",
-		"1": "Main Plaza"
-	},
-	"Plaza Access": {
-		"0": "Main Plaza",
-		"1": "Vault"
-	},
-	"Piston Tunnel": {
-		"0": "Main Plaza",
-		"1": "Training Chamber"
-	},
-	"Ruined Fountain": {
-		"0": "Arboretum Access",
-		"1": "Ruined Fountain Access",
-		"2": "Meditation Fountain"
-	},
-	"Ruined Shrine": {
-		"0": "Tower of Light Access",
-		"1": "Ruined Shrine Access"
-	},
-	"Eyon Tunnel": {
-		"0": "Ruined Nursery",
-		"1": "Nursery Access"
-	},
-	"Vault": {
-		"0": "Vault Access",
-		"1": "Plaza Access"
-	},
-	"Training Chamber": {
-		"0": "Training Chamber Access",
-		"1": "Piston Tunnel"
-	},
-	"Arboretum Access": {
-		"0": "Arboretum",
-		"1": "Ruined Fountain"
-	},
-	"Meditation Fountain": {
-		"0": "Magma Pool",
-		"1": "Ruined Fountain"
-	},
-	"Tower of Light Access": {
-		"0": "Tower of Light",
-		"1": "Ruined Shrine"
-	},
-	"Ruined Nursery": {
-		"0": "Save Station 1",
-		"1": "North Atrium",
-		"2": "Eyon Tunnel"
-	},
-	"Vault Access": {
-		"0": "Vault",
-		"1": "Transport to Magmoor Caverns North"
-	},
-	"Training Chamber Access": {
-		"0": "Magma Pool",
-		"1": "Training Chamber"
-	},
-	"Arboretum": {
-		"0": "Sunchamber Lobby",
-		"1": "Arboretum Access",
-		"2": "Gathering Hall Access"
-	},
-	"Magma Pool": {
-		"0": "Training Chamber Access",
-		"1": "Meditation Fountain"
-	},
-	"Tower of Light": {
-		"0": "Tower of Light Access",
-		"1": "Tower Chamber"
-	},
-	"Save Station 1": {
-		"0": "Ruined Nursery"
-	},
-	"North Atrium": {
-		"0": "Ruined Nursery",
-		"1": "Ruined Gallery"
-	},
-	"Transport to Magmoor Caverns North": {
-		"0": "Sun Tower",
-		"1": "Vault Access",
-		"2": "Transport Access North"
-	},
-	"Sunchamber Lobby": {
-		"0": "Arboretum",
-		"1": "Sunchamber Access"
-	},
-	"Gathering Hall Access": {
-		"0": "Gathering Hall",
-		"1": "Arboretum"
-	},
-	"Tower Chamber": {
-		"0": "Tower of Light"
-	},
-	"Ruined Gallery": {
-		"0": "North Atrium",
-		"1": "Totem Access",
-		"2": "Map Station"
-	},
-	"Sun Tower": {
-		"0": "Sun Tower Access",
-		"1": "Transport to Magmoor Caverns North"
-	},
-	"Transport Access North": {
-		"0": "Hive Totem",
-		"1": "Transport to Magmoor Caverns North"
-	},
-	"Sunchamber Access": {
-		"0": "Sunchamber",
-		"1": "Sunchamber Lobby"
-	},
-	"Gathering Hall": {
-		"0": "Watery Hall Access",
-		"1": "Gathering Hall Access",
-		"2": "Save Station 2",
-		"3": "East Atrium"
-	},
-	"Totem Access": {
-		"0": "Ruined Gallery",
-		"1": "Hive Totem"
-	},
-	"Map Station": {
-		"0": "Research Entrance"
-	},
-	"Sun Tower Access": {
-		"0": "Sunchamber",
-		"1": "Sun Tower"
-	},
-	"Hive Totem": {
-		"0": "Totem Access",
-		"1": "Transport Access North"
-	},
-	"Sunchamber": {
-		"0": "Sun Tower Access",
-		"1": "Sunchamber Access"
-	},
-	"Watery Hall Access": {
-		"0": "Gathering Hall",
-		"1": "Watery Hall"
-	},
-	"Save Station 2": {
-		"0": "Gathering Hall"
-	},
-	"East Atrium": {
-		"0": "Gathering Hall",
-		"1": "Energy Core Access"
-	},
-	"Watery Hall": {
-		"0": "Dynamo Access",
-		"1": "Watery Hall Access"
-	},
-	"Energy Core Access": {
-		"0": "Energy Core",
-		"1": "East Atrium"
-	},
-	"Dynamo Access": {
-		"0": "Central Dynamo",
-		"1": "Omega Research"
-	},
-	"Energy Core": {
-		"0": "Burn Dome Access",
-		"1": "West Furnace Access",
-		"2": "Energy Core Access"
-	},
-	"Dynamo": {
-		"0": "Dynamo Access"
-	},
-	"Burn Dome Access": {
-		"0": "Burn Dome",
-		"1": "Energy Core"
-	},
-	"West Furnace Access": {
-		"0": "Energy Core",
-		"1": "Furnace"
-	},
-	"Burn Dome": {
-		"0": "Burn Dome Access"
-	},
-	"Furnace": {
-		"0": "East Furnace Access",
-		"1": "West Furnace Access",
-		"2": "Crossway Access West"
-	},
-	"East Furnace Access": {
-		"0": "Hall of the Elders",
-		"1": "Furnace"
-	},
-	"Crossway Access West": {
-		"0": "Crossway",
-		"1": "Furnace"
-	},
-	"Hall of the Elders": {
-		"0": "Reflecting Pool Access",
-		"1": "Elder Hall Access",
-		"2": "East Furnace Access",
-		"3": "Crossway Access South",
-		"4": "Elder Chamber"
-	},
-	"Crossway": {
-		"0": "Crossway Access South",
-		"1": "Crossway Access West",
-		"2": "Elder Hall Access"
-	},
-	"Reflecting Pool Access": {
-		"0": "Reflecting Pool",
-		"1": "Hall of the Elders"
-	},
-	"Elder Hall Access": {
-		"0": "Hall of the Elders",
-		"1": "Crossway"
-	},
-	"Crossway Access South": {
-		"0": "Crossway",
-		"1": "Hall of the Elders"
-	},
-	"Elder Chamber": {
-		"0": "Hall of the Elders"
-	},
-	"Reflecting Pool": {
-		"0": "Save Station 3",
-		"1": "Transport Access South",
-		"2": "Reflecting Pool Access",
-		"3": "Antechamber"
-	},
-	"Save Station 3": {
-		"0": "Reflecting Pool",
-		"1": "Transport to Tallon Overworld East"
-	},
-	"Transport Access South": {
-		"0": "Reflecting Pool",
-		"1": "Transport to Tallon Overworld South"
-	},
-	"Antechamber": {
-		"0": "Reflecting Pool"
-	},
-	"Transport to Tallon Overworld East": {
-		"0": "Save Station 3"
-	},
-	"Transport to Tallon Overworld South": {
-		"0": "Quarry Access"
-	},
-	"Transport to Magmoor Caverns West": {
-		"0": "Shoreline Entrance"
-	},
-	"Shoreline Entrance": {
-		"0": "Transport to Magmoor Caverns West",
-		"1": "Phendrana Shorelines"
-	},
-	"Phendrana Shorelines": {
-		"0": "Shoreline Entrance",
-		"1": "Temple Entryway",
-		"2": "Save Station B",
-		"3": "Ruins Entryway",
-		"4": "Plaza Walkway",
-		"5": "Ice Ruins Access"
-	},
-	"Temple Entryway": {
-		"0": "Chozo Ice Temple",
-		"1": "Phendrana Shorelines"
-	},
-	"Save Station B": {
-		"0": "Phendrana Shorelines"
-	},
-	"Ruins Entryway": {
-		"0": "Ice Ruins West",
-		"1": "Phendrana Shorelines"
-	},
-	"Plaza Walkway": {
-		"0": "Phendrana Shorelines",
-		"1": "Ice Ruins East"
-	},
-	"Ice Ruins Access": {
-		"0": "Ice Ruins East",
-		"1": "Phendrana Shorelines"
-	},
-	"Chozo Ice Temple": {
-		"0": "Temple Entryway",
-		"1": "Chapel Tunnel"
-	},
-	"Ice Ruins West": {
-		"0": "Ruins Entryway",
-		"1": "Courtyard Entryway",
-		"2": "Canyon Entryway"
-	},
-	"Ice Ruins East": {
-		"0": "Ice Ruins Access",
-		"1": "Plaza Walkway"
-	},
-	"Chapel Tunnel": {
-		"0": "Chapel of the Elders",
-		"1": "Chozo Ice Temple"
-	},
-	"Courtyard Entryway": {
-		"0": "Ruined Courtyard",
-		"1": "Ice Ruins West"
-	},
-	"Canyon Entryway": {
-		"0": "Phendrana Canyon",
-		"1": "Ice Ruins West"
-	},
-	"Chapel of the Elders": {
-		"0": "Chapel Tunnel"
-	},
-	"Ruined Courtyard": {
-		"0": "Courtyard Entryway",
-		"1": "Save Station A",
-		"2": "Specimen Storage",
-		"3": "Quarantine Access"
-	},
-	"Phendrana Canyon": {
-		"0": "Canyon Entryway"
-	},
-	"Save Station A": {
-		"0": "Ruined Courtyard"
-	},
-	"Specimen Storage": {
-		"0": "Research Entrance",
-		"1": "Ruined Courtyard"
-	},
-	"Quarantine Access": {
-		"0": "North Quarantine Tunnel",
-		"1": "Ruined Courtyard"
-	},
-	"Research Entrance": {
-		"0": "Specimen Storage",
-		"1": "Map Station",
-		"2": "Hydra Lab Entryway"
-	},
-	"North Quarantine Tunnel": {
-		"0": "Quarantine Cave",
-		"1": "Quarantine Access"
-	},
-	"Hydra Lab Entryway": {
-		"0": "Research Entrance",
-		"1": "Research Lab Hydra"
-	},
-	"Quarantine Cave": {
-		"0": "North Quarantine Tunnel",
-		"1": "South Quarantine Tunnel",
-		"2": "Quarantine Monitor"
-	},
-	"Research Lab Hydra": {
-		"0": "Hydra Lab Entryway",
-		"1": "Observatory Access"
-	},
-	"South Quarantine Tunnel": {
-		"0": "Quarantine Cave",
-		"1": "Transport to Magmoor Caverns South"
-	},
-	"Quarantine Monitor": {
-		"0": "Quarantine Cave"
-	},
-	"Observatory Access": {
-		"0": "Observatory",
-		"1": "Research Lab Hydra"
-	},
-	"Transport to Magmoor Caverns South": {
-		"0": "Transport Access",
-		"1": "South Quarantine Tunnel"
-	},
-	"Observatory": {
-		"0": "Observatory Access",
-		"1": "West Tower Entrance",
-		"2": "Save Station D"
-	},
-	"Transport Access": {
-		"0": "Phazon Processing Center",
-		"1": "Transport to Magmoor Caverns South"
-	},
-	"West Tower Entrance": {
-		"0": "West Tower",
-		"1": "Observatory"
-	},
-	"Save Station D": {
-		"0": "Observatory"
-	},
-	"Frozen Pike": {
-		"0": "Pike Access",
-		"1": "Transport Access",
-		"2": "Frost Cave Access",
-		"3": "Hunter Cave Access"
-	},
-	"West Tower": {
-		"0": "West Tower Entrance",
-		"1": "Control Tower"
-	},
-	"Pike Access": {
-		"0": "Frozen Pike",
-		"1": "Research Core"
-	},
-	"Frost Cave Access": {
-		"0": "Frozen Pike",
-		"1": "Frost Cave"
-	},
-	"Hunter Cave Access": {
-		"0": "Frozen Pike",
-		"1": "Hunter Cave"
-	},
-	"Control Tower": {
-		"0": "East Tower",
-		"1": "West Tower"
-	},
-	"Research Core": {
-		"0": "Pike Access",
-		"1": "Research Core Access"
-	},
-	"Frost Cave": {
-		"0": "Save Station C",
-		"1": "Frost Cave Access",
-		"2": "Upper Edge Tunnel"
-	},
-	"Hunter Cave": {
-		"0": "Hunter Cave Access",
-		"1": "Lower Edge Tunnel",
-		"2": "Chamber Access",
-		"3": "Lake Tunnel"
-	},
-	"East Tower": {
-		"0": "Aether Lab Entryway",
-		"1": "Control Tower"
-	},
-	"Research Core Access": {
-		"0": "Research Core",
-		"1": "Research Lab Aether"
-	},
-	"Save Station C": {
-		"0": "Frost Cave"
-	},
-	"Upper Edge Tunnel": {
-		"0": "Phendrana's Edge",
-		"1": "Frost Cave"
-	},
-	"Lower Edge Tunnel": {
-		"0": "Phendrana's Edge",
-		"1": "Hunter Cave"
-	},
-	"Chamber Access": {
-		"0": "Hunter Cave",
-		"1": "Gravity Chamber"
-	},
-	"Lake Tunnel": {
-		"0": "Lava Lake",
-		"1": "Burning Trail"
-	},
-	"Aether Lab Entryway": {
-		"0": "East Tower",
-		"1": "Research Lab Aether"
-	},
-	"Research Lab Aether": {
-		"0": "Aether Lab Entryway",
-		"1": "Research Core Access"
-	},
-	"Phendrana's Edge": {
-		"0": "Lower Edge Tunnel",
-		"1": "Upper Edge Tunnel",
-		"2": "Storage Cave",
-		"3": "Security Cave"
-	},
-	"Gravity Chamber": {
-		"0": "Lake Tunnel",
-		"1": "Chamber Access"
-	},
-	"Storage Cave": {
-		"0": "Phendrana's Edge"
-	},
-	"Security Cave": {
-		"0": "Phendrana's Edge"
-	},
-	"Landing Site": {
-		"0": "Gully",
-		"1": "Canyon Cavern",
-		"2": "Temple Hall",
-		"3": "Alcove",
-		"4": "Waterfall Cavern"
-	},
-	"Gully": {
-		"0": "Tallon Canyon",
-		"1": "Landing Site"
-	},
-	"Canyon Cavern": {
-		"0": "Tallon Canyon",
-		"1": "Landing Site"
-	},
-	"Temple Hall": {
-		"0": "Temple Security Station",
-		"1": "Landing Site"
-	},
-	"Alcove": {
-		"0": "Landing Site"
-	},
-	"Waterfall Cavern": {
-		"0": "Landing Site",
-		"1": "Frigate Crash Site"
-	},
-	"Tallon Canyon": {
-		"0": "Canyon Cavern",
-		"1": "Transport Tunnel A",
-		"2": "Gully",
-		"3": "Root Tunnel"
-	},
-	"Temple Security Station": {
-		"0": "Temple Hall",
-		"1": "Temple Lobby"
-	},
-	"Frigate Crash Site": {
-		"0": "Waterfall Cavern",
-		"1": "Frigate Access Tunnel",
-		"2": "Overgrown Cavern"
-	},
-	"Transport Tunnel A": {
-		"0": "Transport to Phendrana Drifts North",
-		"1": "Monitor Station"
-	},
-	"Root Tunnel": {
-		"0": "Root Cave",
-		"1": "Tallon Canyon"
-	},
-	"Temple Lobby": {
-		"0": "Artifact Temple",
-		"1": "Temple Security Station"
-	},
-	"Frigate Access Tunnel": {
-		"0": "Main Ventilation Shaft Section C",
-		"1": "Frigate Crash Site"
-	},
-	"Overgrown Cavern": {
-		"0": "Frigate Crash Site",
-		"1": "Transport Tunnel C"
-	},
-	"Transport to Chozo Ruins West": {
-		"0": "Transport Tunnel A"
-	},
-	"Root Cave": {
-		"0": "Transport Tunnel B",
-		"1": "Root Tunnel",
-		"2": "Arbor Chamber"
-	},
-	"Artifact Temple": {
-		"0": "Temple Lobby"
-	},
-	"Main Ventilation Shaft Section C": {
-		"0": "Main Ventilation Shaft Section B",
-		"1": "Frigate Access Tunnel"
-	},
-	"Transport Tunnel C": {
-		"0": "Transport to Phendrana Drifts South",
-		"1": "Magmoor Workstation"
-	},
-	"Transport Tunnel B": {
-		"0": "Transport to Tallon Overworld West",
-		"1": "Fiery Shores"
-	},
-	"Arbor Chamber": {
-		"0": "Root Cave"
-	},
-	"Main Ventilation Shaft Section B": {
-		"0": "Main Ventilation Shaft Section A",
-		"1": "Main Ventilation Shaft Section C"
-	},
-	"Transport to Chozo Ruins East": {
-		"0": "Transport Tunnel C"
-	},
-	"Transport to Magmoor Caverns East": {
-		"0": "Transport Tunnel B"
-	},
-	"Main Ventilation Shaft Section A": {
-		"0": "Main Ventilation Shaft Section B",
-		"1": "Reactor Core"
-	},
-	"Reactor Core": {
-		"0": "Reactor Access",
-		"1": "Main Ventilation Shaft Section A"
-	},
-	"Reactor Access": {
-		"0": "Cargo Freight Lift to Deck Gamma",
-		"1": "Reactor Core",
-		"2": "Savestation"
-	},
-	"Cargo Freight Lift to Deck Gamma": {
-		"0": "Reactor Access",
-		"1": "Deck Beta Transit Hall"
-	},
-	"Savestation": {
-		"0": "Reactor Access"
-	},
-	"Deck Beta Transit Hall": {
-		"0": "Cargo Freight Lift to Deck Gamma",
-		"1": "Biohazard Containment"
-	},
-	"Biohazard Containment": {
-		"0": "Deck Beta Transit Hall",
-		"1": "Deck Beta Security Hall"
-	},
-	"Deck Beta Security Hall": {
-		"0": "Biohazard Containment",
-		"1": "Biotech Research Area 1"
-	},
-	"Biotech Research Area 1": {
-		"0": "Deck Beta Security Hall",
-		"1": "Deck Beta Conduit Hall"
-	},
-	"Biotech Research Area 2": {
-		"0": "Main Ventilation Shaft Section F",
-		"1": "Deck Alpha Mech Shaft"
-	},
-	"Deck Beta Conduit Hall": {
-		"0": "Connection Elevator to Deck Beta",
-		"1": "Biotech Research Area 1"
-	},
-	"Deck Alpha Umbilical Hall": {
-		"0": "Emergency Evacuation Area",
-		"1": "Map Facility"
-	},
-	"Deck Alpha Access Hall": {
-		"0": "Air Lock",
-		"1": "Emergency Evacuation Area"
-	},
-	"Air Lock": {
-		"0": "Exterior Docking Hanger",
-		"1": "Deck Alpha Access Hall"
-	},
-	"Deck Gamma Monitor Hall": {
-		"0": "Reactor Core",
-		"1": "Connection Elevator to Deck Beta"
-	},
-	"Connection Elevator to Deck Beta": {
-		"0": "Deck Beta Conduit Hall",
-		"1": "Hydro Access Tunnel"
-	},
-	"Hydro Access Tunnel": {
-		"0": "Great Tree Hall",
-		"1": "Connection Elevator to Deck Beta"
-	},
-	"Great Tree Hall": {
-		"0": "Hydro Access Tunnel",
-		"1": "Great Tree Chamber",
-		"2": "Transport Tunnel D",
-		"3": "Life Grove Tunnel",
-		"4": "Transport Tunnel E"
-	},
-	"Great Tree Chamber": {
-		"0": "Great Tree Hall"
-	},
-	"Transport Tunnel D": {
-		"0": "Transport to Chozo Ruins South",
-		"1": "Great Tree Hall"
-	},
-	"Life Grove Tunnel": {
-		"0": "Great Tree Hall",
-		"1": "Life Grove"
-	},
-	"Transport Tunnel E": {
-		"0": "Transport to Phazon Mines East",
-		"1": "Great Tree Hall"
-	},
-	"Transport to Chozo Ruins South": {
-		"0": "Transport Tunnel D"
-	},
-	"Life Grove": {
-		"0": "Life Grove Tunnel"
-	},
-	"Transport to Phazon Mines East": {
-		"0": "Transport Tunnel E"
-	},
-	"Quarry Access": {
-		"0": "Main Quarry",
-		"1": "Transport to Tallon Overworld South"
-	},
-	"Main Quarry": {
-		"0": "Waste Disposal",
-		"1": "Quarry Access",
-		"2": "Save Station Mines A",
-		"3": "Security Access A"
-	},
-	"Waste Disposal": {
-		"0": "Main Quarry",
-		"1": "Ore Processing"
-	},
-	"Save Station Mines A": {
-		"0": "Main Quarry"
-	},
-	"Security Access A": {
-		"0": "Main Quarry",
-		"1": "Mine Security Station"
-	},
-	"Ore Processing": {
-		"0": "Research Access",
-		"1": "Storage Depot B",
-		"2": "Waste Disposal",
-		"3": "Elevator Access A"
-	},
-	"Mine Security Station": {
-		"0": "Security Access A",
-		"1": "Security Access B",
-		"2": "Storage Depot A"
-	},
-	"Research Access": {
-		"0": "Ore Processing",
-		"1": "Elite Research"
-	},
-	"Storage Depot B": {
-		"0": "Ore Processing"
-	},
-	"Elevator Access A": {
-		"0": "Ore Processing",
-		"1": "Elevator A"
-	},
-	"Security Access B": {
-		"0": "Elite Research",
-		"1": "Mine Security Station"
-	},
-	"Storage Depot A": {
-		"0": "Mine Security Station"
-	},
-	"Elite Research": {
-		"0": "Research Access",
-		"1": "Security Access B"
-	},
-	"Elevator A": {
-		"0": "Elevator Access A",
-		"1": "Elite Control Access"
-	},
-	"Elite Control Access": {
-		"0": "Elevator A",
-		"1": "Elite Control"
-	},
-	"Elite Control": {
-		"0": "Maintenance Tunnel",
-		"1": "Elite Control Access",
-		"2": "Ventilation Shaft"
-	},
-	"Maintenance Tunnel": {
-		"0": "Elite Control",
-		"1": "Phazon Processing Center"
-	},
-	"Ventilation Shaft": {
-		"0": "Omega Research",
-		"1": "Elite Control"
-	},
-	"Phazon Processing Center": {
-		"0": "Transport Access",
-		"1": "Maintenance Tunnel",
-		"2": "Processing Center Access"
-	},
-	"Omega Research": {
-		"0": "Map Station Mines",
-		"1": "Ventilation Shaft",
-		"2": "Dynamo Access"
-	},
-	"Processing Center Access": {
-		"0": "Phazon Processing Center",
-		"1": "Elite Quarters"
-	},
-	"Map Station Mines": {
-		"0": "Omega Research"
-	},
-	"Elite Quarters": {
-		"0": "Elite Quarters Access",
-		"1": "Processing Center Access"
-	},
-	"Central Dynamo": {
-		"0": "Dynamo Access",
-		"1": "Quarantine Access A",
-		"2": "Save Station Mines B"
-	},
-	"Elite Quarters Access": {
-		"0": "Metroid Quarantine B",
-		"1": "Elite Quarters"
-	},
-	"Quarantine Access A": {
-		"0": "Central Dynamo",
-		"1": "Metroid Quarantine A"
-	},
-	"Save Station Mines B": {
-		"0": "Central Dynamo"
-	},
-	"Metroid Quarantine B": {
-		"0": "Quarantine Access B",
-		"1": "Elite Quarters Access",
-		"2": "Save Station Mines C"
-	},
-	"Metroid Quarantine A": {
-		"0": "Quarantine Access A",
-		"1": "Elevator Access B"
-	},
-	"Quarantine Access B": {
-		"0": "Metroid Quarantine B",
-		"1": "Fungal Hall B"
-	},
-	"Save Station Mines C": {
-		"0": "Metroid Quarantine B"
-	},
-	"Elevator Access B": {
-		"0": "Metroid Quarantine A",
-		"1": "Elevator B"
-	},
-	"Fungal Hall B": {
-		"0": "Missile Station Mines",
-		"1": "Quarantine Access B",
-		"2": "Phazon Mining Tunnel"
-	},
-	"Elevator B": {
-		"0": "Elevator Access B",
-		"1": "Fungal Hall Access"
-	},
-	"Missile Station Mines": {
-		"0": "Fungal Hall B"
-	},
-	"Phazon Mining Tunnel": {
-		"0": "Fungal Hall B",
-		"1": "Fungal Hall A"
-	},
-	"Fungal Hall Access": {
-		"0": "Fungal Hall A",
-		"1": "Elevator B"
-	},
-	"Fungal Hall A": {
-		"0": "Phazon Mining Tunnel",
-		"1": "Fungal Hall Access"
-	},
-	"Transport to Chozo Ruins North": {
-		"0": "Burning Trail"
-	},
-	"Burning Trail": {
-		"0": "Lake Tunnel",
-		"1": "Transport to Chozo Ruins North",
-		"2": "Save Station Magmoor A"
-	},
-	"Save Station Magmoor A": {
-		"0": "Burning Trail"
-	},
-	"Lava Lake": {
-		"0": "Lake Tunnel",
-		"1": "Pit Tunnel"
-	},
-	"Pit Tunnel": {
-		"0": "Triclops Pit",
-		"1": "Lava Lake"
-	},
-	"Triclops Pit": {
-		"0": "Monitor Tunnel",
-		"1": "Storage Cavern",
-		"2": "Pit Tunnel"
-	},
-	"Monitor Tunnel": {
-		"0": "Monitor Station",
-		"1": "Triclops Pit"
-	},
-	"Storage Cavern": {
-		"0": "Triclops Pit"
-	},
-	"Monitor Station": {
-		"0": "Monitor Tunnel",
-		"1": "Transport Tunnel A",
-		"2": "Warrior Shrine",
-		"3": "Shore Tunnel"
-	},
-	"Warrior Shrine": {
-		"0": "Monitor Station",
-		"1": "Fiery Shores"
-	},
-	"Shore Tunnel": {
-		"0": "Monitor Station",
-		"1": "Fiery Shores"
-	},
-	"Transport to Phendrana Drifts North": {
-		"0": "Transport Tunnel A"
-	},
-	"Fiery Shores": {
-		"0": "Shore Tunnel",
-		"1": "Transport Tunnel B",
-		"2": "Warrior Shrine"
-	},
-	"Transport to Tallon Overworld West": {
-		"0": "Twin Fires Tunnel",
-		"1": "Transport Tunnel B"
-	},
-	"Twin Fires Tunnel": {
-		"0": "Twin Fires",
-		"1": "Transport to Tallon Overworld West"
-	},
-	"Twin Fires": {
-		"0": "North Core Tunnel",
-		"1": "Twin Fires Tunnel"
-	},
-	"North Core Tunnel": {
-		"0": "Twin Fires",
-		"1": "Geothermal Core"
-	},
-	"Geothermal Core": {
-		"0": "North Core Tunnel",
-		"1": "Plasma Processing",
-		"2": "South Core Tunnel"
-	},
-	"Plasma Processing": {
-		"0": "Geothermal Core"
-	},
-	"South Core Tunnel": {
-		"0": "Geothermal Core",
-		"1": "Magmoor Workstation"
-	},
-	"Magmoor Workstation": {
-		"0": "South Core Tunnel",
-		"1": "Workstation Tunnel",
-		"2": "Transport Tunnel C"
-	},
-	"Workstation Tunnel": {
-		"0": "Transport to Phazon Mines West",
-		"1": "Magmoor Workstation"
-	},
-	"Transport to Phazon Mines West": {
-		"0": "Workstation Tunnel"
-	},
-	"Transport to Phendrana Drifts South": {
-		"0": "Save Station Magmoor B",
-		"1": "Transport Tunnel C"
-	},
-	"Save Station Magmoor B": {
-		"0": "Transport to Phendrana Drifts South"
-	},
-	"Crater Entry Point": {
-		"0": "Crater Tunnel A"
-	},
-	"Crater Tunnel A": {
-		"0": "Phazon Core",
-		"1": "Crater Entry Point"
-	},
-	"Phazon Core": {
-		"0": "Crater Missile Station",
-		"1": "Crater Tunnel A",
-		"2": "Crater Tunnel B"
-	},
-	"Crater Missile Station": {
-		"0": "Phazon Core"
-	},
-	"Crater Tunnel B": {
-		"0": "Phazon Infusion Chamber",
-		"1": "Phazon Core"
-	},
-	"Phazon Infusion Chamber": {
-		"0": "Subchamber One",
-		"1": "Crater Tunnel B"
-	},
-	"Subchamber One": {
-		"0": "Phazon Infusion Chamber",
-		"1": "Subchamber Two"
-	},
-	"Subchamber Two": {
-		"0": "Subchamber One",
-		"1": "Subchamber Three"
-	},
-	"Subchamber Three": {
-		"0": "Subchamber Four",
-		"1": "Subchamber Two"
-	},
-	"Subchamber Four": {
-		"0": "Subchamber Five",
-		"1": "Subchamber Three"
-	},
-	"Subchamber Five": {
-		"0": "Subchamber Four",
-		"1": "Metroid Prime Lair"
-	},
-	"Metroid Prime Lair": {
-		"0": "Subchamber Five"
-	},
-	"": {
-		"": ""
+	"Impact Crater": {
+		"Crater Entry Point": {
+			"0": "Crater Tunnel A"
+		},
+		"Crater Tunnel A": {
+			"0": "Phazon Core",
+			"1": "Crater Entry Point"
+		},
+		"Phazon Core": {
+			"0": "Crater Missile Station",
+			"1": "Crater Tunnel A",
+			"2": "Crater Tunnel B"
+		},
+		"Crater Missile Station": {
+			"0": "Phazon Core"
+		},
+		"Crater Tunnel B": {
+			"0": "Phazon Infusion Chamber",
+			"1": "Phazon Core"
+		},
+		"Phazon Infusion Chamber": {
+			"0": "Subchamber One",
+			"1": "Crater Tunnel B"
+		},
+		"Subchamber One": {
+			"0": "Phazon Infusion Chamber",
+			"1": "Subchamber Two"
+		},
+		"Subchamber Two": {
+			"0": "Subchamber One",
+			"1": "Subchamber Three"
+		},
+		"Subchamber Three": {
+			"0": "Subchamber Four",
+			"1": "Subchamber Two"
+		},
+		"Subchamber Four": {
+			"0": "Subchamber Five",
+			"1": "Subchamber Three"
+		},
+		"Subchamber Five": {
+			"0": "Subchamber Four",
+			"1": "Metroid Prime Lair"
+		},
+		"Metroid Prime Lair": {
+			"0": "Subchamber Five"
+		}
+	},
+	"Chozo Ruins": {
+		"Transport to Tallon Overworld North": {
+			"0": "Ruins Entrance"
+		},
+		"Ruins Entrance": {
+			"0": "Main Plaza",
+			"1": "Tallon Overworld North"
+		},
+		"Main Plaza": {
+			"0": "Ruined Fountain Access",
+			"1": "Ruins Entrance",
+			"2": "Ruined Shrine Access",
+			"3": "Nursery Access",
+			"4": "Plaza Access",
+			"5": "Piston Tunnel"
+		},
+		"Ruined Fountain Access": {
+			"0": "Main Plaza",
+			"1": "Ruined Fountain"
+		},
+		"Ruined Shrine Access": {
+			"0": "Ruined Shrine",
+			"1": "Main Plaza"
+		},
+		"Nursery Access": {
+			"0": "Eyon Tunnel",
+			"1": "Main Plaza"
+		},
+		"Plaza Access": {
+			"0": "Main Plaza",
+			"1": "Vault"
+		},
+		"Piston Tunnel": {
+			"0": "Main Plaza",
+			"1": "Training Chamber"
+		},
+		"Ruined Fountain": {
+			"0": "Arboretum Access",
+			"1": "Ruined Fountain Access",
+			"2": "Meditation Fountain"
+		},
+		"Ruined Shrine": {
+			"0": "Tower of Light Access",
+			"1": "Ruined Shrine Access"
+		},
+		"Eyon Tunnel": {
+			"0": "Ruined Nursery",
+			"1": "Nursery Access"
+		},
+		"Vault": {
+			"0": "Vault Access",
+			"1": "Plaza Access"
+		},
+		"Training Chamber": {
+			"0": "Training Chamber Access",
+			"1": "Piston Tunnel"
+		},
+		"Arboretum Access": {
+			"0": "Arboretum",
+			"1": "Ruined Fountain"
+		},
+		"Meditation Fountain": {
+			"0": "Magma Pool",
+			"1": "Ruined Fountain"
+		},
+		"Tower of Light Access": {
+			"0": "Tower of Light",
+			"1": "Ruined Shrine"
+		},
+		"Ruined Nursery": {
+			"0": "Save Station 1",
+			"1": "North Atrium",
+			"2": "Eyon Tunnel"
+		},
+		"Vault Access": {
+			"0": "Vault",
+			"1": "Magmoor Caverns North"
+		},
+		"Training Chamber Access": {
+			"0": "Magma Pool",
+			"1": "Training Chamber"
+		},
+		"Arboretum": {
+			"0": "Sunchamber Lobby",
+			"1": "Arboretum Access",
+			"2": "Gathering Hall Access"
+		},
+		"Magma Pool": {
+			"0": "Training Chamber Access",
+			"1": "Meditation Fountain"
+		},
+		"Tower of Light": {
+			"0": "Tower of Light Access",
+			"1": "Tower Chamber"
+		},
+		"Save Station 1": {
+			"0": "Ruined Nursery"
+		},
+		"North Atrium": {
+			"0": "Ruined Nursery",
+			"1": "Ruined Gallery"
+		},
+		"Transport to Magmoor Caverns North": {
+			"0": "Sun Tower",
+			"1": "Vault Access",
+			"2": "Transport Access North"
+		},
+		"Sunchamber Lobby": {
+			"0": "Arboretum",
+			"1": "Sunchamber Access"
+		},
+		"Gathering Hall Access": {
+			"0": "Gathering Hall",
+			"1": "Arboretum"
+		},
+		"Tower Chamber": {
+			"0": "Tower of Light"
+		},
+		"Ruined Gallery": {
+			"0": "North Atrium",
+			"1": "Totem Access",
+			"2": "Map Station"
+		},
+		"Sun Tower": {
+			"0": "Sun Tower Access",
+			"1": "Magmoor Caverns North"
+		},
+		"Transport Access North": {
+			"0": "Hive Totem",
+			"1": "Magmoor Caverns North"
+		},
+		"Sunchamber Access": {
+			"0": "Sunchamber",
+			"1": "Sunchamber Lobby"
+		},
+		"Gathering Hall": {
+			"0": "Watery Hall Access",
+			"1": "Gathering Hall Access",
+			"2": "Save Station 2",
+			"3": "East Atrium"
+		},
+		"Totem Access": {
+			"0": "Ruined Gallery",
+			"1": "Hive Totem"
+		},
+		"Map Station": {
+			"0": "Ruined Gallery"
+		},
+		"Sun Tower Access": {
+			"0": "Sunchamber",
+			"1": "Sun Tower"
+		},
+		"Hive Totem": {
+			"0": "Totem Access",
+			"1": "Transport Access North"
+		},
+		"Sunchamber": {
+			"0": "Sun Tower Access",
+			"1": "Sunchamber Access"
+		},
+		"Watery Hall Access": {
+			"0": "Gathering Hall",
+			"1": "Watery Hall"
+		},
+		"Save Station 2": {
+			"0": "Gathering Hall"
+		},
+		"East Atrium": {
+			"0": "Gathering Hall",
+			"1": "Energy Core Access"
+		},
+		"Watery Hall": {
+			"0": "Dynamo Access",
+			"1": "Watery Hall Access"
+		},
+		"Energy Core Access": {
+			"0": "Energy Core",
+			"1": "East Atrium"
+		},
+		"Dynamo Access": {
+			"0": "Watery Hall",
+			"1": "Dynamo"
+		},
+		"Energy Core": {
+			"0": "Burn Dome Access",
+			"1": "West Furnace Access",
+			"2": "Energy Core Access"
+		},
+		"Dynamo": {
+			"0": "Dynamo Access"
+		},
+		"Burn Dome Access": {
+			"0": "Burn Dome",
+			"1": "Energy Core"
+		},
+		"West Furnace Access": {
+			"0": "Energy Core",
+			"1": "Furnace"
+		},
+		"Burn Dome": {
+			"0": "Burn Dome Access"
+		},
+		"Furnace": {
+			"0": "East Furnace Access",
+			"1": "West Furnace Access",
+			"2": "Crossway Access West"
+		},
+		"East Furnace Access": {
+			"0": "Hall of the Elders",
+			"1": "Furnace"
+		},
+		"Crossway Access West": {
+			"0": "Crossway",
+			"1": "Furnace"
+		},
+		"Hall of the Elders": {
+			"0": "Reflecting Pool Access",
+			"1": "Elder Hall Access",
+			"2": "East Furnace Access",
+			"3": "Crossway Access South",
+			"4": "Elder Chamber"
+		},
+		"Crossway": {
+			"0": "Crossway Access South",
+			"1": "Crossway Access West",
+			"2": "Elder Hall Access"
+		},
+		"Reflecting Pool Access": {
+			"0": "Reflecting Pool",
+			"1": "Hall of the Elders"
+		},
+		"Elder Hall Access": {
+			"0": "Hall of the Elders",
+			"1": "Crossway"
+		},
+		"Crossway Access South": {
+			"0": "Crossway",
+			"1": "Hall of the Elders"
+		},
+		"Elder Chamber": {
+			"0": "Hall of the Elders"
+		},
+		"Reflecting Pool": {
+			"0": "Save Station 3",
+			"1": "Transport Access South",
+			"2": "Reflecting Pool Access",
+			"3": "Antechamber"
+		},
+		"Save Station 3": {
+			"0": "Reflecting Pool",
+			"1": "Tallon Overworld East"
+		},
+		"Transport Access South": {
+			"0": "Reflecting Pool",
+			"1": "Tallon Overworld South"
+		},
+		"Antechamber": {
+			"0": "Reflecting Pool"
+		},
+		"Transport to Tallon Overworld East": {
+			"0": "Save Station 3"
+		},
+		"Transport to Tallon Overworld South": {
+			"0": "Transport Access South"
+		}
+	},
+	"Phendrana Drifts": {
+		"Transport to Magmoor Caverns West": {
+			"0": "Shoreline Entrance"
+		},
+		"Shoreline Entrance": {
+			"0": "Magmoor Caverns West",
+			"1": "Phendrana Shorelines"
+		},
+		"Phendrana Shorelines": {
+			"0": "Shoreline Entrance",
+			"1": "Temple Entryway",
+			"2": "Save Station B",
+			"3": "Ruins Entryway",
+			"4": "Plaza Walkway",
+			"5": "Ice Ruins Access"
+		},
+		"Temple Entryway": {
+			"0": "Chozo Ice Temple",
+			"1": "Phendrana Shorelines"
+		},
+		"Save Station B": {
+			"0": "Phendrana Shorelines"
+		},
+		"Ruins Entryway": {
+			"0": "Ice Ruins West",
+			"1": "Phendrana Shorelines"
+		},
+		"Plaza Walkway": {
+			"0": "Phendrana Shorelines",
+			"1": "Ice Ruins East"
+		},
+		"Ice Ruins Access": {
+			"0": "Ice Ruins East",
+			"1": "Phendrana Shorelines"
+		},
+		"Chozo Ice Temple": {
+			"0": "Temple Entryway",
+			"1": "Chapel Tunnel"
+		},
+		"Ice Ruins West": {
+			"0": "Ruins Entryway",
+			"1": "Courtyard Entryway",
+			"2": "Canyon Entryway"
+		},
+		"Ice Ruins East": {
+			"0": "Ice Ruins Access",
+			"1": "Plaza Walkway"
+		},
+		"Chapel Tunnel": {
+			"0": "Chapel of the Elders",
+			"1": "Chozo Ice Temple"
+		},
+		"Courtyard Entryway": {
+			"0": "Ruined Courtyard",
+			"1": "Ice Ruins West"
+		},
+		"Canyon Entryway": {
+			"0": "Phendrana Canyon",
+			"1": "Ice Ruins West"
+		},
+		"Chapel of the Elders": {
+			"0": "Chapel Tunnel"
+		},
+		"Ruined Courtyard": {
+			"0": "Courtyard Entryway",
+			"1": "Save Station A",
+			"2": "Specimen Storage",
+			"3": "Quarantine Access"
+		},
+		"Phendrana Canyon": {
+			"0": "Canyon Entryway"
+		},
+		"Save Station A": {
+			"0": "Ruined Courtyard"
+		},
+		"Specimen Storage": {
+			"0": "Research Entrance",
+			"1": "Ruined Courtyard"
+		},
+		"Quarantine Access": {
+			"0": "North Quarantine Tunnel",
+			"1": "Ruined Courtyard"
+		},
+		"Research Entrance": {
+			"0": "Specimen Storage",
+			"1": "Map Station",
+			"2": "Hydra Lab Entryway"
+		},
+		"North Quarantine Tunnel": {
+			"0": "Quarantine Cave",
+			"1": "Quarantine Access"
+		},
+		"Map Station": {
+			"0": "Research Entrance"
+		},
+		"Hydra Lab Entryway": {
+			"0": "Research Entrance",
+			"1": "Research Lab Hydra"
+		},
+		"Quarantine Cave": {
+			"0": "North Quarantine Tunnel",
+			"1": "South Quarantine Tunnel",
+			"2": "Quarantine Monitor"
+		},
+		"Research Lab Hydra": {
+			"0": "Hydra Lab Entryway",
+			"1": "Observatory Access"
+		},
+		"South Quarantine Tunnel": {
+			"0": "Quarantine Cave",
+			"1": "Magmoor Caverns South"
+		},
+		"Quarantine Monitor": {
+			"0": "Quarantine Cave"
+		},
+		"Observatory Access": {
+			"0": "Observatory",
+			"1": "Research Lab Hydra"
+		},
+		"Transport to Magmoor Caverns South": {
+			"0": "Transport Access",
+			"1": "South Quarantine Tunnel"
+		},
+		"Observatory": {
+			"0": "Observatory Access",
+			"1": "West Tower Entrance",
+			"2": "Save Station D"
+		},
+		"Transport Access": {
+			"0": "Magmoor Caverns South",
+			"1": "Frozen Pike"
+		},
+		"West Tower Entrance": {
+			"0": "West Tower",
+			"1": "Observatory"
+		},
+		"Save Station D": {
+			"0": "Observatory"
+		},
+		"Frozen Pike": {
+			"0": "Pike Access",
+			"1": "Transport Access",
+			"2": "Frost Cave Access",
+			"3": "Hunter Cave Access"
+		},
+		"West Tower": {
+			"0": "West Tower Entrance",
+			"1": "Control Tower"
+		},
+		"Pike Access": {
+			"0": "Frozen Pike",
+			"1": "Research Core"
+		},
+		"Frost Cave Access": {
+			"0": "Frozen Pike",
+			"1": "Frost Cave"
+		},
+		"Hunter Cave Access": {
+			"0": "Frozen Pike",
+			"1": "Hunter Cave"
+		},
+		"Control Tower": {
+			"0": "East Tower",
+			"1": "West Tower"
+		},
+		"Research Core": {
+			"0": "Pike Access",
+			"1": "Research Core Access"
+		},
+		"Frost Cave": {
+			"0": "Save Station C",
+			"1": "Frost Cave Access",
+			"2": "Upper Edge Tunnel"
+		},
+		"Hunter Cave": {
+			"0": "Hunter Cave Access",
+			"1": "Lower Edge Tunnel",
+			"2": "Chamber Access",
+			"3": "Lake Tunnel"
+		},
+		"East Tower": {
+			"0": "Aether Lab Entryway",
+			"1": "Control Tower"
+		},
+		"Research Core Access": {
+			"0": "Research Core",
+			"1": "Research Lab Aether"
+		},
+		"Save Station C": {
+			"0": "Frost Cave"
+		},
+		"Upper Edge Tunnel": {
+			"0": "Phendrana's Edge",
+			"1": "Frost Cave"
+		},
+		"Lower Edge Tunnel": {
+			"0": "Phendrana's Edge",
+			"1": "Hunter Cave"
+		},
+		"Chamber Access": {
+			"0": "Hunter Cave",
+			"1": "Gravity Chamber"
+		},
+		"Lake Tunnel": {
+			"0": "Hunter Cave",
+			"1": "Gravity Chamber"
+		},
+		"Aether Lab Entryway": {
+			"0": "East Tower",
+			"1": "Research Lab Aether"
+		},
+		"Research Lab Aether": {
+			"0": "Aether Lab Entryway",
+			"1": "Research Core Access"
+		},
+		"Phendrana's Edge": {
+			"0": "Lower Edge Tunnel",
+			"1": "Upper Edge Tunnel",
+			"2": "Storage Cave",
+			"3": "Security Cave"
+		},
+		"Gravity Chamber": {
+			"0": "Lake Tunnel",
+			"1": "Chamber Access"
+		},
+		"Storage Cave": {
+			"0": "Phendrana's Edge"
+		},
+		"Security Cave": {
+			"0": "Phendrana's Edge"
+		}
+	},
+	"Tallon Overworld": {
+		"Landing Site": {
+			"0": "Gully",
+			"1": "Canyon Cavern",
+			"2": "Temple Hall",
+			"3": "Alcove",
+			"4": "Waterfall Cavern"
+		},
+		"Gully": {
+			"0": "Tallon Canyon",
+			"1": "Landing Site"
+		},
+		"Canyon Cavern": {
+			"0": "Tallon Canyon",
+			"1": "Landing Site"
+		},
+		"Temple Hall": {
+			"0": "Temple Security Station",
+			"1": "Landing Site"
+		},
+		"Alcove": {
+			"0": "Landing Site"
+		},
+		"Waterfall Cavern": {
+			"0": "Landing Site",
+			"1": "Frigate Crash Site"
+		},
+		"Tallon Canyon": {
+			"0": "Canyon Cavern",
+			"1": "Transport Tunnel A",
+			"2": "Gully",
+			"3": "Root Tunnel"
+		},
+		"Temple Security Station": {
+			"0": "Temple Hall",
+			"1": "Temple Lobby"
+		},
+		"Frigate Crash Site": {
+			"0": "Waterfall Cavern",
+			"1": "Frigate Access Tunnel",
+			"2": "Overgrown Cavern"
+		},
+		"Transport Tunnel A": {
+			"0": "Chozo Ruins West",
+			"1": "Tallon Canyon"
+		},
+		"Root Tunnel": {
+			"0": "Root Cave",
+			"1": "Tallon Canyon"
+		},
+		"Temple Lobby": {
+			"0": "Artifact Temple",
+			"1": "Temple Security Station"
+		},
+		"Frigate Access Tunnel": {
+			"0": "Main Ventilation Shaft Section C",
+			"1": "Frigate Crash Site"
+		},
+		"Overgrown Cavern": {
+			"0": "Frigate Crash Site",
+			"1": "Transport Tunnel C"
+		},
+		"Transport to Chozo Ruins West": {
+			"0": "Transport Tunnel A"
+		},
+		"Root Cave": {
+			"0": "Transport Tunnel B",
+			"1": "Root Tunnel",
+			"2": "Arbor Chamber"
+		},
+		"Artifact Temple": {
+			"0": "Temple Lobby"
+		},
+		"Main Ventilation Shaft Section C": {
+			"0": "Main Ventilation Shaft Section B",
+			"1": "Frigate Access Tunnel"
+		},
+		"Transport Tunnel C": {
+			"0": "Overgrown Cavern",
+			"1": "Chozo Ruins East"
+		},
+		"Transport Tunnel B": {
+			"0": "Magmoor Caverns East",
+			"1": "Root Cave"
+		},
+		"Arbor Chamber": {
+			"0": "Root Cave"
+		},
+		"Main Ventilation Shaft Section B": {
+			"0": "Main Ventilation Shaft Section A",
+			"1": "Main Ventilation Shaft Section C"
+		},
+		"Transport to Chozo Ruins East": {
+			"0": "Transport Tunnel C"
+		},
+		"Transport to Magmoor Caverns East": {
+			"0": "Transport Tunnel B"
+		},
+		"Main Ventilation Shaft Section A": {
+			"0": "Main Ventilation Shaft Section B",
+			"1": "Reactor Core"
+		},
+		"Reactor Core": {
+			"0": "Reactor Access",
+			"1": "Main Ventilation Shaft Section A"
+		},
+		"Reactor Access": {
+			"0": "Deck Gamma",
+			"1": "Reactor Core",
+			"2": "Savestation"
+		},
+		"Cargo Freight Lift to Deck Gamma": {
+			"0": "Reactor Access",
+			"1": "Deck Beta Transit Hall"
+		},
+		"Savestation": {
+			"0": "Reactor Access"
+		},
+		"Deck Beta Transit Hall": {
+			"0": "Deck Gamma",
+			"1": "Biohazard Containment"
+		},
+		"Biohazard Containment": {
+			"0": "Deck Beta Transit Hall",
+			"1": "Deck Beta Security Hall"
+		},
+		"Deck Beta Security Hall": {
+			"0": "Biohazard Containment",
+			"1": "Biotech Research Area 1"
+		},
+		"Biotech Research Area 1": {
+			"0": "Deck Beta Security Hall",
+			"1": "Deck Beta Conduit Hall"
+		},
+		"Deck Beta Conduit Hall": {
+			"0": "Deck Beta",
+			"1": "Biotech Research Area 1"
+		},
+		"Connection Elevator to Deck Beta": {
+			"0": "Deck Beta Conduit Hall",
+			"1": "Hydro Access Tunnel"
+		},
+		"Hydro Access Tunnel": {
+			"0": "Great Tree Hall",
+			"1": "Deck Beta"
+		},
+		"Great Tree Hall": {
+			"0": "Hydro Access Tunnel",
+			"1": "Great Tree Chamber",
+			"2": "Transport Tunnel D",
+			"3": "Life Grove Tunnel",
+			"4": "Transport Tunnel E"
+		},
+		"Great Tree Chamber": {
+			"0": "Great Tree Hall"
+		},
+		"Transport Tunnel D": {
+			"0": "Chozo Ruins South",
+			"1": "Great Tree Hall"
+		},
+		"Life Grove Tunnel": {
+			"0": "Great Tree Hall",
+			"1": "Life Grove"
+		},
+		"Transport Tunnel E": {
+			"0": "Phazon Mines East",
+			"1": "Great Tree Hall"
+		},
+		"Transport to Chozo Ruins South": {
+			"0": "Transport Tunnel D"
+		},
+		"Life Grove": {
+			"0": "Life Grove Tunnel"
+		},
+		"Transport to Phazon Mines East": {
+			"0": "Transport Tunnel E"
+		}
+	},
+	"Magmoor Caverns": {
+		"Transport to Chozo Ruins North": {
+			"0": "Burning Trail"
+		},
+		"Burning Trail": {
+			"0": "Lake Tunnel",
+			"1": "Chozo Ruins North",
+			"2": "Save Station Magmoor A"
+		},
+		"Lake Tunnel": {
+			"0": "Lava Lake",
+			"1": "Burning Trail"
+		},
+		"Save Station Magmoor A": {
+			"0": "Burning Trail"
+		},
+		"Lava Lake": {
+			"0": "Lake Tunnel",
+			"1": "Pit Tunnel"
+		},
+		"Pit Tunnel": {
+			"0": "Triclops Pit",
+			"1": "Lava Lake"
+		},
+		"Triclops Pit": {
+			"0": "Monitor Tunnel",
+			"1": "Storage Cavern",
+			"2": "Pit Tunnel"
+		},
+		"Monitor Tunnel": {
+			"0": "Monitor Station",
+			"1": "Triclops Pit"
+		},
+		"Storage Cavern": {
+			"0": "Triclops Pit"
+		},
+		"Monitor Station": {
+			"0": "Monitor Tunnel",
+			"1": "Transport Tunnel A",
+			"2": "Warrior Shrine",
+			"3": "Shore Tunnel"
+		},
+		"Transport Tunnel A": {
+			"0": "Phendrana Drifts North",
+			"1": "Monitor Station"
+		},
+		"Warrior Shrine": {
+			"0": "Monitor Station",
+			"1": "Fiery Shores"
+		},
+		"Shore Tunnel": {
+			"0": "Monitor Station",
+			"1": "Fiery Shores"
+		},
+		"Transport to Phendrana Drifts North": {
+			"0": "Transport Tunnel A"
+		},
+		"Fiery Shores": {
+			"0": "Shore Tunnel",
+			"1": "Transport Tunnel B",
+			"2": "Warrior Shrine"
+		},
+		"Transport Tunnel B": {
+			"0": "Tallon Overworld West",
+			"1": "Fiery Shores"
+		},
+		"Transport to Tallon Overworld West": {
+			"0": "Twin Fires Tunnel",
+			"1": "Transport Tunnel B"
+		},
+		"Twin Fires Tunnel": {
+			"0": "Twin Fires",
+			"1": "Tallon Overworld West"
+		},
+		"Twin Fires": {
+			"0": "North Core Tunnel",
+			"1": "Twin Fires Tunnel"
+		},
+		"North Core Tunnel": {
+			"0": "Twin Fires",
+			"1": "Geothermal Core"
+		},
+		"Geothermal Core": {
+			"0": "North Core Tunnel",
+			"1": "Plasma Processing",
+			"2": "South Core Tunnel"
+		},
+		"Plasma Processing": {
+			"0": "Geothermal Core"
+		},
+		"South Core Tunnel": {
+			"0": "Geothermal Core",
+			"1": "Magmoor Workstation"
+		},
+		"Magmoor Workstation": {
+			"0": "South Core Tunnel",
+			"1": "Workstation Tunnel",
+			"2": "Transport Tunnel C"
+		},
+		"Workstation Tunnel": {
+			"0": "Phazon Mines West",
+			"1": "Magmoor Workstation"
+		},
+		"Transport Tunnel C": {
+			"0": "Phendrana Drifts South",
+			"1": "Magmoor Workstation"
+		},
+		"Transport to Phazon Mines West": {
+			"0": "Workstation Tunnel"
+		},
+		"Transport to Phendrana Drifts South": {
+			"0": "Save Station Magmoor B",
+			"1": "Transport Tunnel C"
+		},
+		"Save Station Magmoor B": {
+			"0": "Phendrana Drifts South"
+		}
+	},
+	"Phazon Mines": {
+		"Transport to Tallon Overworld South": {
+			"0": "Quarry Access"
+		},
+		"Quarry Access": {
+			"0": "Main Quarry",
+			"1": "Tallon Overworld South"
+		},
+		"Main Quarry": {
+			"0": "Waste Disposal",
+			"1": "Quarry Access",
+			"2": "Save Station Mines A",
+			"3": "Security Access A"
+		},
+		"Waste Disposal": {
+			"0": "Main Quarry",
+			"1": "Ore Processing"
+		},
+		"Save Station Mines A": {
+			"0": "Main Quarry"
+		},
+		"Security Access A": {
+			"0": "Main Quarry",
+			"1": "Mine Security Station"
+		},
+		"Ore Processing": {
+			"0": "Research Access",
+			"1": "Storage Depot B",
+			"2": "Waste Disposal",
+			"3": "Elevator Access A"
+		},
+		"Mine Security Station": {
+			"0": "Security Access A",
+			"1": "Security Access B",
+			"2": "Storage Depot A"
+		},
+		"Research Access": {
+			"0": "Ore Processing",
+			"1": "Elite Research"
+		},
+		"Storage Depot B": {
+			"0": "Ore Processing"
+		},
+		"Elevator Access A": {
+			"0": "Ore Processing",
+			"1": "Elevator A"
+		},
+		"Security Access B": {
+			"0": "Elite Research",
+			"1": "Mine Security Station"
+		},
+		"Storage Depot A": {
+			"0": "Mine Security Station"
+		},
+		"Elite Research": {
+			"0": "Research Access",
+			"1": "Security Access B"
+		},
+		"Elevator A": {
+			"0": "Elevator Access A",
+			"1": "Elite Control Access"
+		},
+		"Elite Control Access": {
+			"0": "Elevator A",
+			"1": "Elite Control"
+		},
+		"Elite Control": {
+			"0": "Maintenance Tunnel",
+			"1": "Elite Control Access",
+			"2": "Ventilation Shaft"
+		},
+		"Maintenance Tunnel": {
+			"0": "Elite Control",
+			"1": "Phazon Processing Center"
+		},
+		"Ventilation Shaft": {
+			"0": "Omega Research",
+			"1": "Elite Control"
+		},
+		"Phazon Processing Center": {
+			"0": "Transport Access",
+			"1": "Maintenance Tunnel",
+			"2": "Processing Center Access"
+		},
+		"Omega Research": {
+			"0": "Map Station Mines",
+			"1": "Ventilation Shaft",
+			"2": "Dynamo Access"
+		},
+		"Transport Access": {
+			"0": "Phazon Processing Center",
+			"1": "Magmoor Caverns South"
+		},
+		"Processing Center Access": {
+			"0": "Phazon Processing Center",
+			"1": "Elite Quarters"
+		},
+		"Map Station Mines": {
+			"0": "Omega Research"
+		},
+		"Dynamo Access": {
+			"0": "Central Dynamo",
+			"1": "Omega Research"
+		},
+		"Transport to Magmoor Caverns South": {
+			"0": "Transport Access"
+		},
+		"Elite Quarters": {
+			"0": "Elite Quarters Access",
+			"1": "Processing Center Access"
+		},
+		"Central Dynamo": {
+			"0": "Dynamo Access",
+			"1": "Quarantine Access A",
+			"2": "Save Station Mines B"
+		},
+		"Elite Quarters Access": {
+			"0": "Metroid Quarantine B",
+			"1": "Elite Quarters"
+		},
+		"Quarantine Access A": {
+			"0": "Central Dynamo",
+			"1": "Metroid Quarantine A"
+		},
+		"Save Station Mines B": {
+			"0": "Central Dynamo"
+		},
+		"Metroid Quarantine B": {
+			"0": "Quarantine Access B",
+			"1": "Elite Quarters Access",
+			"2": "Save Station Mines C"
+		},
+		"Metroid Quarantine A": {
+			"0": "Quarantine Access A",
+			"1": "Elevator Access B"
+		},
+		"Quarantine Access B": {
+			"0": "Metroid Quarantine B",
+			"1": "Fungal Hall B"
+		},
+		"Save Station Mines C": {
+			"0": "Metroid Quarantine B"
+		},
+		"Elevator Access B": {
+			"0": "Metroid Quarantine A",
+			"1": "Elevator B"
+		},
+		"Fungal Hall B": {
+			"0": "Missile Station Mines",
+			"1": "Quarantine Access B",
+			"2": "Phazon Mining Tunnel"
+		},
+		"Elevator B": {
+			"0": "Elevator Access B",
+			"1": "Fungal Hall Access"
+		},
+		"Missile Station Mines": {
+			"0": "Fungal Hall B"
+		},
+		"Phazon Mining Tunnel": {
+			"0": "Fungal Hall B",
+			"1": "Fungal Hall A"
+		},
+		"Fungal Hall Access": {
+			"0": "Fungal Hall A",
+			"1": "Elevator B"
+		},
+		"Fungal Hall A": {
+			"0": "Phazon Mining Tunnel",
+			"1": "Fungal Hall Access"
+		}
+	},
+	"Frigate Orpheon": {
+		"Exterior Docking Hangar": {
+			"0": "Air Lock"
+		},
+		"Air Lock": {
+			"0": "Deck Alpha Access Hall",
+			"1": "Exterior Docking Hangar",
+			"2": "Deck Alpha Mech Shaft"
+		},
+		"Deck Alpha Access Hall": {
+			"0": "Air Lock",
+			"1": "Emergency Evacuation Area"
+		},
+		"Deck Alpha Mech Shaft": {
+			"0": "Deck Alpha",
+			"1": "Air Lock"
+		},
+		"Emergency Evacuation Area": {
+			"0": "Deck Alpha Umbilical Hall",
+			"1": "Deck Alpha Access Hall"
+		},
+		"Connection Elevator to Deck Alpha": {
+			"0": "Biotech Research Area 2",
+			"1": "Deck Alpha Mech Shaft"
+		},
+		"Deck Alpha Umbilical Hall": {
+			"0": "Emergency Evacuation Area",
+			"1": "Map Facility"
+		},
+		"Biotech Research Area 2": {
+			"0": "Main Ventilation Shaft Section F",
+			"1": "Deck Alpha"
+		},
+		"Map Facility": {
+			"0": "Deck Alpha Umbilical Hall",
+			"1": "Deck Beta"
+		},
+		"Main Ventilation Shaft Section F": {
+			"0": "Biotech Research Area 2",
+			"1": "Main Ventilation Shaft Section E"
+		},
+		"Connection Elevator to Deck Beta": {
+			"0": "Map Facility",
+			"1": "Deck Gamma Monitor Hall"
+		},
+		"Main Ventilation Shaft Section E": {
+			"0": "Main Ventilation Shaft Section F",
+			"1": "Main Ventilation Shaft Section D"
+		},
+		"Deck Beta Conduit Hall": {
+			"0": "Biotech Research Area 1",
+			"1": "Deck Beta"
+		},
+		"Main Ventilation Shaft Section D": {
+			"0": "Main Ventilation Shaft Section C",
+			"1": "Main Ventilation Shaft Section E"
+		},
+		"Biotech Research Area 1": {
+			"0": "Deck Beta Security Hall",
+			"1": "Deck Beta Conduit Hall",
+			"2": "Deck Beta (2)",
+			"3": "Subventilation Shaft Section A"
+		},
+		"Main Ventilation Shaft Section C": {
+			"0": "Main Ventilation Shaft Section D",
+			"1": "Main Ventilation Shaft Section B"
+		},
+		"Deck Beta Security Hall": {
+			"0": "Biohazard Containment",
+			"1": "Biotech Research Area 1"
+		},
+		"Connection Elevator to Deck Beta (2)": {
+			"0": "Biotech Research Area 1"
+		},
+		"Subventilation Shaft Section A": {
+			"0": "Biotech Research Area 1",
+			"1": "Subventilation Shaft Section B"
+		},
+		"Main Ventilation Shaft Section B": {
+			"0": "Main Ventilation Shaft Section A",
+			"1": "Main Ventilation Shaft Section C"
+		},
+		"Biohazard Containment": {
+			"0": "Deck Beta Transit Hall",
+			"1": "Deck Beta Security Hall"
+		},
+		"Deck Gamma Monitor Hall": {
+			"0": "Reactor Core",
+			"1": "Deck Beta (2)"
+		},
+		"Subventilation Shaft Section B": {
+			"0": "Deck Gamma",
+			"1": "Subventilation Shaft Section A"
+		},
+		"Main Ventilation Shaft Section A": {
+			"0": "Deck Gamma",
+			"1": "Main Ventilation Shaft Section B"
+		},
+		"Deck Beta Transit Hall": {
+			"0": "Deck Gamma",
+			"1": "Biohazard Containment"
+		},
+		"Reactor Core": {
+			"0": "Reactor Core Entrance",
+			"1": "Deck Gamma Monitor Hall"
+		},
+		"Cargo Freight Lift to Deck Gamma": {
+			"0": "Deck Beta Transit Hall",
+			"1": "Subventilation Shaft Section B",
+			"2": "Main Ventilation Shaft Section A",
+			"3": "Reactor Core Entrance"
+		},
+		"Reactor Core Entrance": {
+			"0": "Deck Gamma",
+			"1": "Reactor Core"
+		}
 	}
 }

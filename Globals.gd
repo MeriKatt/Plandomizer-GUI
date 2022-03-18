@@ -9,6 +9,7 @@ var working_layout = json_layout
 var vanilla = {}
 
 var names = {}
+var pickups = {}
 
 var DEBUG = false
 # Declare member variables here. Examples:
@@ -114,6 +115,7 @@ var frigate_rooms = [
 	"Cargo Freight Lift to Deck Gamma",
 	"Connection Elevator to Deck Alpha",
 	"Connection Elevator to Deck Beta",
+	"Connection Elevator to Deck Beta (2)",
 	"Deck Alpha Access Hall",
 	"Deck Alpha Mech Shaft",
 	"Deck Alpha Umbilical Hall",
@@ -433,6 +435,7 @@ func test_file(file):
 	data_text = default_file.get_as_text()
 	data_parse = JSON.parse(data_text)
 	if data_parse.error != OK:
+		print(data_parse.error)
 		return
 	data = data_parse.result
 	working_layout = data
@@ -523,6 +526,15 @@ func _ready():
 			return
 		data = data_parse.result
 		names = data
+		var file2 = File.new()
+		if file2.open("res://pickups.json", File.READ) != OK:
+			return
+		data_text = file2.get_as_text()
+		data_parse = JSON.parse(data_text)
+		if data_parse.error != OK:
+			return
+		data = data_parse.result
+		pickups = data
 #		var commands = [
 #			"cd "+OS.get_executable_path(),
 #			"pip install virtualenv",
