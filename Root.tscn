@@ -1,28 +1,28 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Room Node Selection.gd" type="Script" id=1]
-[ext_resource path="res://Area Node Selection.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Room Node Selection.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Area Node Selection.gd" type="Script" id=2]
 [ext_resource path="res://Nodes List.gd" type="Script" id=3]
-[ext_resource path="res://Import Button.gd" type="Script" id=4]
-[ext_resource path="res://FileDialog.gd" type="Script" id=5]
-[ext_resource path="res://Save.gd" type="Script" id=6]
-[ext_resource path="res://Elevators.gd" type="Script" id=7]
-[ext_resource path="res://Label and Number picker.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Elevator.gd" type="Script" id=9]
-[ext_resource path="res://Starting Items.gd" type="Script" id=10]
-[ext_resource path="res://Config Options.gd" type="Script" id=11]
-[ext_resource path="res://LineEdit and Label.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Artifact Hints.gd" type="Script" id=13]
-[ext_resource path="res://Item Capacity.gd" type="Script" id=14]
-[ext_resource path="res://Label and ChoiceBox.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Preferences.gd" type="Script" id=16]
-[ext_resource path="res://Tweaks.gd" type="Script" id=17]
-[ext_resource path="res://Preferences_Play.gd" type="Script" id=18]
-[ext_resource path="res://Layout Select.gd" type="Script" id=19]
-[ext_resource path="res://Save Iso.gd" type="Script" id=20]
-[ext_resource path="res://Room Options.gd" type="Script" id=21]
-[ext_resource path="res://Room 2.gd" type="Script" id=22]
-[ext_resource path="res://Area 2.gd" type="Script" id=23]
+[ext_resource path="res://scripts/Import Button.gd" type="Script" id=4]
+[ext_resource path="res://scripts/FileDialog.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Save.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Elevators.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Label and Number picker.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/Elevator.gd" type="Script" id=9]
+[ext_resource path="res://scripts/Starting Items.gd" type="Script" id=10]
+[ext_resource path="res://scripts/Config Options.gd" type="Script" id=11]
+[ext_resource path="res://scripts/LineEdit and Label.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/Artifact Hints.gd" type="Script" id=13]
+[ext_resource path="res://scripts/Item Capacity.gd" type="Script" id=14]
+[ext_resource path="res://scripts/Label and ChoiceBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scripts/Preferences.gd" type="Script" id=16]
+[ext_resource path="res://scripts/Tweaks.gd" type="Script" id=17]
+[ext_resource path="res://scripts/Preferences_Play.gd" type="Script" id=18]
+[ext_resource path="res://scripts/Layout Select.gd" type="Script" id=19]
+[ext_resource path="res://scripts/save_iso.py" type="Script" id=20]
+[ext_resource path="res://scripts/Room Options.gd" type="Script" id=21]
+[ext_resource path="res://scripts/Room 2.gd" type="Script" id=22]
+[ext_resource path="res://scripts/Area 2.gd" type="Script" id=23]
 
 [node name="Gui Root" type="Node2D"]
 
@@ -35,7 +35,6 @@ margin_right = 1025.0
 margin_bottom = 600.0
 
 [node name="Play" type="Container" parent="Panel/TabContainer2"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -69,7 +68,10 @@ margin_right = 600.0
 margin_bottom = 300.0
 window_title = "Open a File"
 mode = 0
+access = 2
 filters = PoolStringArray( "*.json" )
+current_dir = "/Users/devta/Documents/Godot/Plandomizer"
+current_path = "/Users/devta/Documents/Godot/Plandomizer/"
 
 [node name="WindowDialog" type="WindowDialog" parent="Panel/TabContainer2/Play/TabContainer/Layout Select"]
 margin_right = 500.0
@@ -185,6 +187,7 @@ rect_scale = Vector2( 2, 2 )
 text = "Save Iso"
 
 [node name="Create" type="Container" parent="Panel/TabContainer2"]
+visible = false
 margin_left = 4.0
 margin_top = 32.0
 margin_right = 1021.0
@@ -195,7 +198,6 @@ margin_right = 1023.0
 margin_bottom = 575.0
 
 [node name="Import" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -261,6 +263,7 @@ margin_right = 1010.0
 margin_bottom = 567.0
 
 [node name="Room Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 21 )

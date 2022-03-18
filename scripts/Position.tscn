@@ -1,0 +1,63 @@
+[gd_scene format=2]
+
+[node name="Position" type="Node2D"]
+
+[node name="X" type="Label" parent="."]
+margin_top = 53.0
+margin_right = 40.0
+margin_bottom = 67.0
+rect_scale = Vector2( 2, 2 )
+text = "X:"
+align = 1
+
+[node name="Y" type="Label" parent="."]
+margin_left = 115.0
+margin_top = 54.0
+margin_right = 155.0
+margin_bottom = 68.0
+rect_scale = Vector2( 2, 2 )
+text = "Y:"
+align = 1
+
+[node name="Z" type="Label" parent="."]
+margin_left = 228.0
+margin_top = 55.0
+margin_right = 268.0
+margin_bottom = 69.0
+rect_scale = Vector2( 2, 2 )
+text = "Z:"
+align = 1
+
+[node name="X Position" type="LineEdit" parent="."]
+margin_left = 60.0
+margin_top = 53.0
+margin_right = 118.0
+margin_bottom = 77.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
+
+[node name="Y Position" type="LineEdit" parent="."]
+margin_left = 172.0
+margin_top = 53.0
+margin_right = 230.0
+margin_bottom = 77.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
+
+[node name="Z Position" type="LineEdit" parent="."]
+margin_left = 288.0
+margin_top = 55.0
+margin_right = 346.0
+margin_bottom = 79.0
+rect_scale = Vector2( 1.2, 1.2 )
+text = "0"
+align = 1
+
+[node name="ChangePosition" type="CheckBox" parent="."]
+margin_left = 15.0
+margin_right = 151.0
+margin_bottom = 24.0
+rect_scale = Vector2( 2, 2 )
+text = "Change Position?"

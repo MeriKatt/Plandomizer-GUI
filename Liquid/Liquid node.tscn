@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Liquid/Type.gd" type="Script" id=1]
-[ext_resource path="res://Position.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Position.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Liquid/Liquid node.gd" type="Script" id=3]
 
 [node name="Liquid node" type="Control"]

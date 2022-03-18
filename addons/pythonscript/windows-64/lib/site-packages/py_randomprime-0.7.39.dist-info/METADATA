@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: py-randomprime
+Version: 0.7.39
+Summary: A Metroid Prime 1 patcher, for randomizers and plandomizers.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Rust
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# py-randomprime
+Python 3.6+ bindings for aprilwade's randomprime.
+
+

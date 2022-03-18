@@ -58,10 +58,10 @@
 		"phazonEliteWithoutDynamo": true,
 		"gameBanner": {
 			"gameName": "Metroid Prime: Plandomizer",
-			"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
+			"gameNameFull": "Metroid Prime Plandomizer",
 			"description": "github.com/toasterparty/metroid-prime-plandomizer"
 		},
-		"mainMenuMessage": "Metroid Prime Plandomizer\nMetroid Prime Impossible",
+		"mainMenuMessage": "Metroid Prime Plandomizer",
 		"creditsString": null,
 		"artifactHints": {
 			"Artifact of Chozo": "&push;&main-color=#c300ff;Artifact of Chozo&pop; has no need to be located.",
@@ -89,7 +89,7 @@
 				"Crater Entry Point": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -102,7 +102,7 @@
 				"Crater Tunnel A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -120,7 +120,7 @@
 				"Phazon Core": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -143,7 +143,7 @@
 				"Crater Missile Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -156,7 +156,7 @@
 				"Crater Tunnel B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -174,7 +174,7 @@
 				"Phazon Infusion Chamber": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -187,42 +187,42 @@
 				"Subchamber One": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Subchamber Two": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Subchamber Three": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Subchamber Four": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Subchamber Five": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Metroid Prime Lair": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				}
@@ -262,7 +262,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -313,7 +313,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -344,7 +344,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -392,7 +392,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -423,7 +423,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -449,7 +449,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -490,7 +490,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -516,7 +516,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -547,7 +547,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -578,7 +578,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
@@ -598,7 +598,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -634,7 +634,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -665,7 +665,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -696,7 +696,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -727,7 +727,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -775,7 +775,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -818,7 +818,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -849,7 +849,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -875,14 +875,14 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Transport to Magmoor Caverns West": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -895,7 +895,7 @@
 				"Shoreline Entrance": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -913,7 +913,7 @@
 				"Temple Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -931,7 +931,7 @@
 				"Save Station B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -944,7 +944,7 @@
 				"Ruins Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -962,7 +962,7 @@
 				"Plaza Walkway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -980,7 +980,7 @@
 				"Ice Ruins Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -998,7 +998,7 @@
 				"Chapel Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1016,7 +1016,7 @@
 				"Courtyard Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1034,7 +1034,7 @@
 				"Canyon Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1052,7 +1052,7 @@
 				"Save Station A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1065,7 +1065,7 @@
 				"Specimen Storage": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1083,7 +1083,7 @@
 				"Quarantine Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1101,7 +1101,7 @@
 				"Research Entrance": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1124,7 +1124,7 @@
 				"North Quarantine Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1142,7 +1142,7 @@
 				"Map Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1155,7 +1155,7 @@
 				"Hydra Lab Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1173,7 +1173,7 @@
 				"South Quarantine Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1191,7 +1191,7 @@
 				"Observatory Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1209,7 +1209,7 @@
 				"Transport to Magmoor Caverns South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1227,7 +1227,7 @@
 				"West Tower Entrance": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1245,7 +1245,7 @@
 				"Save Station D": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1258,7 +1258,7 @@
 				"Frozen Pike": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1286,10 +1286,15 @@
 				"West Tower ": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
+							"type": null,
+							"blastShield": null,
+							"destination": null
+						},
+						"1": {
 							"type": null,
 							"blastShield": null,
 							"destination": null
@@ -1299,7 +1304,7 @@
 				"Pike Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1317,7 +1322,7 @@
 				"Frost Cave Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1335,7 +1340,7 @@
 				"Hunter Cave Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1353,7 +1358,7 @@
 				"Hunter Cave": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1381,7 +1386,7 @@
 				"East Tower": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1399,7 +1404,7 @@
 				"Research Core Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1417,7 +1422,7 @@
 				"Save Station C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1430,7 +1435,7 @@
 				"Upper Edge Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1448,7 +1453,7 @@
 				"Lower Edge Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1466,7 +1471,7 @@
 				"Chamber Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1484,7 +1489,7 @@
 				"Lake Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1502,7 +1507,7 @@
 				"Aether Lab Entryway": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1520,7 +1525,7 @@
 				"Phendrana's Edge": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1548,7 +1553,7 @@
 				"Exterior Docking Hangar": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1561,7 +1566,7 @@
 				"Air Lock": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1574,7 +1579,7 @@
 				"Deck Alpha Access Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1592,14 +1597,14 @@
 				"Deck Alpha Mech Shaft": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Emergency Evacuation Area": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1617,14 +1622,14 @@
 				"Connection Elevator to Deck Alpha": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Deck Alpha Umbilical Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1642,9 +1647,14 @@
 				"Biotech Research Area 2": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
+						"0": {
+							"type": null,
+							"blastShield": null,
+							"destination": null
+						},
 						"1": {
 							"type": null,
 							"blastShield": null,
@@ -1655,7 +1665,7 @@
 				"Map Facility": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1673,7 +1683,7 @@
 				"Main Ventilation Shaft Section F": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1686,7 +1696,7 @@
 				"Connection Elevator to Deck Beta": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1699,7 +1709,7 @@
 				"Main Ventilation Shaft Section E": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1712,7 +1722,7 @@
 				"Deck Beta Conduit Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1730,7 +1740,7 @@
 				"Main Ventilation Shaft Section D": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -1743,7 +1753,7 @@
 				"Biotech Research Area 1": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1761,7 +1771,7 @@
 				"Main Ventilation Shaft Section C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1774,7 +1784,7 @@
 				"Deck Beta Security Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1792,7 +1802,7 @@
 				"Subventilation Shaft Section A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -1805,7 +1815,7 @@
 				"Main Ventilation Shaft Section B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -1818,7 +1828,7 @@
 				"Biohazard Containment": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1836,7 +1846,7 @@
 				"Deck Gamma Monitor Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -1849,14 +1859,14 @@
 				"Subventilation Shaft Section B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Main Ventilation Shaft Section A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -1869,7 +1879,7 @@
 				"Deck Beta Transit Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1897,7 +1907,7 @@
 				"Cargo Freight Lift to Deck Gamma": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1910,7 +1920,7 @@
 				"Reactor Core Entrance": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				}
@@ -1941,7 +1951,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -1972,7 +1982,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2008,7 +2018,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2034,7 +2044,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2065,7 +2075,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2091,7 +2101,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2134,7 +2144,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2165,7 +2175,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2191,7 +2201,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2214,7 +2224,7 @@
 				"Transport to Chozo Ruins North": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2227,7 +2237,7 @@
 				"Burning Trail": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2250,7 +2260,7 @@
 				"Lake Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2268,7 +2278,7 @@
 				"Save Station Magmoor A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2281,7 +2291,7 @@
 				"Pit Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2299,7 +2309,7 @@
 				"Monitor Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2317,7 +2327,7 @@
 				"Monitor Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2345,7 +2355,7 @@
 				"Transport to Phendrana Drifts North": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2358,7 +2368,7 @@
 				"Transport Tunnel B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2376,7 +2386,7 @@
 				"Transport to Tallon Overworld West": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2394,7 +2404,7 @@
 				"Twin Fires Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2412,7 +2422,7 @@
 				"Twin Fires": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2430,7 +2440,7 @@
 				"North Core Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2448,7 +2458,7 @@
 				"Geothermal Core": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2471,7 +2481,7 @@
 				"South Core Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2489,7 +2499,7 @@
 				"Workstation Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2507,7 +2517,7 @@
 				"Transport Tunnel C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2525,7 +2535,7 @@
 				"Transport to Phazon Mines West": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2538,7 +2548,7 @@
 				"Transport to Phendrana Drifts South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2556,7 +2566,7 @@
 				"Save Station Magmoor B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2590,7 +2600,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2631,7 +2641,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2662,7 +2672,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2688,7 +2698,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2726,7 +2736,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2757,7 +2767,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2788,7 +2798,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2819,7 +2829,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2855,7 +2865,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2886,7 +2896,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2917,7 +2927,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2953,7 +2963,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -2989,7 +2999,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3020,7 +3030,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3056,7 +3066,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3087,7 +3097,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3105,7 +3115,7 @@
 				"Transport to Tallon Overworld South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3118,7 +3128,7 @@
 				"Quarry Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3136,7 +3146,7 @@
 				"Waste Disposal": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3154,7 +3164,7 @@
 				"Save Station Mines A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3167,7 +3177,7 @@
 				"Ore Processing": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3195,7 +3205,7 @@
 				"Mine Security Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3218,7 +3228,7 @@
 				"Research Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3236,7 +3246,7 @@
 				"Elevator Access A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3254,7 +3264,7 @@
 				"Security Access B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3272,7 +3282,7 @@
 				"Elevator A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3290,7 +3300,7 @@
 				"Elite Control": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3313,7 +3323,7 @@
 				"Maintenance Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3331,7 +3341,7 @@
 				"Omega Research": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3354,7 +3364,7 @@
 				"Transport Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3372,7 +3382,7 @@
 				"Map Station Mines": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3385,7 +3395,7 @@
 				"Dynamo Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3403,7 +3413,7 @@
 				"Transport to Magmoor Caverns South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3416,7 +3426,7 @@
 				"Elite Quarters Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3434,7 +3444,7 @@
 				"Quarantine Access A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3452,7 +3462,7 @@
 				"Save Station Mines B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3465,7 +3475,7 @@
 				"Quarantine Access B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3483,7 +3493,7 @@
 				"Save Station Mines C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3496,7 +3506,7 @@
 				"Elevator Access B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3514,7 +3524,7 @@
 				"Elevator B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3532,7 +3542,7 @@
 				"Missile Station Mines": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3545,7 +3555,7 @@
 				"Fungal Hall A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3588,7 +3598,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3634,7 +3644,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3660,7 +3670,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3696,7 +3706,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3727,7 +3737,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3763,7 +3773,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3789,7 +3799,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3820,7 +3830,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3846,7 +3856,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -3872,7 +3882,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3903,7 +3913,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3934,7 +3944,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3960,7 +3970,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -3998,14 +4008,14 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Gully": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4023,7 +4033,7 @@
 				"Canyon Cavern": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4041,7 +4051,7 @@
 				"Temple Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4059,7 +4069,7 @@
 				"Waterfall Cavern": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4077,7 +4087,7 @@
 				"Tallon Canyon": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4105,7 +4115,7 @@
 				"Temple Security Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4123,7 +4133,7 @@
 				"Transport Tunnel A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4141,7 +4151,7 @@
 				"Root Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4159,7 +4169,7 @@
 				"Temple Lobby": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4177,7 +4187,7 @@
 				"Frigate Access Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4195,7 +4205,7 @@
 				"Transport to Chozo Ruins West": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4208,7 +4218,7 @@
 				"Main Ventilation Shaft Section C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4226,7 +4236,7 @@
 				"Transport Tunnel C": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4244,7 +4254,7 @@
 				"Main Ventilation Shaft Section B": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4272,7 +4282,7 @@
 				"Transport to Chozo Ruins East": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4285,7 +4295,7 @@
 				"Transport to Magmoor Caverns East": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4298,7 +4308,7 @@
 				"Main Ventilation Shaft Section A": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4316,7 +4326,7 @@
 				"Reactor Core": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -4329,13 +4339,7 @@
 				"Reactor Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
-					"liquids": [],
-					"superheated": false,
-					"drainLiquids": false,
-					"liquids": [],
-					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"2": {
@@ -4348,7 +4352,7 @@
 				"Savestation": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4361,7 +4365,7 @@
 				"Deck Beta Transit Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4379,7 +4383,7 @@
 				"Deck Beta Security Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4397,7 +4401,7 @@
 				"Biotech Research Area 1": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4415,7 +4419,7 @@
 				"Deck Beta Conduit Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4433,7 +4437,7 @@
 				"Connection Elevator to Deck Beta": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4451,7 +4455,7 @@
 				"Great Tree Hall": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4484,7 +4488,7 @@
 				"Transport Tunnel D": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4502,7 +4506,7 @@
 				"Transport Tunnel E": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4520,7 +4524,7 @@
 				"Transport to Chozo Ruins South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4533,7 +4537,7 @@
 				"Transport to Phazon Mines East": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4605,7 +4609,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4646,7 +4650,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4706,7 +4710,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4737,7 +4741,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4768,7 +4772,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4794,7 +4798,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4830,7 +4834,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4861,7 +4865,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4892,7 +4896,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4923,7 +4927,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4961,7 +4965,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -4997,7 +5001,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5028,7 +5032,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5069,7 +5073,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5112,7 +5116,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5143,7 +5147,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5186,7 +5190,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5229,7 +5233,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5267,7 +5271,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5305,7 +5309,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5336,7 +5340,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5382,7 +5386,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5418,7 +5422,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5444,7 +5448,7 @@
 						}
 					],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5457,7 +5461,7 @@
 				"Transport to Tallon Overworld North": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5470,7 +5474,7 @@
 				"Ruins Entrance": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5488,7 +5492,7 @@
 				"Ruined Fountain Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5506,7 +5510,7 @@
 				"Ruined Shrine Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5524,7 +5528,7 @@
 				"Nursery Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5542,7 +5546,7 @@
 				"Plaza Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5560,14 +5564,14 @@
 				"Piston Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {}
 				},
 				"Eyon Tunnel": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5585,7 +5589,7 @@
 				"Arboretum Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5603,7 +5607,7 @@
 				"Meditation Fountain": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5621,7 +5625,7 @@
 				"Tower of Light Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5639,7 +5643,7 @@
 				"Vault Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5657,7 +5661,7 @@
 				"Arboretum": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5680,7 +5684,7 @@
 				"Save Station 1": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5693,7 +5697,7 @@
 				"North Atrium": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5711,7 +5715,7 @@
 				"Transport to Magmoor Caverns North": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5734,7 +5738,7 @@
 				"Sunchamber Lobby": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5752,7 +5756,7 @@
 				"Gathering Hall Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5770,7 +5774,7 @@
 				"Sun Tower": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5788,7 +5792,7 @@
 				"Sunchamber Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5806,7 +5810,7 @@
 				"Totem Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5824,7 +5828,7 @@
 				"Map Station": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5837,7 +5841,7 @@
 				"Sun Tower Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5855,7 +5859,7 @@
 				"Save Station 2": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5868,7 +5872,7 @@
 				"East Atrium": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5886,7 +5890,7 @@
 				"Energy Core Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5904,7 +5908,7 @@
 				"Dynamo Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5922,7 +5926,7 @@
 				"Energy Core": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"1": {
@@ -5940,7 +5944,7 @@
 				"Burn Dome Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5953,7 +5957,7 @@
 				"West Furnace Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5971,7 +5975,7 @@
 				"East Furnace Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -5989,7 +5993,7 @@
 				"Crossway Access West": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6002,7 +6006,7 @@
 				"Reflecting Pool Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6020,7 +6024,7 @@
 				"Elder Hall Access": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6038,7 +6042,7 @@
 				"Crossway Access South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6056,7 +6060,7 @@
 				"Reflecting Pool": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6084,7 +6088,7 @@
 				"Save Station 3": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6102,7 +6106,7 @@
 				"Transport Access South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6120,7 +6124,7 @@
 				"Transport to Tallon Overworld East": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6133,7 +6137,7 @@
 				"Transport to Tallon Overworld South": {
 					"pickups": [],
 					"superheated": false,
-					"drainLiquids": false,
+					"removeWater": false,
 					"liquids": [],
 					"doors": {
 						"0": {
@@ -6146,6 +6150,6 @@
 			}
 		}
 	},
-	"inputIso": "prime.iso",
-	"outputIso": "primeOut.iso"
+	"inputIso": "D:\\Prime_Series\\Isos\\Metroid Prime (USA) (v1.00).iso",
+	"outputIso": "D:\\Prime_Series\\Isos\\test.iso"
 }

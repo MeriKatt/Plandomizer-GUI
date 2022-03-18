@@ -8,6 +8,8 @@ var json_layout = {}
 var working_layout = json_layout
 var vanilla = {}
 
+var names = {}
+
 var DEBUG = false
 # Declare member variables here. Examples:
 # var a = 2
@@ -506,11 +508,32 @@ func Create_Door(type, blastshield, destination):
 		"blastShieldType": blastshield or null,
 		"destination": destination or null
 	}
-
+var SaveIso
 func Create_Liquid():
 	return {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
+		test_file(default_file)
+		var file = File.new()
+		if file.open("res://rooms.json", File.READ) != OK:
+			return
+		data_text = file.get_as_text()
+		data_parse = JSON.parse(data_text)
+		if data_parse.error != OK:
+			return
+		data = data_parse.result
+		names = data
+#		var commands = [
+#			"cd "+OS.get_executable_path(),
+#			"pip install virtualenv",
+#			"virtualenv "+OS.get_executable_path() + "/venv",
+#			".\\venv\\Scripts\\activate",
+#			"pip install py-randomprime"
+#		]
+#		OS.execute("CMD.exe",commands, true, output, true)
+#
+#		print(output)
+#		SaveIso = load("res://save_iso.py")
 #	var json ={
 #		"preferences": {
 #			"qolGameBreaking": true,
@@ -651,27 +674,78 @@ func _ready():
 #		"inputIso": "F:\\Dropbox\\Media\\Games\\ROMs\\Nintendo\\Gamecube\\Metroid Prime\\Metroid Prime [GM8E01].iso",
 #		"outputIso": "D:\\Libraries\\Downloads\\Prime Randomizer - Turret Turret Nature.iso"
 #	}
-#	for x in impact_rooms:
-#		json["levelData"]["Impact Crater"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in phendrana_rooms:
-#		json["levelData"]["Phendrana Drifts"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in frigate_rooms:
-#		json["levelData"]["Frigate Orpheon"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in magmoor_rooms:
-#		json["levelData"]["Magmoor Caverns"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in phazon_rooms:
-#		json["levelData"]["Phazon Mines"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in tallon_rooms:
-#		json["levelData"]["Tallon Overworld"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
-#	for x in chozo_rooms:
-#		json["levelData"]["Chozo Ruins"]["rooms"][x] = Create_Room([Create_Pickup("Nothing","Nothing","Nothing", "Nothing Acquired", 1, 1, false)],false,false,[],null,null,null,[])
 #
+#	var json = {
+#		"Impact Crater": {},
+#		"Phendrana Drifts": {},
+#		"Frigate Orpheon": {},
+#		"Magmoor Caverns": {},
+#		"Phazon Mines": {},
+#		"Tallon Overworld": {},
+#		"Chozo Ruins": {}
+#	}
+#	var i = 0
+#	for x in impact_rooms:
+#		if x == impact_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Impact Crater"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Impact Crater"][x] = js
+#			i+=1
+#	i = 0
+#	for x in phendrana_rooms:
+#		if x == phendrana_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Phendrana Drifts"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Phendrana Drifts"][x] = js
+#			i+=1
+#	i = 0
+#	for x in frigate_rooms:
+#		if x == frigate_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Frigate Orpheon"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Frigate Orpheon"][x] = js
+#			i+=1
+#	i = 0
+#	for x in magmoor_rooms:
+#		if x == magmoor_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Magmoor Caverns"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Magmoor Caverns"][x] = js
+#			i+=1
+#	i = 0
+#	for x in phazon_rooms:
+#		if x == phazon_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Phazon Mines"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Phazon Mines"][x] = js
+#			i+=1
+#	i =0
+#	for x in tallon_rooms:
+#		if x == tallon_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Tallon Overworld"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Tallon Overworld"][x] = js
+#			i+=1
+#	i=0
+#	for x in chozo_rooms:
+#		if x == chozo_rooms[i]:
+#			var js = {}
+#			for k in working_layout["levelData"]["Chozo Ruins"]["rooms"][x]["doors"].keys():
+#				js[str(k)] = ""
+#			json["Chozo Ruins"][x] = js
+#			i+=1
+##
 #	var serial=JSON.print(json, "\t")
 #	var file = File.new()
 #	file.open("user://json_test.json", File.WRITE)
 #	file.store_string(serial)
 #	file.close()
-	test_file(default_file)
 	#Json_Handler.Save_Room_Array_Changes("Phendrana Drifts", "Control Tower", "pickups", 0,  {
 	#	"type": "Nothing",
 	#	"model": "Nothing",

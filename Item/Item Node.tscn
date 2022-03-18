@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Item/Item Selection.gd" type="Script" id=1]
-[ext_resource path="res://Position.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Position.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Item/Item Node.gd" type="Script" id=3]
-[ext_resource path="res://Label and Number picker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/Label and Number picker.tscn" type="PackedScene" id=4]
 
 [node name="Item Node" type="Node2D"]
 script = ExtResource( 3 )
