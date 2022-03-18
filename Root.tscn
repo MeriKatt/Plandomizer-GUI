@@ -35,6 +35,7 @@ margin_right = 1025.0
 margin_bottom = 600.0
 
 [node name="Play" type="Container" parent="Panel/TabContainer2"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -126,8 +127,12 @@ text = "Save Preferences"
 
 [node name="Save Iso" type="Container" parent="Panel/TabContainer2/Play/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 20 )
 
 [node name="select" type="Button" parent="Panel/TabContainer2/Play/TabContainer/Save Iso"]
@@ -195,17 +200,19 @@ margin_bottom = 320.0
 rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="Create" type="Container" parent="Panel/TabContainer2"]
-visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1021.0
-margin_bottom = 599.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="TabContainer" type="TabContainer" parent="Panel/TabContainer2/Create"]
 margin_right = 1023.0
 margin_bottom = 575.0
 
 [node name="Import" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -272,8 +279,12 @@ margin_bottom = 567.0
 
 [node name="Room Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 21 )
 
 [node name="Area" type="OptionButton" parent="Panel/TabContainer2/Create/TabContainer/Room Options"]
@@ -324,10 +335,12 @@ text = "Save Room Options"
 
 [node name="Room Nodes" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1019.0
-margin_bottom = 572.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="VSeparator" type="VSeparator" parent="Panel/TabContainer2/Create/TabContainer/Room Nodes"]
 margin_left = 500.0
@@ -376,9 +389,12 @@ rect_scale = Vector2( 1.5, 1.5 )
 text = "Go"
 
 [node name="Game Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="TabContainer" type="TabContainer" parent="Panel/TabContainer2/Create/TabContainer/Game Options"]
 margin_top = 30.0
@@ -386,6 +402,7 @@ margin_right = 1020.0
 margin_bottom = 597.0
 
 [node name="Preferences" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -442,10 +459,12 @@ text = "Save Preferences"
 
 [node name="Starting Items" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1021.0
-margin_bottom = 570.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 10 )
 
 [node name="combatVisor" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Starting Items"]
@@ -612,10 +631,12 @@ text = "Save Starting Items"
 
 [node name="Item Capacity" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1021.0
-margin_bottom = 568.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 14 )
 
 [node name="etankCapacity" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Item Capacity" instance=ExtResource( 8 )]
@@ -649,10 +670,12 @@ text = "Save Item Capacity"
 
 [node name="Artifact Hints" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1021.0
-margin_bottom = 569.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 13 )
 
 [node name="Artifact of Chozo" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Artifact Hints" instance=ExtResource( 12 )]
@@ -723,10 +746,12 @@ text = "Save Hints"
 
 [node name="Tweaks" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1021.0
-margin_bottom = 569.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 17 )
 
 [node name="smallSamus" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Tweaks"]
@@ -759,11 +784,12 @@ margin_bottom = -407.0
 label_text = " Phazon Dmg Reduction:"
 
 [node name="Config Options" type="Container" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer"]
-visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = 1016.0
-margin_bottom = 563.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
@@ -931,10 +957,31 @@ margin_bottom = 104.0
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Disable Frigate Item Loss"
 
+[node name="patchPowerConduits" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 600.0
+margin_top = 130.0
+margin_right = 873.0
+margin_bottom = 154.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Power Beam Activates power conduits"
+
+[node name="removeVanillaBlastShields" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Game Options/TabContainer/Config Options"]
+margin_left = 600.0
+margin_top = 180.0
+margin_right = 807.0
+margin_bottom = 204.0
+rect_scale = Vector2( 1.5, 1.5 )
+pressed = true
+text = "Remove Vanilla blastshields"
+
 [node name="Save" type="Container" parent="Panel/TabContainer2/Create/TabContainer"]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 script = ExtResource( 6 )
 
 [node name="Save button" type="Button" parent="Panel/TabContainer2/Create/TabContainer/Save"]
@@ -956,7 +1003,6 @@ access = 2
 filters = PoolStringArray( "*.json" )
 current_dir = "/Users/devta/Documents/Godot/Plandomizer"
 current_path = "/Users/devta/Documents/Godot/Plandomizer/"
-
 [connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Layout Select/Import" to="Panel/TabContainer2/Play/TabContainer/Layout Select" method="_on_Import_pressed"]
 [connection signal="file_selected" from="Panel/TabContainer2/Play/TabContainer/Layout Select/FileDialog" to="Panel/TabContainer2/Play/TabContainer/Layout Select" method="_on_FileDialog_file_selected"]
 [connection signal="pressed" from="Panel/TabContainer2/Play/TabContainer/Preferences/saveButton" to="Panel/TabContainer2/Play/TabContainer/Preferences" method="_on_saveButton_pressed"]

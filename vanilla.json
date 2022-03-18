@@ -56,6 +56,7 @@
 		"backwardsUpperMines": true,
 		"backwardsLowerMines": true,
 		"phazonEliteWithoutDynamo": true,
+		"removeVanillaBlastShields":  true,
 		"gameBanner": {
 			"gameName": "Metroid Prime: Plandomizer",
 			"gameNameFull": "Metroid Prime Plandomizer - Metroid Prime Impossible",
