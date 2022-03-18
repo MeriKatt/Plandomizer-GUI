@@ -34,6 +34,7 @@ func _on_FileDialog_file_selected(path):
 	data = data_parse.result
 	if data.has("levelData") and data.has("gameConfig") and data.has("tweaks") and data.has("preferences"):
 		Globals.working_layout = data
+		get_parent().get_node("Save Iso").globals = data
 		get_node("WindowDialog2").popup()
 	else:
 		get_node("WindowDialog").popup()

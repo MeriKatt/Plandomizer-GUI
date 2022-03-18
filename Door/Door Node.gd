@@ -56,6 +56,7 @@ func _ready():
 
 func _on_Door_Warp_destination_item_selected(index):
 	cur_warp = rooms[index]
+	get_node("warpDock").clear()
 	var x = 1
 	var i = 0
 	while x <= (Globals.working_layout["levelData"][Globals.current_world]["rooms"][rooms[index]]["doors"].size()):

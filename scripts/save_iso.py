@@ -29,7 +29,7 @@ class save_iso(Node):
 		try:
 			py_randomprime.patch_iso_raw(
 				json,
-				  py_randomprime.ProgressNotifier(lambda percent, msg: updaters[-1](msg, percent)),
+				  py_randomprime.ProgressNotifier(lambda percent, msg: updaters[0](msg, percent)),
 				)
 			#self.get_node("ProgressBar").value = updaters[0]
 		except BaseException as e:
@@ -39,7 +39,6 @@ class save_iso(Node):
 				raise RuntimeError(f"randomprime panic: {e}") from e
 	
 	def _on_Save_pressed(self):
-		json_path = "working_profile.json"
 		serial = JSON.print(self.globals, "\t")
 		serialz = str(serial)
 		self.save(serialz)
