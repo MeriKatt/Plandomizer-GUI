@@ -1,1 +1,0 @@
-cmd.exe /k "godot --export-pack 'Windows Desktop' Metroid Prime Plandomizer Windows.zip"
