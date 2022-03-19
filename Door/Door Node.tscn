@@ -48,6 +48,9 @@ margin_right = 125.0
 margin_bottom = 150.0
 rect_scale = Vector2( 2, 2 )
 text = "Door Warp?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Door Warp destination" type="OptionButton" parent="."]
 margin_left = 204.0
@@ -73,5 +76,7 @@ rect_scale = Vector2( 2, 2 )
 text = "Dock to warp to:"
 [connection signal="item_selected" from="Door Type" to="." method="_on_Door_Type_item_selected"]
 [connection signal="item_selected" from="Blastshield Type" to="." method="_on_Blastshield_Type_item_selected"]
+[connection signal="pressed" from="Door Warp Checkbox" to="." method="_on_Door_Warp_Checkbox_pressed"]
+[connection signal="toggled" from="Door Warp Checkbox" to="." method="_on_Door_Warp_Checkbox_toggled"]
 [connection signal="item_selected" from="Door Warp destination" to="." method="_on_Door_Warp_destination_item_selected"]
 [connection signal="item_selected" from="warpDock" to="." method="_on_warpDock_item_selected"]
