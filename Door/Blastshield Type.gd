@@ -13,6 +13,12 @@ func _ready():
 	for x in types:
 		add_item(x, i)
 		i+=1
+	i = 0
+	for x in types:
+		if x == Globals.node_details["blastShield"]:	
+			select(i)
+		else:
+			i+=1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
