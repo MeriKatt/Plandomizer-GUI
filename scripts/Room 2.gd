@@ -40,6 +40,11 @@ func _on_Area_item_selected(index):
 		add_item(x,i)
 		i+=1
 
+func get_submerge(array):
+	if array.has("submerge"):
+		return array["submerge"]
+	else:
+		return false
 
 func _on_Room_item_selected(index):
 	var RoomOptions = get_parent().get_node("RoomOptions")
@@ -48,4 +53,4 @@ func _on_Room_item_selected(index):
 	var room = Globals.working_layout["levelData"][Globals.current_world]["rooms"][str(Globals.current_room)]
 	RoomOptions.get_node("drainLiquids").pressed = room["removeWater"]
 	RoomOptions.get_node("superheated").pressed = room["superheated"]
-	RoomOptions.get_node("submergeRoom").pressed = false
+	RoomOptions.get_node("submerge").pressed = get_submerge(room)

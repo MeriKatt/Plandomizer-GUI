@@ -335,7 +335,7 @@ var phendrana_rooms = [
 	"Transport to Magmoor Caverns South",
 	"Transport to Magmoor Caverns West",
 	"Upper Edge Tunnel",
-	"West Tower",
+	"West Tower ",
 	"West Tower Entrance",
 ]
 var phazon_rooms = [

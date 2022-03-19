@@ -317,7 +317,7 @@ margin_bottom = 59.0
 rect_scale = Vector2( 2, 2 )
 text = "Drain Liquids"
 
-[node name="submergeRoom" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
+[node name="submerge" type="CheckBox" parent="Panel/TabContainer2/Create/TabContainer/Room Options/RoomOptions"]
 margin_top = 75.0
 margin_right = 133.0
 margin_bottom = 99.0

@@ -446,7 +446,7 @@
 			"1": "Frozen Pike"
 		},
 		"West Tower Entrance": {
-			"0": "West Tower",
+			"0": "West Tower ",
 			"1": "Observatory"
 		},
 		"Save Station D": {
@@ -458,7 +458,7 @@
 			"2": "Frost Cave Access",
 			"3": "Hunter Cave Access"
 		},
-		"West Tower": {
+		"West Tower ": {
 			"0": "West Tower Entrance",
 			"1": "Control Tower"
 		},
@@ -476,7 +476,7 @@
 		},
 		"Control Tower": {
 			"0": "East Tower",
-			"1": "West Tower"
+			"1": "West Tower "
 		},
 		"Research Core": {
 			"0": "Pike Access",
