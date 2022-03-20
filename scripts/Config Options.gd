@@ -7,6 +7,7 @@ extends Container
 
 func setup():
 	var i = 0
+	$startingRoomArea.clear()
 	for x in Globals.worlds:
 		$startingRoomArea.add_item(x,i)
 		i+=1

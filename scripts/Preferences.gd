@@ -20,10 +20,7 @@ var hint_behaviors = [
 	"none",
 	"all"
 ]
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func setup():
 	var i = 0
 	for x in cutscene_options:
 		get_node("qolCutscenes/OptionButton").add_item(x, i)
@@ -70,6 +67,10 @@ func _ready():
 					else:
 						l +=1
 				x.get_node("OptionButton").select(l)
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	call_deferred("setup")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

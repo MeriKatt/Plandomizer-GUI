@@ -77,7 +77,7 @@ func _on_Room_item_selected(index):
 			if Globals.pickups[Globals.current_world][Globals.current_room].has(str(i)):
 				pickupName = Globals.pickups[Globals.current_world][Globals.current_room][str(i)]
 			else:
-				pickupName = "Piclup "+str(i)
+				pickupName = "Pickup "+str(i)
 		else:
 			pickupName = "Pickup "+str(i)
 		room_nodes.append(create_node("Pickup"+str(i),i, "pickup", x))
@@ -107,11 +107,15 @@ func _on_Nodes_item_selected(index):
 	Globals.working_index = room_nodes[index]["index"]
 	details.add_child(node)
 	print(Globals.vanilla["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].size())
-	if "Pickup" in room_nodes[index]["name"] and (int(room_nodes[index]["name"].right(6)) >= Globals.vanilla["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].size()):
+	if "Pickup" in room_nodes[index]["name"]:
 		details.get_node("Item Node").get_node("Panel").get_node("Position").get_node("ChangePosition").pressed = true
 		details.get_node("Item Node").get_node("Panel").get_node("Position").get_node("ChangePosition").disabled = true
+	elif "Liquid" in room_nodes[index]["name"]:
+		details.get_node("Liquid node").get_node("Position").get_node("ChangePosition").pressed = true
+		details.get_node("Liquid node").get_node("Position").get_node("ChangePosition").disabled = true
+		details.get_node("Liquid node").get_node("sizeCheck").pressed = true
+		details.get_node("Liquid node").get_node("sizeCheck").disabled = true
 	
-		
 	#if room_nodes[index]["type"] == "pickup":
 	#	var pickup_scene = load("res://Item Node.tscn")
 	#	var pickup = pickup_scene.instance()
@@ -145,11 +149,11 @@ func refresh_nodes():
 	i=0
 	for x in roomData["pickups"]:
 		var pickupName
-		if Globals.pickups[Globals.current_world].has(Globals.current_room):
+		if Globals.pickups.has(Globals.current_world) and Globals.pickups[Globals.current_world].has(Globals.current_room):
 			if Globals.pickups[Globals.current_world][Globals.current_room].has(str(i)):
 				pickupName = Globals.pickups[Globals.current_world][Globals.current_room][str(i)]
 			else:
-				pickupName = "Piclup "+str(i)
+				pickupName = "Pickup "+str(i)
 		else:
 			pickupName = "Pickup "+str(i)
 		room_nodes.append(create_node("Pickup"+str(i),i, "pickup", x))
@@ -186,8 +190,9 @@ func _on_Button_pressed():
 				print(Globals.working_index)
 				if get_parent().has_node("Node Details/Item Node"):
 					if get_parent().get_node("Node Details/Item Node/Panel/Position/ChangePosition").disabled:
-						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].pop_at(Globals.working_index)
-						Globals.working_index -= 1
+						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["pickups"].remove(Globals.working_index)
+						if Globals.working_index > 0:
+							Globals.working_index -= 1
 						refresh_nodes()
 		else:
 			if Globals.current_room == null:
@@ -199,9 +204,10 @@ func _on_Button_pressed():
 			if typeof(Globals.working_index) == TYPE_INT:
 				print(Globals.working_index)
 				if get_parent().has_node("Node Details/Liquid node"):
-					if get_parent().get_node("Node Details/Liquid node/Position/Position/ChangePosition").disabled:
-						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["liquids"].pop_at(Globals.working_index)
-						Globals.working_index -= 1
+					if get_parent().get_node("Node Details/Liquid node/Position/ChangePosition").disabled:
+						Globals.working_layout["levelData"][Globals.current_world]["rooms"][Globals.current_room]["liquids"].remove(Globals.working_index)
+						if Globals.working_index > 0:
+							Globals.working_index -= 1
 						refresh_nodes()
 		else:
 			if Globals.current_room == null:

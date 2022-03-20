@@ -32,5 +32,4 @@ func _on_Button_pressed():
 	area_selected = get_node("Panel/Area").get_item_text(get_node("Panel/Area").get_selected_id() -1)
 	room_selected = get_node("Panel/Room").get_item_text(get_node("Panel/Room").get_selected_id() -1)
 	Json_Handler.Save_Transporter_Changes(Globals.elevators_world[get_node(".").get_parent().get_parent().cur_elev], get_node(".").get_parent().get_parent().cur_elev, destination_return())
-	print(Globals.elevators_world[get_node(".").get_parent().get_parent().cur_elev])
-	print(Globals.working_layout["levelData"][area_selected]["transports"])
+

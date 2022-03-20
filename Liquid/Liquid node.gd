@@ -13,10 +13,10 @@ func _ready():
 		get_node("sizeCheck").pressed = true
 		get_node("LineEdit").text = str(liquid["size"])
 	if liquid.has("position"):
-		get_node("Position/Position/ChangePosition").pressed = true
-		var x = get_node("Position/Position/X Position")
-		var y = get_node("Position/Position/Y Position")
-		var z = get_node("Position/Position/Z Position")
+		get_node("Position/ChangePosition").pressed = true
+		var x = get_node("Position/X Position")
+		var y = get_node("Position/Y Position")
+		var z = get_node("Position/Z Position")
 		x.text= str(liquid["position"][0])
 		y.text= str(liquid["position"][1])
 		z.text= str(liquid["position"][2])
@@ -38,10 +38,10 @@ func get_size():
 func _on_Button_pressed():
 	size = get_size()
 	var json = {}
-	if get_node("Position/Position/ChangePosition").pressed:
-		var x = get_node("Position/Position/X Position").text
-		var y = get_node("Position/Position/Y Position").text
-		var z = get_node("Position/Position/Z Position").text
+	if get_node("Position/ChangePosition").pressed:
+		var x = get_node("Position/X Position").text
+		var y = get_node("Position/Y Position").text
+		var z = get_node("Position/Z Position").text
 		if size != null:
 			json = {
 				"type": get_node("Liquid Type/Type").get_item_text(get_node("Liquid Type/Type").get_selected_id()),

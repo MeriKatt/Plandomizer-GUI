@@ -9,13 +9,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 
-[node name="Position" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="Position" parent="Position" instance=ExtResource( 2 )]
-position = Vector2( -13, 58 )
-
 [node name="Liquid Type" type="Control" parent="."]
 margin_left = 12.0
 margin_top = 160.0
@@ -45,6 +38,9 @@ margin_right = 113.0
 margin_bottom = 27.0
 rect_scale = Vector2( 2, 2 )
 text = "Change Size?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LineEdit" type="LineEdit" parent="."]
 margin_left = 218.0
@@ -62,4 +58,6 @@ margin_bottom = 266.0
 rect_scale = Vector2( 2, 2 )
 text = "Save Liquid"
 
+[node name="Position" parent="." instance=ExtResource( 2 )]
+position = Vector2( -13, 58 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

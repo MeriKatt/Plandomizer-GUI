@@ -35,3 +35,6 @@ func _on_FileDialog_file_selected(path):
 	data = data_parse.result
 	Globals.working_layout = data
 	print(Globals.working_layout)
+	var gameOptions = get_parent().get_parent().get_node("Game Options/TabContainer")
+	for x in gameOptions.get_children():
+		x.setup()

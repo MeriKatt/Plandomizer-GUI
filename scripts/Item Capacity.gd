@@ -5,9 +5,7 @@ extends Container
 # var a = 2
 # var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func setup():
 	for x in get_children():
 		if x.get_class() != "Button":
 			if x.get_name() == "etankCapacity":
@@ -15,6 +13,9 @@ func _ready():
 			else:
 				x.get_node("amount").set_value(int(Globals.working_layout["gameConfig"]["itemMaxCapacity"][x.get_name()]))
 
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	call_deferred("setup")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

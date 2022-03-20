@@ -4,10 +4,7 @@ extends Container
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func setup():
 	for x in get_children():
 		if Globals.working_layout["tweaks"].empty():
 			if x.get_class() == "Control":
@@ -17,6 +14,10 @@ func _ready():
 				x.get_node("LineEdit").text = String(Globals.working_layout["tweaks"][x.get_name()])
 		elif Globals.working_layout["tweaks"]["playerSize"] == 0.3 and Globals.working_layout["tweaks"]["morphBallSize"] == 0.3 and Globals.working_layout["tweaks"]["easyLavaEscape"] == true and x.get_class() == "CheckBox":
 			x.pressed = true
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	call_deferred("setup")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

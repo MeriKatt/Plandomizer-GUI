@@ -5,9 +5,7 @@ extends Container
 # var a = 2
 # var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func setup():
 	for x in get_children():
 		if x.get_class() == "Control":
 			x.get_node("amount").set_value(Globals.working_layout["gameConfig"]["startingItems"][x.get_name()])
@@ -15,6 +13,9 @@ func _ready():
 			if x.get_class() != "Button":
 				x.pressed = Globals.working_layout["gameConfig"]["startingItems"][x.get_name()]
 
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	call_deferred("setup")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
